@@ -1072,6 +1072,25 @@
       color: var(--muted);
     }
 
+
+    .wrong-char-hl {
+      background: var(--danger-bg);
+      color: var(--danger);
+      border: 1px solid var(--danger-border);
+      border-radius: 5px;
+      padding: 0 3px;
+      font-weight: 800;
+      text-decoration: underline wavy var(--danger);
+      text-underline-offset: 3px;
+    }
+    .wrong-char-legend {
+      display: inline-block;
+      margin-left: 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--danger);
+    }
+
   </style>
 </head>
 <body>
@@ -5583,7 +5602,13 @@
       const normRef = normalizePron(card.pron);
 
       refLine.textContent = `기준 발음: ${card.pron || "(발음 표기 없음)"}`;
-      userLine.textContent = `내 입력: ${userInput.trim() ? userInput.trim() : "(미입력)"}`;
+      const isMismatch = !(mode === "reveal" || (normRef && normUser && normUser === normRef));
+      if (isMismatch && userInput.trim()) {
+        const highlighted = buildHighlightedUserPron(userInput, card.pron);
+        userLine.innerHTML = `내 입력: ${highlighted}<span class="wrong-char-legend">(오답 의심 부분 표시)</span>`;
+      } else {
+        userLine.textContent = `내 입력: ${userInput.trim() ? userInput.trim() : "(미입력)"}`;
+      }
 
       clearAutoAdvanceTimer();
       if (mode === "reveal") {
@@ -5645,6 +5670,92 @@
           `;
         }).join("");
       }
+    }
+
+    function escapeHtml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function buildHighlightedUserPron(userInput, refPron) {
+      const raw = (userInput || "").trim();
+      if (!raw) return "(미입력)";
+      const refNorm = normalizePron(refPron || "");
+      if (!refNorm) return escapeHtml(raw);
+
+      const normChars = [];
+      const origIndices = [];
+      for (let i = 0; i < raw.length; i++) {
+        const ch = raw[i];
+        const normCh = normalizePron(ch);
+        if (normCh) {
+          for (let k = 0; k < normCh.length; k++) {
+            normChars.push(normCh[k]);
+            origIndices.push(i);
+          }
+        }
+      }
+
+      if (!normChars.length) return escapeHtml(raw);
+
+      const m = normChars.length;
+      const n = refNorm.length;
+      const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+      for (let i = m - 1; i >= 0; i--) {
+        for (let j = n - 1; j >= 0; j--) {
+          if (normChars[i] === refNorm[j]) {
+            dp[i][j] = 1 + dp[i + 1][j + 1];
+          } else {
+            dp[i][j] = Math.max(dp[i + 1][j], dp[i][j + 1]);
+          }
+        }
+      }
+
+      const matchedNormIdx = new Set();
+      let i = 0, j = 0;
+      while (i < m && j < n) {
+        if (normChars[i] === refNorm[j]) {
+          matchedNormIdx.add(i);
+          i++;
+          j++;
+        } else if (dp[i + 1][j] >= dp[i][j + 1]) {
+          i++;
+        } else {
+          j++;
+        }
+      }
+
+      const wrongOrigIndices = new Set();
+      for (let idx = 0; idx < m; idx++) {
+        if (!matchedNormIdx.has(idx)) {
+          wrongOrigIndices.add(origIndices[idx]);
+        }
+      }
+
+      if (!wrongOrigIndices.size) {
+        return escapeHtml(raw);
+      }
+
+      let out = "";
+      let idx = 0;
+      while (idx < raw.length) {
+        if (wrongOrigIndices.has(idx)) {
+          let end = idx + 1;
+          while (end < raw.length && wrongOrigIndices.has(end)) {
+            end++;
+          }
+          out += `<span class="wrong-char-hl">${escapeHtml(raw.slice(idx, end))}</span>`;
+          idx = end;
+        } else {
+          out += escapeHtml(raw[idx]);
+          idx++;
+        }
+      }
+      return out;
     }
 
     function gradeCurrent(mode) {
@@ -5927,6 +6038,9 @@
     applyTheme();
     renderCard();
     checkFullSweepCompletion();
+  </script>
+</body>
+</html>
   </script>
 </body>
 </html>
