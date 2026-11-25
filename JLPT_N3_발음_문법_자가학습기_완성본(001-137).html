@@ -1,0 +1,5932 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JLPT N3 일본어 발음 &amp; 문법 자가학습기 (001~137)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --surface: #ffffff;
+      --surface-2: #fbfaf7;
+      --surface-3: #efeae0;
+      --accent-wash: #eef3fb;
+      --text: #141923;
+      --muted: #526074;
+      --border: #e1dbd0;
+      --border-strong: #c9c0b1;
+      --primary: #1e4fd8;
+      --primary-hover: #173fb0;
+      --primary-soft: rgba(30, 79, 216, 0.1);
+      --primary-ring: rgba(30, 79, 216, 0.24);
+      --accent-vermilion: #c2410c;
+      --accent-vermilion-soft: rgba(194, 65, 12, 0.1);
+      --success: #15803d;
+      --success-bg: rgba(21, 128, 61, 0.11);
+      --success-border: rgba(21, 128, 61, 0.35);
+      --danger: #b91c1c;
+      --danger-bg: rgba(185, 28, 28, 0.11);
+      --danger-border: rgba(185, 28, 28, 0.35);
+      --warn: #b45309;
+      --warn-bg: rgba(180, 83, 9, 0.12);
+      --warn-border: rgba(180, 83, 9, 0.36);
+      --shadow: 0 10px 28px rgba(20, 25, 35, 0.06);
+      --shadow-sm: 0 2px 8px rgba(20, 25, 35, 0.04);
+      --radius: 16px;
+      --radius-sm: 11px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0c1220;
+      --surface: #131c31;
+      --surface-2: #18233c;
+      --surface-3: #213050;
+      --accent-wash: #1a2947;
+      --text: #f3f6fb;
+      --muted: #9fb0c7;
+      --border: #263554;
+      --border-strong: #374b75;
+      --primary: #4f86f7;
+      --primary-hover: #73a1ff;
+      --primary-soft: rgba(79, 134, 247, 0.16);
+      --primary-ring: rgba(79, 134, 247, 0.3);
+      --accent-vermilion: #fb923c;
+      --accent-vermilion-soft: rgba(251, 146, 60, 0.14);
+      --success: #4ade80;
+      --success-bg: rgba(74, 222, 128, 0.14);
+      --success-border: rgba(74, 222, 128, 0.35);
+      --danger: #f87171;
+      --danger-bg: rgba(248, 113, 113, 0.14);
+      --danger-border: rgba(248, 113, 113, 0.35);
+      --warn: #fbbf24;
+      --warn-bg: rgba(251, 191, 36, 0.14);
+      --warn-border: rgba(251, 191, 36, 0.35);
+      --shadow: 0 12px 32px rgba(0, 0, 0, 0.42);
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      overflow-x: hidden;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      background:
+        radial-gradient(circle at top right, var(--primary-soft), transparent 42%),
+        radial-gradient(circle at bottom left, var(--accent-vermilion-soft), transparent 38%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.68;
+      padding: 18px 14px 72px;
+      overflow-x: hidden;
+      transition: background 0.22s ease, color 0.22s ease;
+    }
+
+    .jp {
+      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      overflow-wrap: break-word;
+      word-break: normal;
+    }
+
+    .wrap {
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      min-width: 0;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px 22px;
+      margin-bottom: 16px;
+      min-width: 0;
+      overflow-wrap: anywhere;
+      word-break: keep-all;
+    }
+
+    .top-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent-vermilion);
+      background: var(--accent-vermilion-soft);
+      padding: 3px 9px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+    }
+
+    .top-bar h1 {
+      margin: 0;
+      font-size: clamp(1.28rem, 2.5vw, 1.62rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+
+    .top-bar p {
+      margin: 5px 0 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    button,
+    label.btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      min-height: 44px;
+      padding: 9px 14px;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 700;
+      line-height: 1.2;
+      cursor: pointer;
+      border: 1px solid transparent;
+      box-shadow: var(--shadow-sm);
+      transition: background-color 0.16s ease, border-color 0.16s ease, transform 0.12s ease, box-shadow 0.16s ease;
+      user-select: none;
+    }
+
+    button:active,
+    label.btn-secondary:active {
+      transform: scale(0.99);
+    }
+
+    button:focus-visible,
+    label.btn-secondary:focus-visible,
+    select:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-ring);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+
+    .btn-secondary {
+      background: var(--surface-2);
+      color: var(--text);
+      border-color: var(--border-strong);
+    }
+
+    .btn-secondary:hover {
+      background: var(--surface-3);
+    }
+
+    .btn-success {
+      background: var(--success-bg);
+      color: var(--success);
+      border-color: var(--success-border);
+    }
+
+    .btn-success:hover {
+      filter: brightness(0.96);
+    }
+
+    .btn-danger {
+      background: var(--danger-bg);
+      color: var(--danger);
+      border-color: var(--danger-border);
+    }
+
+    .btn-danger:hover {
+      filter: brightness(0.96);
+    }
+
+    .btn-sm {
+      min-height: 44px;
+      padding: 7px 12px;
+      font-size: 0.83rem;
+    }
+
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 640px) {
+      .stats-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      body {
+        padding: 10px 10px 76px;
+        line-height: 1.72;
+      }
+      .card {
+        padding: 15px 14px;
+        border-radius: 14px;
+      }
+      .prompt-box {
+        padding: 14px 13px !important;
+      }
+      .prompt-jp {
+        font-size: 1.2rem !important;
+        line-height: 1.72 !important;
+      }
+      .prompt-kr {
+        font-size: 0.98rem !important;
+        line-height: 1.66 !important;
+      }
+      .detail-section {
+        padding: 13px 12px !important;
+      }
+      .vocab-list {
+        grid-template-columns: 1fr !important;
+      }
+      .vocab-struct-row {
+        flex-direction: column !important;
+        gap: 3px !important;
+      }
+      .nav-bar {
+        flex-direction: column;
+      }
+    }
+
+    .stat-card {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      text-align: center;
+      min-width: 0;
+    }
+
+    .stat-card .lbl {
+      display: block;
+      font-size: 0.76rem;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .stat-card .val {
+      display: block;
+      font-size: 1.12rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+
+    .progress-track {
+      height: 8px;
+      background: var(--surface-3);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary), var(--accent-vermilion));
+      border-radius: 999px;
+      transition: width 0.28s ease;
+    }
+
+    .filter-bar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr) minmax(0, 1.35fr) auto;
+      gap: 9px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 780px) {
+      .filter-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .filter-bar .search-col {
+        grid-column: 1 / -1;
+      }
+      .filter-bar .rand-col {
+        grid-column: 1 / -1;
+      }
+    }
+
+    select,
+    input[type="text"],
+    textarea {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      font-family: inherit;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    select {
+      min-height: 44px;
+    }
+
+    input[type="text"] {
+      min-height: 44px;
+    }
+
+    select:focus,
+    input[type="text"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-ring);
+    }
+
+    .q-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .grammar-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      border: 1px solid rgba(30, 79, 216, 0.22);
+      padding: 6px 13px;
+      border-radius: 999px;
+      font-size: 0.86rem;
+      font-weight: 800;
+      max-width: 100%;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      padding: 4px 11px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      border: 1px solid var(--border-strong);
+      background: var(--surface-2);
+      color: var(--muted);
+    }
+
+    .status-pill.ok {
+      background: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success);
+    }
+
+    .status-pill.bad {
+      background: var(--danger-bg);
+      border-color: var(--danger-border);
+      color: var(--danger);
+    }
+
+    .prompt-box {
+      background: linear-gradient(180deg, var(--surface-2), var(--accent-wash));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 18px 16px;
+      margin-bottom: 16px;
+    }
+
+    .prompt-jp {
+      font-size: 1.42rem;
+      font-weight: 700;
+      line-height: 1.68;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .prompt-kr {
+      font-size: 1.06rem;
+      font-weight: 700;
+      color: var(--text);
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-strong);
+    }
+
+    .prompt-sub {
+      display: inline-block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-top: 8px;
+      padding: 3px 9px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .quick-marks {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 9px;
+    }
+
+    .quick-mark-btn {
+      min-height: 38px;
+      padding: 5px 11px;
+      font-size: 0.88rem;
+      background: var(--surface-2);
+      color: var(--text);
+      border: 1px solid var(--border-strong);
+      border-radius: 9px;
+      box-shadow: none;
+    }
+
+    .quick-mark-btn:hover {
+      background: var(--surface-3);
+    }
+
+    textarea.pron-input {
+      min-height: 92px;
+      font-size: 1.06rem;
+      line-height: 1.6;
+      resize: vertical;
+    }
+
+    .action-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 12px;
+    }
+
+    .action-bar .btn-primary {
+      flex: 1 1 190px;
+      min-height: 46px;
+      padding: 11px 18px;
+      font-size: 0.98rem;
+    }
+
+    .result-box {
+      margin-top: 18px;
+      border-radius: 14px;
+      border: 1px solid var(--border-strong);
+      background: var(--surface-2);
+      padding: 18px 16px;
+    }
+
+    .verdict-banner {
+      border-radius: var(--radius-sm);
+      padding: 13px 15px;
+      margin-bottom: 12px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .verdict-banner.match {
+      background: var(--success-bg);
+      border-color: var(--success-border);
+      color: var(--success);
+    }
+
+    .verdict-banner.mismatch {
+      background: var(--danger-bg);
+      border-color: var(--danger-border);
+      color: var(--danger);
+    }
+
+    .verdict-banner.revealed {
+      background: var(--warn-bg);
+      border-color: var(--warn-border);
+      color: var(--warn);
+    }
+
+    .verdict-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .compare-line {
+      font-size: 0.93rem;
+      color: var(--text);
+      margin-top: 4px;
+      overflow-wrap: anywhere;
+      word-break: keep-all;
+    }
+
+    .self-grade-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding: 11px 13px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+    }
+
+    .self-grade-bar span {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-right: auto;
+    }
+
+    .detail-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 12px;
+      padding: 15px 16px;
+      margin-top: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .detail-section:nth-of-type(2) {
+      border-left-color: var(--accent-vermilion);
+    }
+
+    .detail-section:nth-of-type(3) {
+      border-left-color: var(--success);
+    }
+
+    .detail-section h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.45;
+    }
+
+    .detail-section p {
+      margin: 4px 0;
+      font-size: 0.92rem;
+    }
+
+    .detail-block {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 11px 13px;
+      margin-bottom: 10px;
+      font-size: 0.94rem;
+      font-weight: 700;
+      line-height: 1.72;
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
+
+    .detail-muted {
+      font-size: 0.91rem;
+      line-height: 1.76;
+      color: var(--text);
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+      margin-bottom: 10px;
+    }
+
+    .tip-box {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 10px 13px;
+      font-size: 0.88rem;
+      line-height: 1.68;
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
+
+    .conn-rule-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .conn-rule-row {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .conn-rule-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pos-chip {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      border: 1px solid rgba(30, 79, 216, 0.22);
+    }
+
+    .pos-chip.adj-i {
+      background: var(--accent-vermilion-soft);
+      color: var(--accent-vermilion);
+      border-color: rgba(194, 65, 12, 0.24);
+    }
+
+    .pos-chip.adj-na {
+      background: var(--warn-bg);
+      color: var(--warn);
+      border-color: var(--warn-border);
+    }
+
+    .pos-chip.noun {
+      background: var(--success-bg);
+      color: var(--success);
+      border-color: var(--success-border);
+    }
+
+    .conn-rule-body {
+      font-size: 0.91rem;
+      line-height: 1.68;
+      color: var(--text);
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
+
+    .vocab-section-head {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .vocab-section-head h3 {
+      margin: 0 !important;
+    }
+
+    .vocab-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 720px) {
+      .vocab-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .vocab-item {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 13px 14px;
+      font-size: 0.9rem;
+      line-height: 1.65;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .vocab-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 6px;
+      padding-bottom: 7px;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .vocab-item .v-jp {
+      font-weight: 800;
+      font-size: 1.12rem;
+      color: var(--text);
+    }
+
+    .vocab-item .v-rd {
+      font-size: 0.83rem;
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .vocab-item .v-kr {
+      font-size: 0.94rem;
+      color: var(--text);
+      font-weight: 700;
+      margin-top: 0;
+    }
+
+    .vocab-struct-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 9px 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 0.84rem;
+    }
+
+    .vocab-struct-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.55;
+    }
+
+    .vocab-struct-tag {
+      flex: 0 0 auto;
+      font-size: 0.74rem;
+      font-weight: 800;
+      padding: 2px 7px;
+      border-radius: 6px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      margin-top: 1px;
+    }
+
+    .vocab-struct-tag.side {
+      background: var(--surface-3);
+      color: var(--text);
+    }
+
+    .vocab-struct-text {
+      flex: 1;
+      min-width: 0;
+      color: var(--muted);
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
+
+    .vocab-mnemonic-box {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .vocab-mnemonic-caption {
+      flex: 1;
+      min-width: 0;
+      font-size: 0.85rem;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .vocab-mnemonic-label {
+      display: inline-block;
+      font-size: 0.74rem;
+      font-weight: 800;
+      color: var(--warn);
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      padding: 2px 7px;
+      border-radius: 6px;
+      margin-bottom: 4px;
+    }
+
+    .vocab-mnemonic-story {
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+      line-height: 1.68;
+    }
+
+    .hidden-mnemonics .vocab-mnemonic-box {
+      display: none !important;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .nav-bar button {
+      flex: 1;
+      min-height: 46px;
+      padding: 11px 16px;
+      font-size: 0.95rem;
+    }
+
+    .shortcut-note {
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      font-size: 0.79rem;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      max-width: calc(100vw - 24px);
+      text-align: center;
+      transform: translateX(-50%) translateY(16px);
+      background: var(--text);
+      color: var(--surface);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      z-index: 100;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  
+    .q-header {
+      justify-content: center;
+      text-align: center;
+    }
+    .prompt-box {
+      text-align: center;
+    }
+    .prompt-jp,
+    .prompt-kr,
+    .prompt-sub {
+      text-align: center;
+    }
+    .quick-marks {
+      justify-content: center;
+    }
+    .action-bar {
+      justify-content: center;
+    }
+    .nav-bar {
+      justify-content: center;
+    }
+    .shortcut-note {
+      text-align: center;
+    }
+    .auto-nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .auto-nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      color: var(--text);
+      font-weight: 800;
+      user-select: none;
+    }
+    .auto-nav-toggle input[type="checkbox"] {
+      width: 17px;
+      height: 17px;
+      accent-color: var(--primary);
+      cursor: pointer;
+    }
+    .auto-nav-delay {
+      width: auto;
+      min-height: 36px;
+      padding: 5px 10px;
+      font-size: 0.83rem;
+      font-weight: 700;
+    }
+    .full-review-banner {
+      background: linear-gradient(135deg, var(--primary-soft), var(--accent-vermilion-soft));
+      border: 1.5px solid var(--primary);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+    .full-review-banner h2 {
+      margin: 0 0 6px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .full-review-banner p {
+      margin: 0 0 12px;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+  
+    .all-q-panel {
+      margin-top: 16px;
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      padding: 18px 20px;
+    }
+    .all-q-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .all-q-header h2 {
+      margin: 0;
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+    .all-q-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      max-height: 540px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+    @media (max-width: 720px) {
+      .all-q-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .q-mini-card {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 4px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow-sm);
+      font-weight: 500;
+    }
+    .q-mini-card:hover {
+      border-color: var(--primary);
+      background: var(--accent-wash);
+    }
+    .q-mini-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .q-mini-jp {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .q-mini-pron {
+      font-size: 0.82rem;
+      color: var(--accent-vermilion);
+      font-weight: 700;
+    }
+    .q-mini-kr {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="card">
+      <div class="top-bar">
+        <div>
+          <span class="brand-eyebrow">JLPT N3 · SOLO PRONUNCIATION &amp; GRAMMAR</span>
+          <h1>JLPT N3 발음 &amp; 문법 자가학습기</h1>
+          <p>일본어 문장과 (한글 뜻)을 보고 올바른 발음을 입력해 보세요. (문법 001~137 전체 수록)</p>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn-secondary btn-sm" id="themeBtn">다크 모드</button>
+          <button type="button" class="btn-secondary btn-sm" id="exportBtn">기록 내보내기</button>
+          <label class="btn-secondary btn-sm" for="importFile" style="margin:0;cursor:pointer;">기록 가져오기</label>
+          <input type="file" id="importFile" accept=".json,application/json" class="hidden" />
+          <button type="button" class="btn-danger btn-sm" id="resetBtn">기록 초기화</button>
+          <button type="button" class="btn-secondary btn-sm" id="toggleAllListBtn">전체 216문항 목록 보기</button>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-card">
+          <span class="lbl">학습 완료</span>
+          <span class="val" id="statDone">0 / 0</span>
+        </div>
+        <div class="stat-card">
+          <span class="lbl">정답</span>
+          <span class="val" id="statOk" style="color:var(--success)">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="lbl">오답 복습 대상</span>
+          <span class="val" id="statBad" style="color:var(--danger)">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="lbl">현재 범위 문항</span>
+          <span class="val" id="statScope">0개</span>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="filter-bar">
+        <select id="scopeSelect" aria-label="범위 및 복습 모드 선택">
+          <option value="all">전체 문항 (001~137)</option>
+          <option value="001-050">001 ~ 050 문법</option>
+          <option value="051-103">051 ~ 103 문법</option>
+          <option value="104-137">104 ~ 137 문법</option>
+          <option value="wrong">현재 오답 복습 모드</option>
+          <option value="history_wrong">오답 이력 총복습 모드</option>
+          <option value="unsolved">미학습 문항만</option>
+        </select>
+
+        <select id="questionSelect" aria-label="문항 선택"></select>
+
+        <div class="search-col">
+          <input type="text" id="searchInput" placeholder="문법 번호, 문형, 발음, 뜻 검색..." />
+        </div>
+
+        <div class="rand-col">
+          <button type="button" class="btn-secondary" id="randomBtn" style="width:100%">랜덤 문항</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="card">
+      <div class="q-header">
+        <div class="btn-row">
+          <span class="grammar-pill" id="grammarBadge"></span>
+          <span id="posIndexText" style="font-size:0.84rem;color:var(--muted);font-weight:700;"></span>
+        </div>
+        <div class="btn-row">
+          <button type="button" class="btn-secondary btn-sm" id="speakBtn">예문 발음 듣기</button>
+          <span class="status-pill" id="statusBadge">미학습</span>
+        </div>
+      </div>
+
+      <section class="prompt-box">
+        <div class="prompt-jp jp" id="promptJp"></div>
+        <div class="prompt-kr" id="promptKr"></div>
+        <div class="prompt-sub" id="promptHint"></div>
+      </section>
+
+      <div class="quick-marks" aria-label="장음 및 발음 기호 입력">
+        <span style="font-size:0.78rem;color:var(--muted);align-self:center;margin-right:2px;">기호 넣기:</span>
+        <button type="button" class="quick-mark-btn" data-char="-">-</button>
+        <button type="button" class="quick-mark-btn" data-char="ー">ー</button>
+        <button type="button" class="quick-mark-btn" data-char="～">～</button>
+        <button type="button" class="quick-mark-btn" data-char="っ">っ</button>
+      </div>
+
+      <textarea
+        id="pronInput"
+        class="pron-input"
+        placeholder="올바른 발음을 입력하세요 (예: 한글 발음 또는 히라가나, 띄어쓰기·장음 '-' 생략 가능)"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+      ></textarea>
+
+      <div class="action-bar">
+        <button type="button" class="btn-primary" id="gradeBtn">발음 채점 및 해설 보기</button>
+        <button type="button" class="btn-secondary" id="revealBtn">정답 · 해설 바로 보기</button>
+        <button type="button" class="btn-secondary" id="clearBtn">입력 지우기</button>
+      </div>
+
+      <div class="auto-nav-bar" id="autoNavBar">
+        <label class="auto-nav-toggle" for="autoAdvanceToggle">
+          <input type="checkbox" id="autoAdvanceToggle" />
+          <span>정답 시 다음 문항 자동 이동</span>
+        </label>
+        <select id="autoAdvanceDelay" class="auto-nav-delay" aria-label="자동 이동 대기 시간">
+          <option value="800">0.8초 후 이동</option>
+          <option value="1200" selected>1.2초 후 이동</option>
+          <option value="1800">1.8초 후 이동</option>
+          <option value="2500">2.5초 후 이동</option>
+        </select>
+        <button type="button" class="btn-secondary btn-sm" id="historyReviewBtn">오답 이력 총복습 (0)</button>
+        <span id="autoNavCountdown" style="color:var(--primary);"></span>
+      </div>
+
+      <div id="fullSweepCompletionBox" class="full-review-banner hidden" aria-live="polite">
+        <h2 id="sweepTitle">전범위 학습 완료!</h2>
+        <p id="sweepDesc"></p>
+        <div class="btn-row" style="justify-content:center;">
+          <button type="button" class="btn-primary btn-sm" id="startHistoryReviewBtn">오답 이력 총복습 시작</button>
+          <button type="button" class="btn-secondary btn-sm" id="dismissSweepBtn">현재 화면 유지</button>
+        </div>
+      </div>
+
+      <section id="resultBox" class="result-box hidden" aria-live="polite">
+        <div id="verdictBanner" class="verdict-banner">
+          <div class="verdict-title" id="verdictTitle"></div>
+          <div class="compare-line" id="refPronLine"></div>
+          <div class="compare-line" id="userPronLine"></div>
+        </div>
+
+        <div class="self-grade-bar">
+          <span>자가 채점 반영:</span>
+          <button type="button" class="btn-success btn-sm" id="markCorrectBtn">정답 처리</button>
+          <button type="button" class="btn-danger btn-sm" id="markWrongBtn">오답 처리 (오답 복습 추가)</button>
+        </div>
+
+        <div class="detail-section">
+          <h3>1. 문법 내용 및 의미 · 뉘앙스</h3>
+          <div class="detail-block" id="expGrammarMeaning"></div>
+          <div class="detail-muted" id="expExtraNotes"></div>
+          <div class="tip-box" id="expMemoryTip"></div>
+        </div>
+
+        <div class="detail-section">
+          <h3>2. 접속 및 품사 변형 규칙</h3>
+          <div class="detail-block jp" id="expConnection"></div>
+          <div class="detail-muted" id="expInflection"></div>
+        </div>
+
+        <div class="detail-section">
+          <div class="vocab-section-head">
+            <h3>3. 문장 속 주요 일본어 단어 및 표현 뜻 (한자 핵심·좌우 분석 · 한자연상)</h3>
+            <button type="button" class="btn-secondary btn-sm" id="toggleMnemonicBtn">한자연상 연상기억 숨기기</button>
+          </div>
+          <div class="vocab-list" id="expVocabList"></div>
+        </div>
+      </section>
+
+      <div class="nav-bar">
+        <button type="button" class="btn-secondary" id="prevBtn">← 이전 문항 (←)</button>
+        <button type="button" class="btn-primary" id="nextBtn">다음 문항 (→)</button>
+      </div>
+
+      <div class="shortcut-note">
+        단축키: 입력창에서 <strong>Enter</strong>(줄바꿈 없이 채점) / <strong>Shift+Enter</strong>(줄바꿈) · 입력창 밖에서 <strong>Space</strong>(해설 열기/닫기), <strong>← / →</strong>(문항 이동) · 문장 더블클릭으로 발음 듣기
+      </div>
+    </main>
+  </div>
+
+  
+    <section id="allQuestionsPanel" class="all-q-panel hidden" aria-label="전체 문항 목록">
+      <div class="all-q-header">
+        <div>
+          <h2>전체 수록 문항 (001~137 문법 · 총 216예문)</h2>
+          <p style="margin:2px 0 0;font-size:0.84rem;color:var(--muted);">문항을 클릭하면 상단 학습기에서 바로 풀고 해설을 확인할 수 있습니다.</p>
+        </div>
+        <button type="button" class="btn-secondary btn-sm" id="closeAllListBtn">목록 닫기</button>
+      </div>
+      <div class="all-q-grid" id="allQuestionsGrid"></div>
+    </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const RAW_GRAMMAR_TEXT = `
+001 ～あいだ(に) ～동안(에), ～사이(에)
+접속: [동사 사전형 / ~ている / ~ない] + あいだ(に) / [명사 + の] + あいだ(に)
+
+・試験の間は静かにしていてください。
+(시켄노 아이다와 시즈카니 시테이테 쿠다사이)
+시험 보는 동안은 조용히 해 주세요.
+
+・昨日、寝ている間に地震がありました。
+(키노- 네테이루 아이다니 지신가 아리마시타)
+어제 자고 있는 동안에 지진이 있었습니다.
+
+
+002 いくら～ても(でも) 아무리～해도 / どんなに～ても(でも) 얼마나～해도
+접속: [동사 て형 + も] / [い형용사 어미 'い'→くても] / [な형용사 / 명사 + でも]
+
+・いくら食べても太らない体が欲しいです。
+(이쿠라 타베테모 후토라나이 카라다가 호시-데스)
+아무리 먹어도 살찌지 않는 몸을 원합니다.
+
+・いくら優秀な大学を出ていても、仕事が出来なければ意味がありません。
+(이쿠라 유-슈-나 다이가쿠오 데테이테모, 시고토가 데키나케레바 이미가 아리마센)
+아무리 우수한 대학을 나와도 일을 할 수 없으면 의미가 없습니다.
+
+
+003 ～一方(で) ～하는 한편(으로)
+접속: [동사 / い형용사 보통형] + 一方で / [な형용사 + な/である] + 一方で
+
+・彼は俳優として活躍する一方、監督としても高い評価を受けている。
+(카레와 하이유-토시테 카츠야쿠스루 잇뽀-, 칸토쿠토시테모 타카이 효-카오 우케테이루)
+그는 배우로서 활약하는 한편, 감독으로서도 높은 평가를 받고 있다.
+
+・仕事のない人がいる一方で、働きすぎて病気になる人もある。
+(시고토노 나이 히토가 이루 잇뽀-데, 하타라키스기데 뵤-키니 나루 히토모 아루)
+일이 없는 사람이 있는 한편으로, 과로로 병이 나는 사람도 있다.
+
+
+004 ～うちに / ～ないうちに ～하는 동안에 / ～하기 전에
+접속: [동사 사전형 / ~ている / ~ない형] + うちに / [명사 + の] + うちに
+
+・日本に来たばかりのときは日本語であいさつもできなかったのに、2年間いるうちに新聞も読めるようになりました。
+(니혼니 키타 바카리노 토키와 니혼고데 아이사츠모 데키나캇타노니, 니넨칸 이루 우치니 신분모 요메루요-니 나리마시타)
+일본에 막 왔을 때는 일본어로 인사도 할 수 없었는데, 2년간 있는 동안에 신문도 읽을 수 있게 되었습니다.
+
+・パパが帰ってこないうちに全部食べちゃおうよ。
+(파파가 카엣테 코나이 우치니 젠부 타베챠오-요)
+아빠가 돌아오기 전에 전부 먹어 버리자.
+
+
+005 ～(よ)うと思う ～하려고 생각하다
+접속: [동사 의지형] + と思う / と思っている
+
+・来年日本に行こうと思っています。
+(라이넨 니혼니 이코-토 오못테이마스)
+내년에 일본에 가려고 생각하고 있습니다.
+
+
+006 ～(よ)うとする ～하려고 하다
+접속: [동사 의지형] + とする
+
+・笑おうとしても歯が痛くて笑えなかった。
+(와라오-토시테모 하가 이타쿠테 와라에나캇타)
+웃으려고 해도 이가 아파서 웃을 수 없었다.
+
+
+007 ～おかげで / ～おかげだ ～덕분에 / ～덕분이다
+접속: [동사 / い형용사 보통형] + おかげで / [나형용사 + な] + おかげで
+
+・一生懸命勉強したおかげで、成績が上がりました。
+(잇쇼-켄메- 벤교-시타 오카게데, 세-세키가 아가리마시타)
+열심히 공부한 덕분에 성적이 올랐습니다.
+
+
+008 ～終わる 다～하다
+접속: [동사 마스형 어미 'ます' 탈락] + 終わる
+
+・食べ終わったらテーブルを片づけてください。
+(타베오왓타라 테-부루오 카타즈케테 쿠다사이)
+다 먹으면 테이블을 치워 주세요.
+
+
+009 ～がする (소리·냄새·맛 등이) 나다, (느낌·기분 등이) 들다
+접속: [명사(감각·신체적 느낌)] + がする
+
+・喫茶店に入るとコーヒーのいい匂いがした。
+(킷사텐니 하이루토 코-히-노 이이 니오이가 시타)
+커피숍에 들어서자 커피의 좋은 냄새가 났다.
+
+・この辺りは夜遅くまでバイクの音がします。
+(코노 아타리와 요루오소쿠마데 바이쿠노 오토가 시마스)
+이 부근은 밤늦게까지 바이크 소리가 납니다.
+
+
+010 ～がっている ～하게 여기고 있다, ～워 하고 있다
+접속: [い/な형용사 어미 변형] + がる / がっている
+
+・その話をしたら山田さんは不思議がっていた。
+(소노 하나시오 시타라 야마다산와 후시기갓테이타)
+그 이야기를 했더니 야마다 씨는 이상하게 여기고 있었다.
+
+
+011 ～かというと・～かといえば ～인가 하면, ～인가 하면
+접속: [보통형] + かというと / かといえば
+
+・なぜ日本に来たかというと、柔道に興味があったからです。
+(나제 니혼니 키타카토 이우토, 쥬-도-니 쿄-미가 앗타카라데스)
+왜 일본에 왔는가 하면 유도에 흥미가 있었기 때문입니다.
+
+・私はどちらかといえば、みんなでさわぐより一人でいるほうが好きです。
+(와타시와 도치라카토 이에바, 민나데 사와구요리 히토리데 이루 호-가 스키데스)
+나는 어느 쪽인가 하면, 여럿이서 떠들기 보다 혼자 있는 것을 더 좋아합니다.
+
+
+012 必ずしも～ない 반드시 ～인 것은 아니다
+접속: [必ずしも] + [부정형 문장 (~ない / ~とは言えない)]
+
+・高いレストランだからといって、料理が必ずしもおいしいとは言えない。
+(타카이 레스토란다카라토 잇테, 료-리가 카나라즈시모 오이시이토와 이에나이)
+비싼 레스토랑이라고 해서 요리가 반드시 맛있는 것은 아니다.
+
+
+013 ～かもしれない ～지도 모른다
+접속: [동사 / い형용사 보통형] + かもしれない / [나형용사 / 명사 원형(다 생략)] + かもしれない
+
+・彼が怒っているのは、私の言い方のせいかもしれない。
+(카레가 오콧테 이루노와 와타시노 이이카타노 세-카모 시레나이)
+그가 화가 난 것은 내 말투 때문일지도 모른다.
+
+
+014 ～から～にかけて ～부터 ～에 걸쳐서
+접속: [명사] + から + [명사] + にかけて
+
+・朝から夕方にかけて雨が降るでしょう。
+(아사카라 유-가타니 카케테 아메가 후루데쇼-)
+아침부터 저녁에 걸쳐서 비가 내리겠죠.
+
+
+015 ～代わりに ～대신에
+접속: [동사 / い형용사 보통형] + 代わりに / [나형용사 + な] + 代わりに / [명사 + の] + 代わりに
+
+・新聞を読む代わりにケータイでニュースを見ています。
+(신분오 요무 카와리니 케-타이데 뉴-스오 미테 이마스)
+신문을 읽는 대신에 휴대폰으로 뉴스를 보고 있습니다.
+
+
+016 ～きる / ～きれる / ～きれない 다～하다, 완전～하다 / 다～할 수 있다, 완전～할 수 있다 / 다～할 수 없다, 완전～할 수 없다
+접속: [동사 마스형 어미 탈락] + きる / きれる / きれない
+
+・明日のテストまでに100個の英単語を覚えきるのは難しそうだ。
+(아시타노 테스토마데니 햣코노 에-탄고오 오보에키루노와 무즈카시소-다)
+내일 테스트까지 100개의 영 단어를 다 외우는 것은 어려울 것 같다.
+
+・足を怪我したものの、フルマラソンを最後まで走りきれたのでよかった。
+(아시오 케가시타모노노, 후루마라손오 사이고마데 하시리키레타노데 요캇타)
+다리를 다쳤지만, 풀코스 마라톤을 마지막까지 완주할 수 있어서 다행이었다.
+
+・量が多すぎて食べきれません。
+(료-가 오오스기테 타베키레마센)
+양이 너무 많아서 다 먹을 수 없습니다.
+
+
+017 ～くする・～にする ～(하)게 하다, ～로 하다
+접속: [い형용사 어미 'い'→く] + する / [나형용사 / 명사 + に] + する
+
+・テレビの音を小さくしてください。
+(테레비노 오토오 치이사쿠 시테 쿠다사이)
+텔레비전 소리를 작게 해주세요.
+
+・子どもが寝ているので、静かにしてください。
+(코도모가 네테이루노데, 시즈카니 시테 쿠다사이)
+아이들이 자고 있으니, 조용히 해 주세요.
+
+
+018 ～くせに ～주제에, ～면서도
+접속: [동사 / い형용사 보통형] + くせに / [나형용사 + な] + くせに / [명사 + の] + くせに
+
+・彼はお金持ちのくせにけちだ。
+(카레와 오카네모치노 쿠세니 케치다)
+그는 부자이면서도 인색하다.
+
+・部長は仕事ができないくせに、部下には厳しい。
+(부쵸-와 시고토가 데키나이 쿠세니, 부카니와 키비시-)
+부장은 일을 못하는 주제에, 부하에게는 엄격하다.
+
+
+019 ～くなる・～になる ～해 지다, ～이 되다
+접속: [い형용사 어미 'い'→く] + なる / [나형용사 / 명사 + に] + なる
+
+・こんなにうるさい音楽を聞いていると頭がおかしくなる。
+(콘나니 우루사이 온가쿠오 키이테 이루토 아타마가 오카시쿠 나루)
+이렇게 시끄러운 음악을 듣고 있으면 머리가 이상해진다.
+
+・あの歌手は有名になる前にパン屋で働きました。
+(아노 카슈와 유-메-니 나루 마에니 판야데 하타라키마시타)
+저 가수는 유명해지기 전에 빵집에서 일했습니다.
+
+
+020 ～くらい／～くらいだ ～정도 / ～정도이다
+접속: [동사 / 형용사 / 명사 보통형] + くらい(ぐらい)
+
+・立って歩けないくらいの風が吹いていた。
+(탓테 아루케나이 쿠라이노 카제가 후이테 이타)
+서서 걸을 수 없을 정도의 바람이 불고 있었다.
+
+・あんな大きな事故だったのに生きているのが不思議なくらいだ。
+(안나 오오키나 지코닷타노니 이키테이루노가 후시기나 쿠라이다)
+그렇게 큰 사고였는데 살아 있는 것이 이상할 정도이다.
+
+
+021 ～こと ～일, ～것
+접속: [동사 / 형용사 / 명사 보통형] + こと
+
+・日本のことについて書いてある本をさがしています。
+(니혼노 코토니 츠이테 카이테 아루 혼오 사가시테 이마스)
+일본에 관해 쓰여 있는 책을 찾고 있습니다.
+
+・高山さんがこんど課長になるんだってね。うん、そのことならぼくもさっき聞いたよ。
+(타카야마산가 콘도 카쵸-니 나룬닷테네. 운, 소노 코토나라 보쿠모 삿키 키이타요)
+타카야마 씨가 이번에 과장이 된다고 하네. 응, 그 이야기라면 나도 아까 들었어.
+
+
+022 ～ことか ～던가, ～인지
+접속: [의문사 + 보통형] + ことか
+
+・第一希望の会社に就職が決まった。母が生きていたら、どんなに喜んでくれたことか。
+(다이이치키보-노 카이샤니 슈-쇼쿠가 키맛타. 하하가 이키테 이타라, 돈나니 요로콘데 쿠레타 코토카)
+제1희망의 회사에 취직이 정해졌다. 엄마가 살아 있었다면 얼마나 기뻐해 주었을 것인가.
+
+
+023 ～ことがある ～할 때가 있다, ～할 경우가 있다
+접속: [동사 사전형 / ない형] + ことがある
+
+・時々、駅で木村教授を見かけることがあります。
+(토키도키, 에키데 키무라쿄-쥬오 미카케루 코토가 아리마스)
+가끔 역에서 키무라 교수님을 본 적이 있습니다.
+
+・ストレスでたまに、夜眠れないことがあります。
+(스토레스데 타마니 요루네무레나이 코토가 아리마스)
+스트레스로 가끔 밤잠들 수 없는 일(경우)이 있습니다.
+
+
+024 ～ことから ～때문에, ～한 이유에서
+접속: [동사 / 형용사 보통형] + ことから / [나형용사 / 명사 + である] + ことから
+
+・ここは富士山が見えることから富士見ヶ丘と呼ばれている。
+(코코와 후지산가 미에루 코토카라 후지미가오카토 요바레테 이루)
+여기는 후지산이 볼 수 있는 곳이기 때문에 후지미가오카라고 불리고 있다.
+
+
+025 ～ことができる ～할 수 있다
+접속: [동사 사전형(기본형)] + ことができる
+
+・この会議室は予約した人だけが利用することができます。
+(코노 카이기시츠와 요야쿠시타 히토다케가 리요-스루 코토가 데키마스)
+이 회의실은 예약한 사람만이 이용하는 것이 가능합니다.
+
+
+026 ～ことで ～해서, ～로 인해
+접속: [동사 / 형용사 / 명사 보통형] + ことで
+
+・留学したことで、異なる文化に興味を持つようになった。
+(류-가쿠시타 코토데, 코토나루 분카니 쿄-미오 모츠요-니 낫타)
+유학했던 것으로 인해 다른 문화에 흥미를 가지게 되었다.
+
+
+027 ～ことにする ～하기로 하다
+접속: [동사 사전형 / ない형] + ことにする
+
+・健康のためにお酒は飲まないことにします。
+(켄코-노 타메니 오사케와 노마나이 코토니 시마스)
+건강을 위해서 술은 마시지 않기로 합니다.
+
+
+028 ～ことになる／～ことになっている ～하게 되다／～하기로 되어 있다
+접속: [동사 사전형 / ない형] + ことになる / ことになっている
+
+・この電車に乗らないと次の電車まで1時間も待つことになるよ。
+(코노 덴샤니 노라나이토 츠기노 덴샤마데 이치지칸모 마츠 코토니 나루요)
+이 전철을 타지 않으면 다음 전철까지 1시간이나 기다리게 돼.
+
+・日本では自動車は左側を走ることになっている。
+(니혼데와 지도-샤와 히다리가와오 하시루 코토니 낫테 이루)
+일본에서는 자동차는 왼쪽을 달리게 되어 있다.
+
+
+029 ～さえ ～조차
+접속: [명사] + さえ
+
+・忙しすぎて、ご飯を食べる時間さえない。
+(이소가시스기테, 고한오 타베루 지칸사에 나이)
+너무 바빠서 밥을 먹을 시간조차 없다.
+
+
+030 ～さえ～ば ～만～하면, ～만～이면
+접속: [동사 마스형 어간 + さえ + ば] / [명사 + さえ + なら/であれば]
+
+・この薬を飲みさえすれば、熱は下がるはずです。
+(코노 쿠스리오 노미사에 스레바, 네츠와 사가루 하즈데스)
+이 약을 먹기만 하면 열은 내려갈 겁니다.
+
+
+031 ～し ～하고, ～하니까
+접속: [동사 / 형용사 / 명사 보통형] + し
+
+・疲れたし、お腹もすいたし、もう帰ろう。
+(츠카레타시, 오나카모 스이타시, 모- 카에로-)
+피곤하고, 배도 고프니까 이제 돌아가자.
+
+
+032 ～しか～ない ～밖에～없다
+접속: [명사] + しか + 부정형 / [동사 사전형] + しかない
+
+・郵便局は5時までしか開いていません。
+(유-빈쿄쿠와 고지마데시카 아이테 이마센)
+우체국은 5시까지밖에 열려 있지 않습니다.
+
+
+033 ～すぎる 너무～하다, 지나치게～하다
+접속: [동사 마스형 어간] + すぎる / [い/な형용사 어미 탈락] + すぎる
+
+・このお茶は熱すぎて飲めない。
+(코노 오챠와 아츠스기테 노메나이)
+이 차는 너무 뜨거워서 마실 수 없다.
+
+
+034 ～ずに・～ないで ～하지 않고
+접속: [동사 ない형 어미 탈락] + ずに (※ する→せずに) / [동사 ない형] + で
+
+・勉強せずに、テストを受けた。
+(벤쿄-세즈니, 테스토오 우케타)
+공부하지 않고 시험을 보았다.
+
+
+035 ～せいか／～せいで ～탓인지／～탓에
+접속: [동사 / 형용사 보통형] + せいか/せいで / [나형용사 + な] + せいか/せいで
+
+・最近あまり見かけなかったが、彼女は気のせいかやせたようだ。
+(사이킨 아마리 미카케나캇타가, 카노죠와 키노 세-카 야세타요-다)
+최근 별로 보지는 못했지만, 그녀는 기분 탓인지 살이 빠진 것 같다.
+
+・風邪をひいているせいで何を食べてもおいしく感じない。
+(카제오 히이테 이루 세-데 나니오 타베테모 오이시쿠 칸지나이)
+감기에 걸려 있는 탓에 무엇을 먹어도 맛있게 느껴지지 않는다.
+
+
+036 ～そうだ ①～한 듯하다 ②～라고 한다
+접속: [① 양태: 동사/형용사 어간 + そうだ] / [② 전문: 보통형 + そうだ]
+
+・暗くなってきましたよ。もうすぐ、雨が降りそうですね。
+(쿠라쿠낫테 키마시타요. 모- 스구, 아메가 후리소-데스네)
+어두워졌어요. 이제 곧 비가 올 것 같네요.
+
+・今度の競技で優勝した選手の中から、オリンピック代表が選ばれるそうだ。
+(콘도노 쿄-기데 유-쇼-시타 센슈노 나카카라, 오린핏쿠 다이효가 에라바레루 소-다)
+이번 경기에서 우승한 선수 중에서 올림픽 대표가 선발된다고 한다.
+
+
+037 ～そうもない・～そうにもない ～할 것 같지도 않다
+접속: [동사 마스형 어미 탈락] + そうもない / そうにもない
+
+・原稿のしめきりまであと1週間では、とても間に合いそうもない。
+(겐코-노 시메키리마데 아토 잇슈-칸데와, 토테모 마니아이 소-모나이)
+원고 마감까지 앞으로 1주일로는 도저히 맞출 수 있을 것 같지도 않다.
+
+・林さんは寒いのが苦手だから今日は来そうにない。
+(하야시산와 사무이노가 니가테다카라 쿄-와 키소-니나이)
+하야시 씨는 추운 것을 싫어하기 때문에 오늘은 올 것 같지 않다.
+
+
+038 ～だけでなく / ～ばかりでなく / ～ばかりか / ～に限らず ～뿐만 아니라
+접속: [명사 / 보통형] + だけでなく / ばかりでなく / ばかりか / に限らず
+
+・あの工場は、設備だけでなく周りの環境もすばらしい。
+(아노 코-죠-와 세츠비다케데나쿠 마와리노 칸쿄-모 스바라시-)
+저 공장은 설비뿐만 아니라 주위 환경도 훌륭하다.
+
+・鈴木さんは私ばかりでなく妻にもプレゼントを持ってきた。
+(스즈키산와 와타시바카리데나쿠 츠마니모 푸레젠토오 못테키타)
+스즈키 씨는 나뿐만 아니라 아내에게도 선물을 가져왔다.
+
+・彼は仕事や財産ばかりか、家族まで捨てて家を出てしまった。
+(카레와 시고토야 자이산바카리카, 카조쿠마데 스테테 이에오 데테 시맛타)
+그는 일과 재산뿐만 아니라 가족까지 버리고 집을 나가 버렸다.
+
+・中年に限らず、肥満の人は糖尿病にかかる危険がある。
+(츄-넨니 카기라즈, 히만노 히토와 토-뇨-뵤-니 카카루 키켄가 아루)
+중년뿐만 아니라 비만인 사람은 당뇨병에 걸릴 위험이 있다.
+
+
+039 ～たことがある ～한 적이 있다
+접속: [동사 타형(과거형)] + ことがある
+
+・学生のころ、一時、家庭教師のアルバイトをしたことがある。
+(가쿠세-노 코로, 이치지, 카테-쿄-시노 아루바이토오 시타 코토가 아루)
+학생 시절에 한 때 가정교사 아르바이트를 한 적이 있다.
+
+
+040 ～だす ～하기 시작하다
+접속: [동사 마스형 어미 탈락] + だす
+
+・会議中に電話が鳴りだした。
+(카이기츄-니 덴와가 나리다시타)
+회의 중에 전화가 울리기 시작했다.
+
+
+041 ～だって ～(라)도, ～일지라도, ～누구든간에
+접속: [명사 / 의문사 / 동사 보통형] + だって
+
+・手伝うことがあるなら、いくらだって手伝います。
+(테츠다우 코토가 아루나라, 이쿠라 닷테 테츠다이마스)
+도울 것이 있다면 얼마든지 도울게요.
+
+・あの二人が結婚したと聞けば、だれだってびっくりするよ。
+(아노 후타리가 켓콘시타토 키케바, 다레닷테 빗쿠리 스루요)
+그 두 사람이 결혼했다고 들으면 누구라도(누구든지) 깜짝 놀랄 거야.
+
+
+042 たとえ～ても 설령(비록)～라고 해도
+접속: たとえ + [동사/형용사 て형 + も]
+
+・たとえ冗談でも、人を傷つけることを言ってはいけない。
+(타토에 죠-단데모, 히토오 키즈츠케루 코토오 잇테와 이케나이)
+설령 농담이라도 사람을 상처 주는 것을 말해서는 안 된다.
+
+
+043 ～ところだ 막～한 참이다
+접속: [동사 사전형 / ている / た형] + ところだ
+
+・みんなから旅行のお金を集め終わったところです。
+(민나카라 료코-노 오카네오 아츠메오왓타 토코로데스)
+모두에게 여행 돈을 다 모은 참입니다.
+
+
+044 ～とたんに ～하자마자, ～하는 순간
+접속: [동사 타형(과거형)] + とたんに
+
+・赤ちゃんはその男の人を見たとたんに泣き出した。
+(아카챤와 소노 오토코노 히토오 미타 토탄니 나키다시타)
+아기는 그 남자 사람을 보자마자 울기 시작했다.
+
+
+045 ～たばかり ～한 지 얼마 안 됨, 막～함
+접속: [동사 타형(과거형)] + ばかり
+
+・手術したばかりなのに、もう働くなんてとんでもない。
+(슈쥬츠시타 바카리 나노니, 모- 하타라쿠 난테 톤데모나이)
+수술한 지 얼마 안 됐는데, 벌써 일하다니 당치도 않다.
+
+
+046 ～たびに ～할 때마다
+접속: [동사 사전형] + たびに / [명사 + の] + たびに
+
+・このカードは使うたびにポイントがたまる。
+(코노 카-도와 츠카우 타비니 포인토가 타마루)
+이 카드는 사용할 때마다 포인트가 쌓인다.
+
+
+047 ～たほうがいい ～하는 편이 좋다
+접속: [동사 타형(과거형)] + ほうがいい
+
+・今日は早く家に帰ったほうがいいですよ。
+(쿄-와 하야쿠 우치에 카엣타 호-가 이이데스요)
+오늘은 일찍 집에 돌아가는 게 좋아요.
+
+
+048 ～まま ①～한 채로 ②～대로
+접속: [동사 타형/ない형] + まま / [명사 + の] + まま
+
+・電気を消さないまま、家を出てしまった。
+(덴키오 케사나이마마, 이에오 데테 시맛타)
+불을 끄지 않은 채로 집을 나와 버렸다.
+
+・気の向くまま、町を歩いた。
+(키노 무쿠 마마, 마치오 아루이타)
+마음 가는 대로 거리를 걸었다.
+
+
+049 ～ため(に) ①～하기 위해서 ②～때문에
+접속: [① 목적: 동사 사전형 / 명사 + の] + ために / [② 원인: 보통형 / 나형용사 + な] + ために
+
+・日本の会社で働くために、日本語を勉強しています。
+(니혼노 카이샤데 하타라쿠 타메니 니혼고오 벤쿄-시테 이마스)
+일본 회사에서 일하기 위해서 일본어를 공부하고 있습니다.
+
+・彼女が遅刻したため、計画を変更した。
+(카노죠가 치코쿠시타타메, 케-카쿠오 헨코-시타)
+그녀가 지각했기 때문에 계획을 변경했다.
+
+
+050 ～だらけ ～투성이
+접속: [명사] + だらけ
+
+・本棚がほこりだらけだったので掃除をしました。
+(혼다나가 호코리 다라케 닷타노데 소-지오 시마시타)
+책장이 먼지투성이였기 때문에 청소를 했습니다.
+
+
+051 ～たり～たり ①～했다 ～했다 ②～하거나 ～하거나
+접속: [동사 타형(た형)] + り + [동사 타형(た형)] + りする
+
+・本田さんはドアの前を行ったり来たりしています。
+(혼다산와 도아노 마에오 잇타리 키타리 시테 이마스)
+혼다 씨는 문 앞을 왔다 갔다 하고 있습니다.
+
+・友達と遊んだり、買い物をしたりします。
+(토모다치토 아손다리, 카이모노오 시타리 시마스)
+친구와 놀거나, 쇼핑을 하거나 합니다.
+
+
+052 ～だろうと思う ～(할) 것으로 생각하다
+접속: [보통형] + だろうと思う (※ 나형용사/명사는 'だ' 탈락)
+
+・税金が上がり、これから家計が厳しくなるだろうと思う。
+(제-킨가 아가리, 코레카라 카케이가 키비시쿠 나루다로-토 오모우)
+세금이 올라 앞으로 가계가 어려워질 것으로 생각한다.
+
+
+053 ～続ける 계속 ～하다
+접속: [동사 마스형 어미 'ます' 탈락] + 続ける
+
+・本田さんは夜遅くまで働き続けています。
+(혼다산와 요루오소쿠마데 하타라키 츠즈케테 이마스)
+혼다 씨는 밤늦게까지 계속 일하고 있습니다.
+
+
+054 ～って ①～라고 ②～란, ～은/는 ③～라고 하는, ～라는 ④～라고 한다, ～래
+접속: [보통형 / 명사] + って
+
+・彼女に映画に行こうって誘われた。
+(카노죠니 에-가니 이코-테 사소와레타)
+그녀가 영화를 보러 가자고 했다.
+
+・登山って本当に楽しいね。
+(토잔테 혼토-니 타노시-네)
+등산이란 정말 재미있네.
+
+・きのう、本田さんって人に会った。
+(키노-, 혼다산테 히토니 앗타)
+어제 혼다 씨라는 사람을 만났다.
+
+・スミスさんはもうアメリカに帰ったって。
+(스미스산와 모- 아메리카니 카엣탓테)
+스미스 씨는 벌써 미국에 돌아갔대.
+
+
+055 ～つもりだ ～할 생각이다, ～할 작정이다
+접속: [동사 사전형 / ない형] + つもりだ
+
+・試験が終わるまでテレビは見ないつもりです。
+(시켄가 오와루마데 테레비와 미나이 츠모리데스)
+시험이 끝날 때까지 텔레비전은 보지 않을 생각입니다.
+
+
+056 ～てある ～해져 있다
+접속: [타동사 て형] + ある
+
+・飛行機のきっぷは予約してあるから安心です。
+(히코-키노 킷푸와 요야쿠시테 아루카라 안신데스)
+비행기표는 예약되어 있으니까 안심입니다.
+
+
+057 ～ている ①～하고 있다 ②～해져 있다
+접속: [동사 て형] + いる
+
+・強い風が吹いている。
+(츠요이 카제가 후이테 이루)
+강한 바람이 불고 있다.
+
+・駅の周りがすっかり変わっているのを見て驚いた。
+(에키노 마와리가 슷카리 카왓테 이루노오 미테 오도로이타)
+역 주변이 완전히 바뀌어 있는 것을 보고 놀랐다.
+
+
+058 ～でいい ～로 좋다, ～라도 괜찮다
+접속: [명사] + でいい
+
+・時間がないから、朝ごはんはコーヒーでいいよ。
+(지칸가 나이카라 아사고한와 코-히-데 이이요)
+시간이 없으니까 아침밥은 커피로 괜찮아.
+
+
+059 ～ておく ～해 놓다, ～해 두다
+접속: [동사 て형] + おく
+
+・だれにも会いたくないの。一人にしておいて！
+(다레니모 아이타쿠 나이노. 히토리니 시테 오이테)
+아무도 만나고 싶지 않아. 혼자 놔 둬!
+
+・出かける前に新聞を読んどこう。
+(데카케루 마에니 신분오 욘도코-)
+외출하기 전에 신문을 읽어 둬야지.
+
+
+060 ～てから ～하고 나서, ～한 뒤 / ～あとで ～한 후에
+접속: [동사 て형] + から / [동사 타형(た형) / 명사 + の] + あとで
+
+・早くお風呂に入りなさい。うん、宿題終わってからね。
+(하야쿠 오후로니 하이리나사이. 운, 슈쿠다이오왓테카라네)
+빨리 목욕해라. 응, 숙제 마치고 나서.
+
+・試合のあとで、選手たちは記念写真を撮りました。
+(시아이노 아토데, 센슈타치와 키넨샤신오 토리마시타)
+시합 후에 선수들은 기념 사진을 찍었습니다.
+
+
+061 ～てからでないと ～하고 나서가 아니면, ～한 후가 아니면
+접속: [동사 て형] + からでないと
+
+・20歳になってからでないとお酒は飲めません。
+(하타치니 낫테 카라데나이토 오사케와 노메마센)
+스무 살이 된 후가 아니면 술은 마실 수 없습니다.
+
+
+062 ～てくる ①～해 오다 ②～해지다 ③～하기 시작하다 / ～ていく ①～해 가다 ②～해지다
+접속: [동사 て형] + くる / いく
+
+・パンは近くの店で買ってきます。
+(판와 치카쿠노 미세데 캇테 키마스)
+빵은 근처 가게에서 사옵니다.
+
+・日が短くなってきましたね。5時にはもう暗いですよ。
+(히가 미지카쿠낫테 키마시타네. 고지니와 모- 쿠라이데스요.)
+해가 짧아졌네요. 5시에는 이미 어두워요.
+
+・花が咲いてきたら、水をたくさんやってください。
+(하나가 사이테 키타라, 미즈오 타쿠산 얏테 쿠다사이)
+꽃이 펴 오면 물을 많이 주세요.
+
+・コンビニで飲み物を買っていきます。
+(콘비니데 노미모노오 캇테 이키마스)
+편의점에서 음료를 사서 갑니다.
+
+・もう3月だから、だんだん暖かくなっていくでしょう。
+(모- 산가츠다카라, 단단 아타타카쿠 낫테 이쿠 데쇼-)
+벌써 3월이니까 점점 따뜻해져 가겠지요.
+
+
+063 ～てしまう ～해 버리다, ～하고 말다
+접속: [동사 て형] + しまう
+
+・どうして彼女がひとりで行ってしまったのか私は知らない。
+(도-시테 카노죠가 히토리데 잇테 시맛타노카 와타시와 시라나이)
+왜 그녀가 혼자서 가 버렸던 것인지 나는 모르겠다.
+
+・困っちゃったなあ。自動車が動かなくなっちゃった。
+(코맛챳타나-. 지도-샤가 우고카나쿠 낫챳타)
+곤란해졌어. 자동차가 움직이지 않게 되어버렸어.
+
+
+064 ～てたまらない ～해서 견딜 수 없다, 너무～하다
+접속: [동사/형용사 て형] + たまらない
+
+・夜中にお腹が空いてたまらなかったのでカップラーメンを食べてしまいました。
+(요나카니 오나카가 스이테 타마라 나캇타노데 캇푸라-멘오 타베테 시마이마시타)
+밤중에 배가 고파서 견딜 수 없었기 때문에 컵라면을 먹어 버렸습니다.
+
+・明日はピアノの発表会ですが、うまく弾けるか不安でたまりません。
+(아시타와 피아노노 핫표-카이데스가, 우마쿠 히케루카 후안데 타마리마센)
+내일은 피아노 발표회지만, 잘 칠 수 있을지 불안해서 견딜 수가 없습니다.
+
+
+065 ～てほしい ～해 주었으면 한다
+접속: [동사 て형] + ほしい
+
+・父に車を使わせてほしいと頼んだが、断られてしまった。
+(치치니 쿠루마오 츠카와세테 호시-토 타논다가, 코토와라레테 시맛타)
+아버지에게 자동차를 쓰게 해 줬으면 하고 부탁했는데, 거절당하고 말았다.
+
+・そんなに怒らないでほしい。
+(손나니 오코라나이데 호시-)
+그렇게 화내지않길 바래
+
+
+066 ～てみる (시험 삼아)～해 보다
+접속: [동사 て형] + みる
+
+・彼女に言いたいことがあるならとりあえず言って、反応を見てみたら？
+(카노죠니 이이타이 코토가 아루나라 토리아에즈 잇테, 한노-오 미테 미타라?)
+그녀에게 말 하고 싶은 것이 있다면 우선 말을 하고, 반응을 봐 보면?
+
+・よく調べてみるとエンジンの一部に損傷があった。
+(요쿠 시라베테 미루토 엔진노 이치부니 손쇼-가 앗타)
+잘 살펴 보니까 엔진 일부에 손상이 있었다.
+
+
+067 ～ても ①～하더라도 ②～해도
+접속: [동사/형용사 て형] + も / [나형용사/명사 + でも]
+
+・この急カーブではいつ事故が起きてもおかしくない。
+(코노 큐-카-부데와 이츠 지코가 오키테모 오카시쿠 나이)
+이 급커브에서는 언제 사고가 일어나도 이상하지 않다.
+
+・バスを利用したくても利用できない人がいる。
+(바스오 리요-시타쿠테모 리요-데키나이 히토가 아루)
+버스를 이용하고 싶어도 이용할 수 없는 사람이 있다.
+
+
+068 ～てもいい ～해도 좋다 / ～てもかまわない ～해도 상관없다(괜찮다)
+접속: [동사/형용사 て형] + もいい / もかまわない
+
+・ここでたばこを吸ってもかまいませんか。ええ、かまいませんよ。どうぞ。
+(코코데 타바코오 슷테모 카마이 마센카. 에에, 카마이마센요. 도-조)
+여기서 담배를 피워도 괜찮습니까? 네, 상관없어요. 피우세요.
+
+・何時でもいいから、今日電話してください。
+(난지데모 이이카라, 쿄-덴와시테 쿠다사이)
+몇 시라도 좋으니까 오늘 전화 주세요.
+
+
+069 ～ても仕方がない ～해도 하는(어쩔) 수 없다, ～해도 소용없다
+접속: [동사/형용사 て형] + 仕方がない
+
+・もうみんな知っているんだから隠してもしかたがない。
+(모- 민나 싯테 이룬다카라 카쿠시테모 시카타가 나이)
+이미 모두 알고 있으니까 숨겨도 소용이 없다.
+
+
+070 ～てばかりいる ～하기만 하다, ～만 하고 있다
+접속: [동사 て형] + ばかりいる
+
+・弟は家でゲームしてばかりいる。
+(오토-토와 이에데 게-무시테 바카리 이루)
+남동생은 집에서 게임하기만 있다.
+
+
+071 ～てよかった ～해서 다행이다
+접속: [동사/형용사 て형] + よかった
+
+・かさを持って来てよかったね。雨が降り出したよ。
+(카사오 못테 키테 요캇타네. 아메가 후리다시타요.)
+우산을 갖고 오길 잘 했네. 비가 내리기 시작했어.
+
+
+072 ～という ～라는, ～라고 하는
+접속: [명사 / 문장] + という
+
+・父は姉が大学に合格したという知らせを聞いて、今にも泣きそうな顔をしていた。
+(치치와 아네가 다이가쿠니 코-카쿠시타토 이우 시라세오 키이테, 이마니모 나키소-나 카오오 시테 이타)
+아빠는 언니가 대학에 합격했다는 말하는 소식을 듣고, 당장이라도 울 것 같은 얼굴을 하고 있었다.
+
+・彼は「マル」という犬を飼っています。
+(카레와 마루토 이우 이누오 캇테 이마스)
+그는 '마루'라는 개를 기르고 있습니다.
+
+
+073 ～というと・～といえば ～라고 하면
+접속: [명사 / 보통형] + というと / といえば
+
+・北海道というとやはりカニですね。
+(핫카이도-토 이우토 야하리 카니데스네)
+홋카이도라고 하면 역시 게죠.
+
+・秋と言えば食欲の秋です。
+(아키토 이에바 쇼쿠요쿠노 아키데스)
+가을이라고 하면 식욕의 가을이죠.
+
+
+074 ～というのは ～이라는 것은, ～란
+접속: [명사 / 보통형] + というのは
+
+・「下水」というのは、台所などで使った汚れた水のことである。
+(게스이토 이우노와, 다이도코로나도데 츠캇타 요고레타 미즈노 코토데 아루)
+'하수'라는 것은, 부엌 등에서 사용한 더러워진 물을 말한다.
+
+
+075 ～とおりに ～대로
+접속: [동사 사전형/타형] + とおりに / [명사 + の] + とおりに (※ 명사 직결 시 どおり)
+
+・母の言うとおりに部屋を片付けました。
+(하하노 이우 토오리니 헤야오 카타즈케마시타)
+엄마가 말한 대로 방을 정리했습니다.
+
+・説明書のとおりに組み立ててください。
+(세츠메-쇼노 토오리니 쿠미타테테 쿠다사이)
+설명서대로 조립해 주세요.
+
+・会議は予定どおり午後2時から始まります。
+(카이기와 요테-도오리 고고 니지카라 하지마리마스)
+회의는 예정대로 오후 2시부터 시작됩니다.
+
+
+076 ～と思う ～라고 생각하다
+접속: [보통형] + と思う
+
+・すもうはおもしろいと思います。
+(스모-와 오모시로이토 오모이마스)
+스모는 재미있다고 생각합니다.
+
+
+077 ～とか～とか ～든가～든가
+접속: [명사 / 보통형] + とか
+
+・焼肉とか中華料理とか脂っこい料理は好きじゃありません。
+(야키니쿠토카 츄-카료-리토카 아부랏코이 료-리와 스키쟈 아리마센)
+야키니쿠라든가 중화요리라든가 기름진 요리는 좋아하지 않습니다.
+
+・部屋を選ぶ条件は駅から近いとか、家賃が安いとか人によって様々です。
+(헤야오 에라부 죠-켄와 에키카라 치카이토카, 야친가 야스이토카 히토니 욧테 사마자마데스)
+방을 고르는 조건은 역에서 가깝다든가, 집세가 저렴하다든가 사람에 따라 다양합니다.
+
+
+078 ～ところだ／～ているところだ ～하려는 참이다／～하고 있는 중이다
+접속: [동사 사전형] + ところだ / [동사 ている] + ところだ
+
+・早くおいで。今、番組が始まるところだよ。
+(하야쿠 오이데. 이마, 반구미가 하지마루 토코로다요.)
+빨리 와. 지금 방송이 막 시작되려는 참이야.
+
+・オーケストラのメンバーは、今それぞれの楽器の音を合わせているところです。
+(오-케스토라노 멘바-와, 이마 소레조레노 갓키노 오토오 아와세테 이루 토코로데스)
+오케스트라 멤버는 지금 각각의 악기 음을 맞추고 있는 중입니다.
+
+
+079 ～としたら・～とすれば・～とすると ～라고 (가정)하면
+접속: [보통형] + としたら / とすれば / とすると
+
+・宝くじで1億円当たったとしたら、あなたは何に使いますか。
+(다카라쿠지데 이치오쿠엔 아탓타토시타라, 아나타와 나니니 츠카이 마스카)
+복권으로 1억 엔 당첨되었다고 하면, 당신은 무엇에 사용하겠습니까?
+
+・駅まで歩いて行くとすれば、何分ぐらいかかりますか。
+(에키마데 아루이테 이쿠토 스레바, 난분 구라이 카카리마스카)
+역까지 걸어간다고 하면 몇 분 정도 걸립니까?
+
+・あのとき、始めていたとすると、今ごろはもう終わっているでしょう。
+(아노 토키, 하지메테 이타토 스루토, 이마고로와 모- 오왓테 이루 데쇼-)
+그 때 시작하고 있었다고 한다면, 지금쯤은 이미 끝나 있을 것입니다.
+
+
+080 ～として ～로서
+접속: [명사] + として
+
+・私はボランティアとして働きたいと思います。
+(와타시와 보란티아토시테 하타라키 타이토 오모이마스)
+나는 자원봉사자로서 일하고 싶다고 생각합니다.
+
+
+081 ～としても ～라고 해도
+접속: [보통형] + としても
+
+・今回の試験にまた落ちたとしても、あきらめないつもりです。
+(콘카이노 시켄니 마타 오치타 토시테모 아키라메나이 츠모리데스)
+이번회 시켄에 또 떨어진다해도 포기하지 않을 생각입니다.
+
+
+082 途中 도중
+접속: [동사 사전형 / 명사 + の] + 途中
+
+・彼女が途中までいっしょに来てくれた。
+(카노죠가 토츄-마데 잇쇼니 키테 쿠레타)
+그녀가 도중까지 함께 와 주었다.
+
+
+083 ～とともに ①～와 함께 ②～하면서, ～와 더불어
+접속: [명사] + とともに / [동사 사전형] + とともに
+
+・部長とともに会議に出席しました。
+(부쵸-토 토모니 카이기니 슛세키시마시타)
+부장님과 함께 회의에 참석했습니다.
+
+・年を取るとともに体力が落ちてきた。
+(토시오 토루토 토모니 타이료쿠가 오치테키타)
+나이를 먹음에 따라 체력이 떨어져왔다.
+
+・技術の発展とともに、生活は便利になった。
+(기쥬츠노 핫텐토 토모니 세-카츠와 벤리니 낫타)
+기술의 발전과 더불어 생활은 편리해졌다.
+
+
+084 ～な ～하지 마라
+접속: [동사 사전형] + な
+
+・きたない手で品物にさわるな。
+(키타나이 테데 시나모노니 사와루나)
+더러운 손으로 물건에 손대지 마라.
+
+
+085 ～ないといけない・～なくてはいけない・～なければならない ～하지 않으면 안 된다, ～해야 한다
+접속: [동사 ない형] + といけない / なくてはいけない / なければならない (※ なきゃならなくなった)
+
+・このジーパンは洗濯しないといけない。
+(코노 지-판와 센타쿠 시나이토 이케나이)
+이 청바지는 세탁하지 않으면 안 된다.
+
+・今日は8時までに家に帰らなくてはいけません。
+(쿄-와 하치지마데니 이에니 카에라나쿠테와 이케마센)
+오늘은 8시까지 집에 돌아가야 합니다.
+
+・1週間を1万円で過ごさなきゃならなくなったんだ。
+(잇슈-칸오 이치만엔데 스고사나캬 나라나쿠 낫탄다)
+1주간을 1만 엔으로 지내지 않으면 안 되게 되었어.
+
+
+086 ～直す 다시～하다, 고쳐～하다
+접속: [동사 마스형 어미 'ます' 탈락] + 直す
+
+・その美術館はすっかり建て直されて、一般に公開された。
+(소노 비쥬츠칸와 슷카리 타테 나오사레테, 잇판니 코-카이사레타)
+그 미술관은 완전히 새로 지어져서 일반에게 공개되었다.
+
+
+087 ～ながら ①～하면서 ②～이지만, ～이면서
+접속: [동사 마스형 어미 탈락 / 형용사 / 명사] + ながら
+
+・ポップコーンを食べながら、映画を見ます。
+(폿푸코-온오 타베나가라 에-가오 미마스)
+팝콘을 먹으면서 영화를 봅니다.
+
+・残念ながらパーティーには出席できません。
+(잔넨나가라 파-티-니와 슛세키데키마센)
+유감이지만 파티에는 출석할 수 없습니다.
+
+
+088 ～なんか ～같은 건, ～따위
+접속: [명사 / 조사] + なんか
+
+・君なんかに負けるものか。
+(키미난카니 마케루 모노카)
+너 따위에게 질까 보냐!
+
+・ワンさん、日本語が上手になりましたね。私なんかまだまだです。
+(완산, 니혼고가 죠-즈니 나리마시타네. 와타시난카 마다마다데스)
+왕 씨, 일본어가 능숙해졌네요. 저는 아직 멀었어요.
+
+
+089 ～なんて ①～라니, ～하다니 ②～따위 ③～같은 거
+접속: [명사 / 보통형] + なんて
+
+・彼女が大学を辞めていたなんて。
+(카노죠가 다이가쿠오 야메테 이타 난테)
+그녀가 대학을 그만두었다니.
+
+・君なんて会社からいなくなっても全然問題ない。
+(키미난테 카이샤카라 이나쿠 낫테모 젠젠 몬타이나이)
+너 따위 회사에서 사라져도 전혀 문제없어.
+
+・新婚旅行はヨーロッパなんてどうかな。
+(신콘료코-와 요-롯파난테 도-카나)
+신혼여행은 유럽 같은 데 어떨까?
+
+
+090 ～に関して ～에 대해서, ～에 관련해서
+접속: [명사] + に関して / に関する
+
+・その事故に関して、現在調査中です。
+(소노 지코니 칸시테, 겐자이 쵸-사츄-데스)
+그 사고에 관해서 현재 조사 중입니다.
+
+
+091 ～にくい ～하기 어렵다, 좀처럼～않다
+접속: [동사 마스형 어미 'ます' 탈락] + にくい
+
+・この紙袋はやぶれにくい。
+(코노 카미후쿠로와 야부레 니쿠이)
+이 종이 봉투는 잘 찢어지지 않는다.
+
+
+092 ～に比べ(て)／～と比べ(て) ～에 비해(서)／～와 비교해(서)
+접속: [명사] + に比べて / と比べて
+
+・野菜は、ほかの食料品にくらべ価格の変動がはげしい。
+(야사이와, 호카노 쇼쿠료-힌니 쿠라베 카카쿠노 헨도-가 하게시-)
+채소는 다른 식료품에 비해 가격 변동이 심하다.
+
+・今年は去年と比べると雨が少ない。
+(코토시와 쿄넨토 쿠라베루토 아메가 스쿠나이)
+올해는 작년과 비교하면 비가 적다.
+
+
+093 ～に加えて ～에 더해서
+접속: [명사] + に加えて
+
+・このスポーツジムでは入会金に加え、月利用料として2000円かかります。
+(코노 스포-츠지무데와 뉴-카이킨니 쿠와에, 츠키리요-료-토시테 니센엔 카카리마스)
+이 체육관에서는 입회금에 더해, 월 이용료로서 2000엔이 듭니다.
+
+
+094 ～にしたがって・～にしたがい ～함에 따라(서), ～에 따라
+접속: [동사 사전형 / 명사] + にしたがって / にしたがい
+
+・収入が増えるにしたがって、税金も多くなります。
+(슈-뉴-가 후에루니 시타갓테, 제-킨모 오오쿠 나리마스)
+수입이 늘어남에 따라 세금도 많아집니다.
+
+
+095 ～にする ～로 (정)하다
+접속: [명사] + にする
+
+・ええと、ぼくは、カレーライスにします。
+(에에토, 보쿠와, 카레-라이스니 시마스)
+음, 저는 카레라이스로 하겠습니다.
+
+
+096 ～に対して ①～에 대해, ～에게 ②～에 비해
+접속: [명사] + に対して / に対する / [보통형 + の] + に対して
+
+・政府は野菜に対する農薬の規制を強めた。
+(세-후와 야사이니 타이스루 노-야쿠노 키세-오 츠요메타)
+정부는 채소에 대한 농약 규제를 강화했다.
+
+・姉はおとなしい性格なのに対して、妹は活発だ。
+(아네와 오토나시- 세-가쿠나노니 타이시테, 이모-토와 캇파츠다)
+언니는 얌전한 성격인 데 반해, 여동생은 활발하다.
+
+
+097 ～に違いない ～임에 틀림없다, ～인 것이 분명하다
+접속: [보통형] + に違いない (※ 나형용사/명사는 'だ' 탈락)
+
+・あの男が犯人に違いない。
+(아노 오토코가 한닌니 치가이나이)
+저 남자가 범인임에 틀림없어.
+
+
+098 ～について ～에 대해서
+접속: [명사] + について / についての
+
+・私達は将来の希望について話し合いました。
+(와타시타치와 쇼-라이노 키보-니 츠이테 하나시아이마시타)
+우리들은 장래 희망에 대해서 이야기를 나누었습니다.
+
+
+099 ～にとって ～에게 있어, ～에게
+접속: [명사] + にとって
+
+・そんな失敗は、研究を指導した私にとっても嬉しいことじゃありません。
+(손나 싯파이와 켄큐-오 시도-시타 와타시니 톳테모 우레시- 코토쟈 아리마센)
+그런 실패는 연구를 지도한 내게 있어서도 즐거운 일이 아닙니다.
+
+
+100 ～には ①～하려면 ②～에게는
+접속: [동사 사전형] + には / [명사] + には
+
+・大阪駅に行くにはどの電車に乗ればいいですか。
+(오-사카에키니 이쿠니와 도노 덴샤니 노레바 이이데스카)
+오사카역에 가려면 어느 전철을 타면 되나요?
+
+・自転車は3歳の子どもにはまだ難しい。
+(지텐샤와 산사이노 코도모니와 마다 무즈카시-)
+자전거는 3살 아이에게는 아직 어렵다.
+
+
+101 ～に反して ～에 반해서
+접속: [명사] + に反して / に反する
+
+・予想に反して多くの人が集まった。
+(요소-니 한시테 오오쿠노 히토가 아츠맛타)
+예상에 반해서 많은 사람이 모였다.
+
+
+102 ～によって・～により／～による ～에 의해, ～에 따라／～에 의한, ～에 따른
+접속: [명사] + によって / により / による
+
+・訪問販売によるトラブルは非常に多い。
+(호-몬한바이니 요루 토라부루와 히죠-니 오오이)
+방문 판매에 의한 트러블은 매우 많다.
+
+・その話を聞けば、人によっては怒るかもしれません。
+(소노 하나시오 키케바, 히토니 욧테와 오코루 카모 시레마센)
+그 이야기를 들으면 사람에 따라서는 화낼지도 모릅니다.
+
+
+103 ～の ～것
+접속: [동사/형용사 보통형] + の
+
+・車が近づいてくるのが聞こえた。
+(쿠루마가 치카즈이테 쿠루노가 키코에타)
+차가 가까이 오는 것이 들렸다.
+
+
+104 ～のに ①～인데도 ②～하는 데
+접속: [동사/い형용사 보통형, な형용사/명사 + な] + のに (※ な형용사/명사의 현재 보통형 'だ'는 'な'로 변형)
+
+・待ち合わせの時間は9時なのに、彼はまだ来ません。
+(마치아와세노 지칸와 쿠지나노니, 카레와 마다 키마센.)
+만나기로 한 시간은 9시인데도, 그는 아직 오지 않습니다.
+
+・日本からイギリスに行くのに飛行機で12時間くらいかかります。
+(니혼카라 이기리스니 이쿠노니 히코-키데 쥬-니지칸 쿠라이 카카리마스.)
+일본에서 영국에 가는 데 비행기로 12시간 정도 걸립니다.
+
+
+105 ～のだ・～んだ ～인 것이다, ～이다
+접속: [동사/い형용사 보통형, な형용사/명사 + な] + のだ・んだ (※ 회화체에서는 '～んだ'를 주로 사용)
+
+・寒い日が続いたから花がさかないのだ。
+(사무이히가 츠즈이타카라 하나가 사카나이노다)
+추운 날이 계속되었기 때문에 꽃이 피지 않는 것이다.
+
+・歯が痛くて眠れなかったんだ。
+(하가 이타쿠테 네무레나캇탄다)
+이가 아파서 잠들 수 없었다.
+
+
+106 ～はじめる ～하기 시작하다
+접속: [동사 ます형(어근)] + はじめる (※ ます형에서 ます를 떼고 결합)
+
+・トンネルを出たあたりから道が悪くなりはじめた。
+(톤네루오 데타 아타리카라 미치가 와루쿠 나리 하지메타)
+터널을 나온 부근부터 길이 나빠지기 시작했다.
+
+
+107 ～はずがない ～할 리가 없다
+접속: [동사/い형용사 보통형, な형용사 + な, 명사 + の] + はずがない
+
+・こんな時間に中山さんが家にいるはずがないよ。
+(콘나 지칸니 나카야마산가 이에니 이루 하즈가나이요)
+이런 시간에 나카야마 씨가 집에 있을 리가 없어.
+
+
+108 ～はずだ ～할 것이다, ～일 터이다
+접속: [동사/い형용사 보통형, な형용사 + な, 명사 + の] + はずだ
+
+・山田さんは今日出かけると言っていたから、留守のはずです。
+(야마다산와 쿄- 데카케루토 잇테 이타카라 루스노 하즈데스)
+야마다 씨는 오늘 외출한다고 말했었으니까, 부재중일 것입니다.
+
+
+109 ～ば～ほど ～하면 ~할수록
+접속: [동사/형용사 가정형(~ば)] + [동사/형용사 원형] + ほど
+
+・この歌は聞けば聞くほど好きになります。
+(코노 우타와 키케바 키쿠 호도 스키니 나리마스)
+이 노래는 들으면 들을수록 좋아집니다.
+
+
+110 ～べきだ ～해야 한다
+접속: [동사 기본형] + べきだ (※ する는 するべきだ 또는 すべきだ 가능)
+
+・借りたお金は必ず返すべきです。
+(카리타 오카네와 카나라즈 카에스 베키데스)
+빌린 돈은 반드시 돌려줘야 합니다.
+
+
+111 ～ほど～ない ～만큼 ~하지 않다
+접속: [명사] + ほど + 부정형(ない/ありません)
+
+・この学校で山田さんほど頭のいい人はいないだろう。
+(코노 갓코-데 야마다산 호도 아타마노 이이 히토와 이나이 다로-)
+이 학교에서 야마다 씨만큼 머리가 좋은 사람은 없을 것이다.
+
+
+112 ～みたいだ ①~인 것 같다, ~인 듯하다 ②~같다
+접속: [동사/い형용사 보통형, な형용사 어간, 명사] + みたいだ (※ な형용사/명사는 だ 탈락)
+
+・頭が痛いし、熱もあるし、かぜをひいたみたいだ。
+(아타마가 이타이시, 네츠모 아루시, 카제오 히이타 미타이다.)
+머리가 아프고, 열도 있고 감기에 걸린 것 같다.
+
+・その子は小さな猫みたいだ。
+(소노 코와 치이사나 네코 미타이다)
+그 아이는 작은 고양이 같다.
+
+
+113 ～やすい ~하기 쉽다, ~하기 편하다
+접속: [동사 ます형(어근)] + やすい
+
+・私の田舎は空気はきれいだし、野菜や魚はおいしいし、とても住みやすいところです。
+(와타시노 이나카와 쿠-키와 키레이다시, 야사이 야 사카나와 오이시이시, 토테모 스미 야스이 토코로데스)
+나의 시골은 공기는 깨끗하고, 채소나 생선은 맛있고, 무척 살기 편한 곳입니다.
+
+
+114 ～ようだ ①~인 것 같다 ②~같다 / ～ような ～인 듯한 / ～ように ～같이, ~처럼
+접속: [동사·い형용사 보통형 / な형용사 + な / 명사 + の] + ようだ·ような·ように
+
+・玄関のベルが鳴った。だれか来たようだ。
+(겐칸노 베루가 낫타. 다레카 키타요-다)
+현관 벨이 울렸다. 누군가 온 것 같다.
+
+・母が怒ったような顔をしています。
+(하하가 오콧타요-나 카오오 시테이마스)
+엄마가 화가 난 듯한 얼굴을 짓고 있습니다.
+
+・彼女は飼いネコを我が子のように扱っている。
+(카노죠와 카이네코오 와가코노 요-니 아츠캇테 이루)
+그녀는 기르는 고양이를 자기 자식처럼 돌보고 있다.
+
+
+115 ～ようなら ~할 것 같으면
+접속: [동사·い형용사 보통형 / な형용사 + な / 명사 + の] + ようなら
+
+・やってもだめなようなら、もう無理しなくていいよ。
+(얏테모 다메나 요-나라, 모- 무리시나쿠테 이이요.)
+해도 안 될 것 같으면, 더 무리하지 않아도 돼.
+
+
+116 ～ように / ～ないように ~하도록 / ~하지 않도록
+접속: [동사 원형 또는 ない형] + ように
+
+・みんなに聞こえるようにもっと大きな声で言ってください。
+(민나니 키코에루 요-니 못토 오오키나 코에데 잇테 쿠다사이)
+모두에게 들릴 수 있도록 더 큰 목소리로 말해 주세요.
+
+・運動不足にならないように、毎日ジョギングをした。
+(운도-부조쿠니 나라나이 요-니, 마이니치 죠긴구오 시타)
+운동 부족이 되지 않도록 매일 조깅을 했다.
+
+
+117 ～ようにする / ～ないようにする ~하도록 하다 / ~하지 않도록 하다
+접속: [동사 원형 또는 ない형] + ようにする
+
+・毎朝6時から軽い運動をするようにしています。
+(마이아사 로쿠지카라 카루이 운도-오 스루 요-니 시테 이마스)
+매일 아침 6시부터 가벼운 운동을 하도록 하고 있습니다.
+
+・試験に合格するまで旅行はしないようにします。
+(시켄니 고-카쿠스루마데 료코-와 시나이 요-니 시마스)
+시험에 합격할 때까지 여행은 하지 않도록 하겠습니다.
+
+
+118 ～ようになる ~하게(끔) 되다
+접속: [동사 가능형 또는 원형] + ようになる (상태·능력의 변화)
+
+・日本語で書かれた小説が読めるようになりました。
+(니혼고데 카카레타 쇼-세츠가 요메루 요-니 나리마시타)
+일본어로 쓰여진 소설을 읽을 수 있게 되었습니다.
+
+
+119 ～らしい ①~답다 ②~인 것 같다
+접속: [명사] + らしい (~답다) / [동사·형용사·명사 보통형] + らしい (추측)
+
+・今日は秋らしい日だった。
+(쿄-와 아키라시이 히닷타)
+오늘은 가을다운 날이었다.
+
+・君たちは兄弟らしいね。とてもよく似ている。
+(키미타치와 쿄-다이라시이네. 토테모 요쿠 니테이루)
+너희들은 형제인 것 같아. 매우 잘 닮았어.
+
+
+120 ～わけだ ~한 셈이다, ~인 것이다, ~할 만하다
+접속: [동사·い형용사 보통형 / な형용사 + な / 명사 + の] + わけだ
+
+・今日は日曜日か。どうりで道が渋滞するわけだ。
+(쿄-와 니치요-비카. 도오리데 미치가 쥬-타이스루 와케다)
+오늘 일요일인가? 어쩐지 길이 정체될 만하네.
+
+・彼のお父さんは社長らしい。どうりで、着ている服がブランドもののわけだ。
+(카레노 오토-산와 샤쵸-라시이. 도-리데, 키테이루 후쿠가 부란도모노노 와케다)
+그의 아버지는 사장인 모양이다. 그래서 입고 있는 옷이 명품인 셈이다.
+
+
+121 ～わけではない ~인 것은 아니다
+접속: [동사·い형용사 보통형 / な형용사 + な / 명사 + の] + わけではない
+
+・毎日料理を作りますが、料理が好きなわけではありません。
+(마이니치 료-리오 츠쿠리마스가, 료-리가 스키나 와케데와 아리마센)
+매일 요리를 만들지만, 요리를 좋아하는 것은 아닙니다.
+
+・体調が悪いわけではないですが、食欲がありません。
+(타이쵸-가 와루이 와케데와 나이데스가, 쇼쿠요쿠가 아리마센)
+컨디션이 나쁜 것은 아닌데, 식욕이 없어요.
+
+
+122 ～をきっかけに ~을 계기로
+접속: [명사] + をきっかけに
+
+・結婚をきっかけに、仕事を辞めて専業主婦になりました。
+(켓콘오 킷카케니, 시고토오 야메테 센교-슈후니 나리마시타.)
+결혼을 계기로, 일을 그만두고 전업주부가 되었습니다.
+
+
+123 ～を込めて ~을 담아서
+접속: [명사] + をこめて (마음, 애정 등을 담아)
+
+・彼氏に愛情を込めて、バレンタインチョコレートをプレゼントしました。
+(카레시니 아이죠-오 코메테, 바렌타인 쵸코레-토오 프레젠토 시마시타.)
+남자친구에게 애정을 담아서 발렌타인데이 초콜릿을 선물했습니다.
+
+
+124 ～を中心に ~을 중심으로
+접속: [명사] + を中心に
+
+・そのグループは佐藤さんを中心に作業を進めている。
+(소노 구루-푸와 사토-산오 츄-신니 사교-오 스스메테 이루.)
+그 그룹은 사토 씨를 중심으로 작업을 진행하고 있다.
+
+
+125 ～を通して ~을 통해서
+접속: [명사] + をとおして (수단, 매개)
+
+・私たちは共通の趣味を通して知り合いました。
+(와타시타치와 쿄-츠-노 슈미오 토-시테 시리아이마시타.)
+우리들은 공통의 취미를 통해서 알게 되었다.
+
+
+126 ～(さ)せる ~하게 하다, ~시키다
+접속: [1그룹 あ단+せる / 2그룹 어간+させる / 3그룹 する→させる, 来る→こさせる]
+
+・お父さんは息子にテレビを消させました。
+(오토-산와 무스코니 테레비오 케사세마시타.)
+아버지는 아들에게 텔레비전을 끄게 했습니다.
+
+
+127 ～(さ)せてください ~하게 해 주세요, ~시켜 주세요
+접속: [동사 사역형 て형] + ください
+
+・急ですみませんが、すぐに退職させてください。
+(큐-데 스미마셍가, 스구니 타이쇼쿠 사세테 쿠다사이.)
+갑작스레 죄송합니다만, 바로 퇴직하게 해 주세요.
+
+・この薬は幼児に絶対に触らせないでください。
+(코노 쿠스리와 요-지니 젯타이니 사와라세나이데 쿠다사이.)
+이 약은 유아에게 절대로 만지게 하지 마세요.
+
+
+128 ～(ら)れる ~함을 당하다, ~되다
+접속: [1그룹 あ단+れる / 2그룹 어간+られる / 3그룹 する→される, 来る→こられる]
+
+・これまでに発表されてきた彼の曲と大きく違う。
+(코레마데니 핫표-사레테 키타 카레노 쿄쿠토 오오키쿠 치가우.)
+지금까지 발표되어 온 그의 곡과 크게 다르다.
+
+・大事に育てていた植木鉢を誰かに持って行かれた。
+(다이지니 소다테테이타 우에키바치오 다레카니 못테 이카레타.)
+소중히 기르고 있던 화분을 누군가가 가지고 갔다.
+
+
+129 ～(さ)せられる 억지로 ~하다, 어쩔 수 없이 ~하다
+접속: [1그룹 あ단+せられる(또는 される) / 2그룹 어간+させられる / 3그룹 する→させられる]
+
+・私は部長に歌を歌わせられました。
+(와타시와 부쵸-니 우타오 우타와세라레마시타.)
+나는 부장님이 시켜서 억지로 노래를 했습니다.
+
+・電車の事故があって1時間も待たされました。
+(덴샤노 지코가 앗테 이치지칸모 마타사레마시타.)
+전철 사고가 있어서 1시간이나 어쩔 수 없이 기다렸습니다.
+
+
+130 ～たら ~(하)면, ~(하)니까, ~(하)더니
+접속: [동사·い형용사·な형용사·명사 た형(과거형)] + ら
+
+・プレゼンの内容に対して質問があったら、今のうちにどうぞ。
+(프레젠노 나이요-니 타이시테 시츠몬가 앗타라, 이마노 우치니 도-조.)
+프리젠테이션 내용에 대해 질문이 있다면 지금 바로 하세요.
+
+・電車は平日だから空いているだろうと思ったら、すごく込みあった。
+(덴샤와 헤-지츠다카라 스이테이루 다로-토 오못타라, 스고쿠 코미앗타.)
+전철은 평일이니까 비어있을 거라고 생각했더니, 굉장히 붐볐다.
+
+
+131 ～と ~(하)면, ~(하)니(까)
+접속: [동사·い형용사 기본형 / な형용사·명사 + だと] + と
+
+・春になると、家の庭には花が咲き乱れる。
+(하루니 나루토, 이에노 니와니와 하나가 사키미다레루.)
+봄이 되면 집의 정원에는 꽃이 만발한다.
+
+
+132 ～なら ~(하)면, ~(이)라면
+접속: [동사·い형용사 보통형 / な형용사 어간 / 명사] + なら
+
+・全員で賛成するならその案にしよう。
+(젠인데 산세-스루나라 소노 안니 시요-.)
+전원이 찬성한다면 그 안으로 하자.
+
+・山なら富士山が一番です。
+(야마나라 후지산가 이치방데스.)
+산이라면 후지산이 제일입니다.
+
+
+133 ～ば ~(하)면
+접속: [1그룹 え단+ば / 2그룹 어간+れば / い형용사 어미 い→ければ]
+
+・雨が降れば、行きません。
+(아메가 후레바, 이키마센.)
+비가 오면 가지 않겠습니다.
+
+
+134 ～てやる・～てあげる ~해 주다
+접속: [동사 て형] + やる / あげる
+
+・彼女は孫に毎晩本を読んでやるのが楽しみだった。
+(카노죠와 마고니 마이반 혼오 욘데 야루노가 타노시미 닷타.)
+그녀는 손자에게 매일 밤 책을 읽어 주는 것이 즐거움이었다.
+
+・妹に自転車を買ってあげた。
+(이모-토니 지텐샤오 캇테 아게타.)
+여동생에게 자전거를 사 주었다.
+
+
+135 ～てくれる ~해 주다
+접속: [동사 て형] + くれる
+
+・彼女は私にカメラを買ってくれた。
+(카노죠와 와타시니 카메라오 캇테 쿠레타.)
+그녀는 나에게 카메라를 사 주었다.
+
+
+136 ～てもらう (~에게) ~해 받다, (~가) ~해 주다
+접속: [동사 て형] + もらう
+
+・友達に講義のノートを貸してもらった。
+(토모다치니 코-기노 노-토오 카시테 모랏타.)
+친구가 강의 노트를 빌려 주었다.
+
+・わざわざ来てもらったのにすまないけど、今から出かけるんだ。
+(와자와자 키테 모랏타노니 스마나이케도, 이마카라 데카케룬다.)
+일부러 와 주었는데 미안하지만, 지금부터 나가 봐야 해.
+
+
+137 ～(さ)せてやる・~(さ)せてあげる ~하게 해 주다
+접속: [동사 사역형 て형] + やる / あげる
+
+・息子は勉強ができるので大学まで行かせてやりたい。
+(무스코와 벤쿄-가 데키루노데 다이가쿠마데 이카세테 야리타이.)
+아들은 공부를 할 수 있기 때문에 대학까지 가게 해주고 싶다.
+
+・弟に私の車を運転させてあげた。
+(오토-토니 와타시노 쿠루마오 운텐 사세테 아게타.)
+남동생에게 내 차를 운전하게 해 줬다.
+`;
+
+    const GRAMMAR_NOTES = {
+      "001": "지속되는 기간이나 행동·상태가 이어지는 동안(사이)을 나타냅니다.\n• 〜あいだ: 그 기간 전체가 이어지는 동안\n• 〜あいだに: 그 기간 중 어느 한 시점에 일어난 사건·동작",
+      "002": "앞의 조건이 아무리 극단적이어도 뒤의 결과나 판단이 뒤집히지 않음을 강조합니다.\n• 동사/い형용사 → 〜ても\n• な형용사/명사 → 〜でも",
+      "003": "두 가지 상반되거나 병행하는 사실·성질·역할을 대조하거나 함께 서술할 때 씁니다.\n• 한쪽(〜する一方)에서는 A가 일어나고, 다른 쪽(〜一方)에서는 B가 일어난다는 균형·대조 뉘앙스입니다.",
+      "004": "어떤 상태가 변하기 전이나 특정 기간이 지나가기 전의 시점을 가리킵니다.\n• 긍정형(〜うちに): '~하는 동안에' 자연스럽게 상태가 변함\n• 부정형(〜ないうちに): '~하기 전에' 서둘러 행동함",
+      "005": "화자 자신의 의지나 계획을 자연스럽게 말할 때 씁니다.\n• 〜と思う: 지금 떠오른 생각·의지\n• 〜と思っている: 평소 품고 있는 계획·생각",
+      "006": "어떤 행동을 하려 시도하거나 그 직전 단계에 있음을 나타냅니다.\n• 실제로 성공했는지 여부와 별개로 '시도·직전'에 초점이 있습니다.",
+      "007": "긍정적이거나 바람직한 결과의 원인을 나타낼 때 씁니다.\n• 부정적 결과에는 보통 〜せいで를 사용하므로 결과의 호불호를 구분해 기억하세요.",
+      "008": "동작이 끝났음을 나타냅니다.\n• 타동사·자동사 모두 ます형 어간에 붙이며, 완료 후 다음 행동으로 이어질 때 자주 씁니다.",
+      "009": "오감(소리·냄새·맛·촉감)이나 직감·기분이 자연스럽게 느껴짐을 나타냅니다.\n• '내 의지로 만든다'기보다 '저절로 들리거나 느껴진다'는 뉘앙스입니다.",
+      "010": "제3자의 감정·욕구·태도를 객관적으로 관찰하여 묘사할 때 씁니다.\n• 1인칭(나)에게는 원칙적으로 쓰지 않고, 남의 표정·행동을 보고 말할 때 씁니다.",
+      "011": "앞에서 제기한 질문이나 선택지에 대해 이유나 성향을 설명·정리하며 말을 이어갈 때 씁니다.\n• 〜かというと: 이유를 짚어 설명할 때\n• 〜かといえば: 성향·비교를 정리할 때",
+      "012": "부분 부정을 만드는 부사 必ずしも와 부정 표현을 함께 써서 '전부가 다 그런 것은 아니다'라는 뜻이 됩니다.\n• '절대 ~아니다(전면 부정)'가 아니라 '항상 그렇다고는 할 수 없다'는 뜻입니다.",
+      "013": "확실하지 않은 추측이나 가능성을 조심스럽게 나타낼 때 씁니다.\n• な형용사·명사는 だ를 붙이지 않고 바로 かもしれない를 붙입니다.",
+      "014": "시간이나 공간·범위의 시작점(から)부터 끝점(にかけて)까지 이어지는 구간을 나타냅니다.\n• 한 점이 아니라 '어느 구간 전반에 걸쳐'라는 넓이·기간 느낌을 줍니다.",
+      "015": "본래 해야 할 일이나 다른 대상을 대신하여 선택·행동할 때 씁니다.\n• 'A 대신 B를 하다'라는 대체·교체 관계를 나타냅니다.",
+      "016": "동사 ます형 어간에 붙어 '끝까지·완전히 해내다(きる)', '다 할 수 있다(きれる)', '다 할 수 없다(きれない)'를 나타냅니다.\n• 중도 포기가 아니라 '끝장·완전함'에 초점이 있습니다.",
+      "017": "외부 작용이나 화자의 의지로 상태나 결과를 변화시킬 때 씁니다.\n• い형용사 → くする\n• な형용사/명사 → にする",
+      "018": "입장이나 조건·능력에 비추어 볼 때 납득하기 어렵거나 못마땅한 태도·행동을 비판할 때 씁니다.\n• 화자의 불만·비판·놀람이 강하게 담긴 구어적 표현입니다.",
+      "019": "시간 경과나 변화에 따라 어떤 상태나 성질로 바뀌어 감을 나타냅니다.\n• い형용사 → くなる\n• な형용사/명사 → になる",
+      "020": "정도나 수준·분량을 비유하거나 강조할 때 씁니다.\n• 구어에서는 ぐらい로도 자주 쓰이며, 과장 섞인 강조에도 잘 어울립니다.",
+      "021": "보통형 뒤에 붙어 추상적인 '일·사실·내용·사정'을 가리키는 명사구로 만듭니다.\n• 사물(もの)과 달리 추상적인 일·사정·이야깃거리를 가리킬 때 자주 씁니다.",
+      "022": "의문사와 함께 쓰여 감탄이나 강조('얼마나 ~했던가')의 뜻을 나타냅니다.\n• 주로 문어·독백·깊은 감정 표현에 쓰이며, 회화에서는 다소 극적인 느낌을 줍니다.",
+      "023": "동사 사전형/ない형 + ことがある는 '가끔 ~하는 경우가 있다'는 빈도·상황을 나타냅니다.\n• 과거 경험(た형 + ことがある)과 달리 '지금도 가끔 있는 일'에 초점이 있습니다.",
+      "024": "어떤 판단이나 명칭·결론에 이르게 된 근거·이유를 설명할 때 씁니다.\n• 설명문·지명 유래·근거 제시에서 자연스럽게 쓰입니다.",
+      "025": "능력이나 제도·상황상 어떤 동작을 할 수 있음을 나타내는 정중한 표현입니다.\n• 가능동사보다 조금 더 객관적·공식적·정중한 느낌을 줍니다.",
+      "026": "앞선 행위나 경험이 계기·원인이 되어 뒤의 결과나 변화로 이어졌음을 나타냅니다.\n• '그 일을 겪음으로써(〜ことで)'라는 인과·변화의 다리 역할을 합니다.",
+      "027": "화자 자신의 결심이나 선택을 나타낼 때 씁니다.\n• 긍정: 〜することにする(하기로 하다)\n• 부정: 〜しないことにする(하지 않기로 하다)",
+      "028": "〜ことになる는 상황·타인의 결정으로 정해짐, 〜ことになっている는 이미 정해진 규칙·약속·일정 상태를 나타냅니다.",
+      "029": "극단적인 사례를 들어 '하물며 ~조차'라는 강조를 나타냅니다.\n• 시간·돈·기회 등 '최소한의 것조차 없다'고 강조할 때 자주 씁니다.",
+      "030": "최소한의 조건만 충족되면 충분하다는 뜻으로 '~하기만 하면'을 강조합니다.\n• さえ와 ば/なら가 결합해 조건을 강하게 좁혀 줍니다.",
+      "031": "여러 이유나 근거를 나열할 때 씁니다.\n• '이유 A도 있고, 이유 B도 있으니…'처럼 말끝을 흐리거나 여운을 남기기 좋습니다.",
+      "032": "한정된 범위 외에는 없음을 나타내며, 반드시 뒤 문장을 부정형으로 마무리합니다.\n• '오직 ~뿐'이라는 한계·소량을 강조합니다.",
+      "033": "적절한 정도나 한도를 넘어 지나침을 나타냅니다.\n• 너무 뜨겁거나 너무 많아서 감당하기 어렵다는 뉘앙스가 함께 옵니다.",
+      "034": "어떤 행동을 하지 않은 채로 다음 행동을 함을 나타냅니다.\n• 〜ないで보다 조금 더 문어적·간결한 느낌이며, する는 せずに가 됩니다.",
+      "035": "원인이나 탓을 나타냅니다.\n• せいか: '~탓인지'(추측·반신반의)\n• せいで: '~탓에'(단정·부정적 원인 강조)",
+      "036": "어간 + そうだ는 보고·느낌에 따른 양태('~할 것 같다'), 보통형 + そうだ는 전해 들은 전문('~라고 한다')을 나타냅니다.",
+      "037": "도저히 그럴 가능성이나 기미가 보이지 않음을 강하게 부정할 때 씁니다.\n• そうもない는 そうない보다 '전혀 ~할 것 같지도 않다'는 강한 부정을 나타냅니다.",
+      "038": "앞의 요소에 더해 뒤의 요소까지 포함됨을 나타냅니다.\n• だけでなく/ばかりでなく(뿐만 아니라) → ばかりか/に限らず(뿐만 아니라 ~까지도)로 강조가 커집니다.",
+      "039": "과거에 어떤 일을 해 본 경험이 있음을 나타냅니다.\n• 동사 た형 + ことがある 형태이며, '해 본 적이 있다/없다'로 경험 유무를 묻고 답합니다.",
+      "040": "어떤 동작이나 현상이 갑자기·급격히 시작됨을 나타냅니다.\n• 동사 ます형 어간에 붙으며, 예상치 못한 시작이나 돌발적 움직임에 잘 어울립니다.",
+      "041": "명사·의문사·보통형 뒤에 붙어 '~라도, ~일지라도, 아무리 ~해도'라는 양보·강조를 나타냅니다.\n• 구어에서 '누구라도/얼마라도/언제라도'처럼 폭넓은 포괄을 나타낼 때 자주 씁니다.",
+      "042": "가정·양보의 뜻을 강하게 나타내며 '설령 ~하더라도'라는 뜻으로 たとえ와 호응해 자주 씁니다.\n• 극단적 가정을 세워도 결론은 변하지 않음을 강조합니다.",
+      "043": "동작이나 상태가 어느 시점에 놓여 있는지(직전·진행 중·직후)를 나타냅니다.\n• 사전형(직전) / ている(진행 중) / た형(직후)으로 시점을 구분합니다.",
+      "044": "어떤 행동이나 사건이 일어난 직후, 곧바로 다른 일이 뒤따름을 나타냅니다.\n• '보자마자/열자마자/일어나자마자'처럼 시간 간격이 거의 없는 직후를 뜻합니다.",
+      "045": "시간이 얼마 지나지 않았음을 나타내며, 문맥에 따라 놀람·비판·의외성의 뉘앙스가 동반되기도 합니다.\n• 동사 타형 + ばかり 형태입니다.",
+      "046": "반복되는 횟수나 계기마다 같은 일이 일어남을 나타냅니다.\n• '매번 ~할 때마다'라는 규칙적·반복적 대응을 나타냅니다.",
+      "047": "상대에게 조언하거나 권유할 때 '~하는 편이 좋다'라는 뜻으로 씁니다.\n• 동사 타형 + ほうがいい는 '그렇게 하는 쪽이 나을 것이다'라는 구체적 행동 권유에 많이 쓰입니다.",
+      "048": "원래 상태나 직전 상태를 바꾸지 않고 그대로 유지한 채 다른 동작을 함을 나타냅니다.\n• 신발을 신은 채, 불을 끈 채, 가만히 있는 채 등 '상태 유지'가 핵심입니다.",
+      "049": "목적('~하기 위해서': 동사 사전형/명사+の+ために)과 원인('~때문에': 보통형/な형용사+な+ため)을 나타냅니다.\n• 목적일 때는 보통 의지적 행동과 함께 쓰입니다.",
+      "050": "바람직하지 않거나 거슬리는 것이 가득 차 있는 상태를 나타냅니다.\n• 먼지·상처·실수·거짓말 등 '지저분하거나 안 좋은 것 투성이'에 주로 쓰입니다.",
+      "051": "대표적인 동작을 두 개 이상 골라 나열할 때 씁니다.\n• '이것만 하는 게 아니라 이런 것도 하고 저런 것도 한다'는 대표 나열 뉘앙스입니다.",
+      "052": "앞으로의 상황이나 결과에 대한 추측을 자신의 생각과 함께 부드럽게 나타냅니다.\n• 단정하지 않고 '~일 것으로 생각하다'라고 여지를 두는 표현입니다.",
+      "053": "어떤 동작이나 상태를 중단하지 않고 이어감을 나타냅니다.\n• 동사 ます형 어간 + 続ける 형태이며, 노력·상태·행동의 지속을 나타냅니다.",
+      "054": "구어에서 인용(〜という), 주제 제시(〜は), 정의·명칭(〜というのは), 전문(〜そうだ)의 축약으로 쓰입니다.\n• 회화체에서 빠르고 자연스럽게 말할 때 매우 자주 등장합니다.",
+      "055": "화자의 계획이나 의도를 나타냅니다.\n• 부정 의도는 〜ないつもりだ로 표현하며, '나는 ~할 작정이다'라는 굳은 마음가짐을 담습니다.",
+      "056": "누군가 의도를 가지고 해 놓은 결과의 상태가 남아 있음을 나타냅니다.\n• 주로 타동사 て형 + ある 형태로, '미리 해 둔 상태'를 보여 줍니다.",
+      "057": "동작의 진행(〜ている) 또는 동작이 끝난 뒤의 결과 상태 지속(〜ている)을 나타냅니다.\n• 동사의 성격(계속동사 vs 순간·변화동사)에 따라 해석이 달라집니다.",
+      "058": "완벽하지는 않지만 현재 조건에서 그것으로 충분하거나 수용할 수 있음을 나타냅니다.\n• '최고는 아니어도 ~면 된다'는 실용적·유연한 수락 뉘앙스입니다.",
+      "059": "나중이나 다음 상황을 대비해 미리 어떤 조치를 해 두거나 그대로 두는 것을 나타냅니다.\n• 회화에서는 〜ておく가 〜とく로 줄어들기도 합니다.",
+      "060": "앞선 동작을 마친 뒤 다음 동작으로 이어짐을 나타냅니다.\n• 〜てから는 앞동작 완료 직후 다음 행동으로 이어질 때, 〜あとで는 시간적 후행 관계를 나타낼 때 쓰입니다.",
+      "061": "특정 조건이나 단계를 거친 뒤가 아니면 성립하지 않음을 강조할 때 씁니다.\n• '먼저 ~한 후가 아니면 안 된다'는 선후 조건을 강하게 못 박습니다.",
+      "062": "〜てくる는 접근·변화의 시작·점진적 변화, 〜ていく는 멀어짐·앞으로의 점진적 변화를 나타냅니다.\n• 기준점(화자 쪽으로 다가옴 vs 앞으로 나아감)을 떠올리면 쉽습니다.",
+      "063": "동작의 완료를 나타내거나, 원치 않는 결과·실수에 대한 아쉬움·유감의 감정을 나타냅니다.\n• 회화에서는 〜ちゃう/〜じゃう로 줄여 자주 씁니다.",
+      "064": "감정이나 신체적 느낌이 너무 강해 참거나 견디기 힘들 정도임을 나타냅니다.\n• 기쁨·불안·배고픔·그리움 등 강한 감정·감각과 함께 쓰입니다.",
+      "065": "화자가 상대나 제3자에게 어떤 행동을 해 주었으면 하는 바람을 나타냅니다.\n• 직접 명령하기보다 '~해 주었으면 좋겠다'고 소망을 부드럽게 전합니다.",
+      "066": "부담 없이 가볍게 시도해 보거나 확인해 보라는 뜻으로 씁니다.\n• '일단 한번 ~해 보다'라는 시도·확인 뉘앙스입니다.",
+      "067": "앞의 조건이 성립하더라도 뒤의 결과나 판단이 달라지지 않음을 나타냅니다.\n• 양보('~하더라도')의 의미를 나타내며 문맥에 따라 '~해도'로 자연스럽게 번역합니다.",
+      "068": "허락을 구하거나 허락을 줄 때, 또는 조건에 관계없이 가능함을 나타낼 때 씁니다.\n• 〜てもいい보다 〜てもかまわない가 '상관없다'는 관용·허용 뉘앙스를 더 담습니다.",
+      "069": "어쩔 도리가 없거나 바꾸기 어렵다는 체념·수용의 뉘앙스를 나타냅니다.\n• '이미 벌어진 일이니 어쩔 수 없다'는 현실 수용의 뜻이 있습니다.",
+      "070": "다른 일은 하지 않고 특정 행위만 반복하는 모습에 대한 비판·지적의 뉘앙스가 담깁니다.\n• '맨날 ~만 하고 있다'는 부정적 시선이 함께 묻어납니다.",
+      "071": "어떤 행동을 했거나 그 결과가 생겨서 다행스럽고 안도감을 느낀다는 표현입니다.\n• 동사/い형용사 て형 + よかった 형태로 안도의 감정을 전합니다.",
+      "072": "명칭·내용·소문·생각 등을 풀어서 설명하거나 수식할 때 씁니다.\n• 'A라는 B' 형태로 앞말이 뒷말의 구체적 내용을 풀어 줍니다.",
+      "073": "어떤 말이나 주제를 들었을 때 연상되는 대표적인 것·생각을 꺼낼 때 씁니다.\n• 대화에서 화제를 자연스럽게 연결할 때 매우 유용합니다.",
+      "074": "단어나 개념의 뜻·정의를 설명하거나 화제를 풀어서 말할 때 씁니다.\n• '〜というのは 〜のことだ' 패턴으로 개념 정의에 자주 쓰입니다.",
+      "075": "말한 내용·설명·예정·지시 등의 방식 그대로 행함을 나타냅니다.\n• 명사에 바로 붙을 때는 〜どおり(예: 予定どおり)로 발음·표기합니다.",
+      "076": "자신의 의견이나 판단·추측을 나타낼 때 씁니다.\n• 보통형 뒤에 붙어 '~라고 생각한다'는 기본 의견 표현입니다.",
+      "077": "여러 예시 중 대표적인 것 몇 가지만 골라 열거할 때 씁니다.\n• '~라든가 ~라든가'처럼 전부가 아닌 일부 예시를 가볍게 들 때 씁니다.",
+      "078": "동사 사전형 + ところだ는 '막 ~하려는 참', 동사 ている + ところだ는 '막 ~하고 있는 중'을 나타냅니다.\n• 지금 이 순간 동작의 어느 단계에 있는지를 콕 집어 말합니다.",
+      "079": "사실과 다르거나 아직 일어나지 않은 일을 가정하여 그 결과를 물을 때 씁니다.\n• '만약 ~라고 가정한다면'이라는 가설 설정 표현입니다.",
+      "080": "신분·자격·입장·역할을 나타낼 때 씁니다.\n• '학생으로서', '대표로서', '봉사자로서'처럼 어떤 자격으로 행동하는지를 나타냅니다.",
+      "081": "가정된 조건을 인정하더라도 결론은 변하지 않음을 나타냅니다.\n• '설령 ~라고 하더라도'라는 양보 조건을 세웁니다.",
+      "082": "어떤 일이 진행되는 중간 과정이나 이동하는 길목을 나타냅니다.\n• '가는 도중에', '일하는 도중에'처럼 중간 지점을 가리킵니다.",
+      "083": "함께함(동반) 또는 시간·변화의 진행에 따라 나란히 일어나는 변화를 나타냅니다.\n• 동반의 '함께'와 비례 변화의 '~함에 따라' 두 축으로 기억하세요.",
+      "084": "동사 사전형에 붙는 명령·금지 표현('~하지 마라')으로, 표지판·구호·거친 구어에서 쓰입니다.\n• 일상 대화에서 정중히 부탁할 때는 〜ないでください를 씁니다.",
+      "085": "의무나 필요성('~해야 한다, ~하지 않으면 안 된다')을 나타냅니다.\n• 구어에서는 〜なきゃ/〜なくちゃ로 줄여 말하기도 합니다.",
+      "086": "잘못되거나 낡은 것을 다시 고치거나 새로 만들 때 씁니다.\n• 동사 ます형 어간 + 直す 형태로, '다시 ~하다'라는 재시도·수정 의미를 더합니다.",
+      "087": "두 가지 동작을 동시에 하거나(〜ながら), 앞선 사실을 인정하면서도 뒤의 내용을 이어갈 때 씁니다.\n• 동시 동작('~하면서')과 역접('~이지만') 두 가지 뜻을 모두 확인하세요.",
+      "088": "구어에서 가볍게 낮잡거나 겸손·무시·예시 등의 뉘앙스를 더해 주는 표현입니다.\n• 상대를 낮잡아 말할 때는 무례할 수 있으므로 친근한 관계나 겸손 상황에서 쓰임을 구분하세요.",
+      "089": "놀람·의외성·비하·가벼운 예시 등 문맥에 따라 다양한 감정과 뉘앙스를 담는 구어 표현입니다.\n• 문장 끝이나 명사 뒤에 붙어 감정선을 살려 줍니다.",
+      "090": "어떤 사안이나 사건·주제와 관련된 사항을 다룰 때 쓰는 다소 격식 있는 표현입니다.\n• 뉴스·보고서·공식 안내 등에서 자주 보입니다.",
+      "091": "물리적·심리적으로 행하기 어렵거나 어떤 성질이 잘 나타나지 않음을 나타냅니다.\n• 〜やすい(하기 쉽다)의 반대 개념으로 함께 익히면 좋습니다.",
+      "092": "비교 기준이 되는 대상과 견주어 차이나 정도를 말할 때 씁니다.\n• Aと/に比べて B는 'A와 비교했을 때 B는…'이라는 비교 기준을 세웁니다.",
+      "093": "기존 요소에 새로운 요소가 덧붙여짐을 나타냅니다.\n• 'A에 더해서 B도 있다'는 누적·추가 의미를 나타냅니다.",
+      "094": "한쪽의 변화나 진행에 비례하여 다른 쪽도 점차 변해 감을 나타냅니다.\n• '점차 ~함에 따라'라는 비례적 변화를 나타냅니다.",
+      "095": "선택지 가운데 하나를 결정하거나 정할 때 씁니다.\n• 주문·일정·물건 선택 등에서 '~로 정하겠습니다'라는 결정 표현으로 자주 씁니다.",
+      "096": "행위나 태도가 향하는 대상('~에 대해') 또는 두 대상의 대조('~에 반해')를 나타냅니다.\n• 앞뒤 문장의 대조를 보여 줄 때 〜のに/〜のに対して가 자주 쓰입니다.",
+      "097": "근거와 확신을 바탕으로 '~임에 틀림없다'고 강하게 추측할 때 씁니다.\n• 화자의 확신도가 매우 높은 추측 표현입니다.",
+      "098": "화제나 연구·논의의 주제를 나타낼 때 씁니다.\n• '~에 관해서(말하다·조사하다·생각하다)'와 함께 쓰입니다.",
+      "099": "특정 입장에서의 가치·영향·의미를 평가할 때 씁니다.\n• 'Aにとって(A에게 있어서)'는 평가의 관점·기준점을 나타냅니다.",
+      "100": "목적을 이루기 위한 수단·방법('~하려면') 또는 특정 대상에 대한 평가·기준('~에게는')을 나타냅니다.\n• 〜には 뒤에는 방법·조건이나 평가(어렵다·쉽다·필요하다 등)가 자주 옵니다.",
+      "101": "기대나 예측·일반적인 경향과 어긋나는 결과가 나왔음을 나타냅니다.\n• '예상과는 반대로'라는 반전·어긋남을 강조합니다.",
+      "102": "수단·방법·원인·행위자('~에 의해') 또는 사람·상황에 따른 차이('~에 따라')를 나타냅니다.\n• 문맥에 따라 수단/원인/개별 차이를 구분해 해석합니다.",
+      "103": "용언(동사·형용사)을 명사화하여 지각·감정·상황의 대상이 되게 합니다.\n• '보는 것, 듣는 것, 가는 것'처럼 동사·형용사를 명사처럼 다룰 때 씁니다.",
+      "104": "기대와 상반되는 역접('~인데도') 또는 목적·소요 시간의 기준('~하는 데')을 나타냅니다.\n• 앞뒤 문장의 의미 흐름으로 역접인지 목적·소요 시간인지 구분합니다.",
+      "105": "설명·근거·사정·강조를 담는 설명의 〜のだ/〜んだ 표현으로, 회화에서는 〜んだ가 자연스럽습니다.\n• 이유를 설명하거나 사정을 털어놓을 때 자주 씁니다.",
+      "106": "동작이나 변화가 시작됨을 나타냅니다.\n• 동사 ます형 어간 + はじめる 형태이며, 변화나 행동의 출발점을 나타냅니다.",
+      "107": "상식·정황·전제에 비추어 볼 때 그럴 가능성이 전혀 없음을 강하게 부정합니다.\n• '~할 리가 없다'는 강한 부정 추측입니다.",
+      "108": "근거 있는 추측으로 '~일 것이다, ~일 터이다'라는 기대·확신을 나타냅니다.\n• '아마 ~일 것이다'라는 합리적 추측을 나타냅니다.",
+      "109": "앞의 조건이 깊어질수록 뒤의 정도나 상태도 비례해 커짐을 나타냅니다.\n• '~하면 할수록 더욱 ~하다'라는 비례 강조 표현입니다.",
+      "110": "마땅히 해야 할 도리·의무·권장을 나타내는 다소 딱딱한 표현입니다.\n• 규칙·도리·조언을 단호하게 말할 때 쓰입니다.",
+      "111": "비교 대상만큼의 정도에 미치지 못함을 부정형과 함께 나타냅니다.\n• 'Aほど〜ない'는 'A만큼 ~하지 않다'라는 비교 부정의 대표 패턴입니다.",
+      "112": "감각·인상·추측을 바탕으로 '~인 것 같다, ~같다'를 나타내는 구어적 비유·추측 표현입니다.\n• 일상 회화에서 ようだ보다 더 가볍고 자주 쓰입니다.",
+      "113": "동작하기 쉽거나 다루기 편한 성질을 나타냅니다.\n• 동사 ます형 어간 + やすい 형태이며, 사람·사물·환경의 성질을 설명합니다.",
+      "114": "관찰·추측에 근거한 양태·추측('~인 것 같다')과 비유·예시('~와 같은/처럼')를 나타냅니다.\n• ようだ(서술)/ような(명사 수식)/ように(부사·비유)로 활용됩니다.",
+      "115": "어떤 상황이나 상태가 그러할 것 같으면이라는 가정 조건을 나타냅니다.\n• '만약 ~인 것 같으면'이라는 부드러운 가정 표현입니다.",
+      "116": "목표·상태·목적지에 이르도록 '~하도록 / ~하지 않도록' 방향이나 바람을 나타냅니다.\n• 가능형·자동사·부정형과 함께 쓰여 목표 상태를 향하게 합니다.",
+      "117": "습관·노력·생활 방침으로 '~하도록 하다 / ~하지 않도록 하다'를 나타냅니다.\n• 개인의 습관 형성이나 규칙 실천을 말할 때 자주 씁니다.",
+      "118": "시간이나 노력·환경 변화로 없던 능력이나 습관·상태가 생겨남을 나타냅니다.\n• '할 수 있게 되다', '습관이 되다'처럼 변화의 도달점을 나타냅니다.",
+      "119": "명사 뒤에서는 본질·특징다운 면('~답다'), 보통형 뒤에서는 정황에 따른 추측('~인 것 같다')을 나타냅니다.\n• 접속 대상(명사 vs 보통형)에 따라 뜻이 달라지는 점이 핵심입니다.",
+      "120": "앞뒤 사정이나 이유를 납득하고 '~한 셈이다, ~할 만하다'라고 결론을 내릴 때 씁니다.\n• どうりで(어쩐지)와 함께 쓰이면 자연스러운 이유 설명이 됩니다.",
+      "121": "전면 부정이 아니라 '꼭 ~인 것만은 아니다'라는 부분 부정을 나타냅니다.\n• '전부 다 그런 건 아니다'라고 선을 그을 때 유용합니다.",
+      "122": "어떤 사건이나 경험이 계기가 되어 이후의 변화나 행동으로 이어졌음을 나타냅니다.\n• 명사 + をきっかけに 형태로 계기·전환점을 나타냅니다.",
+      "123": "마음·정성·애정 등을 담아 행위를 함을 나타냅니다.\n• 마음을 담아 편지·선물·노래·요리 등을 할 때 씁니다.",
+      "124": "활동이나 구성·초점의 중심이 되는 대상을 나타냅니다.\n• '~을 중심으로' 움직이거나 구성됨을 나타냅니다.",
+      "125": "매개체나 수단·경험을 거쳐 어떤 결과나 관계에 이르렀음을 나타냅니다.\n• 경험·활동·매체를 통해 얻은 결과나 만남을 나타냅니다.",
+      "126": "주어가 대상에게 어떤 행동을 하게 하거나 시키는 사역 표현입니다.\n• '시키다'와 '허락해 주다' 두 가지 문맥으로 쓰일 수 있습니다.",
+      "127": "상대에게 어떤 행동을 허락해 주거나 시켜 달라고 정중히 부탁할 때 씁니다.\n• '~하게 해 주세요'라는 정중한 허락·요청 표현입니다.",
+      "128": "수동·피해·가능·존경 등 문맥에 따라 쓰이는 ~(ら)れる 활용형입니다.\n• 동사 그룹별 변형 규칙을 정확히 익히는 것이 중요합니다.",
+      "129": "사역(〜させる)과 수동(〜られる)이 결합하여 '시키게 되다 → 억지로·어쩔 수 없이 ~하다'를 나타냅니다.\n• 내 의지와 상관없이 시킴을 당한 상황·감정에 잘 쓰입니다.",
+      "130": "가정('~하면'), 발견·계기('~하니'), 과거 상황 뒤의 사건('~했더니') 등 다용도로 쓰이는 조건·계기 표현입니다.\n• 구어에서 가장 폭넓게 쓰이는 조건·계기 표현 중 하나입니다.",
+      "131": "자연법칙·습관·조작 결과 등 앞의 일이 일어나면 필연적으로 뒤의 일이 이어짐을 나타냅니다.\n• 화자의 의지·명령·권유 문장은 뒤에 오기 어렵다는 점을 기억하세요.",
+      "132": "상대 말이나 화제·상황을 받아 '~라면, ~한다면'이라고 조건·주제를 설정할 때 씁니다.\n• 화제의 주제를 제시할 때도 자연스럽게 쓰입니다.",
+      "133": "일반적·가정적 조건('~하면')을 나타내는 접속형입니다.\n• 1그룹 え단+ば, 2그룹 어간+れば, い형용사 ければ로 활용합니다.",
+      "134": "화자나 주어가 다른 사람에게 어떤 행위를 해 줌을 나타냅니다.\n• 〜てやる는 아랫사람·동식물·친근한 상대에게, 〜てあげる는 일반적 '해 주다'에 쓰입니다.",
+      "135": "다른 사람(또는 사물·상황)이 나나 내 편을 위해 어떤 행위를 해 주었음을 나타냅니다.\n• '남이 나에게 해 줌'이라는 방향성을 꼭 기억하세요.",
+      "136": "내가 상대에게 부탁하거나 허락받아 어떤 행위를 받았음을 나타냅니다.\n• '~에게 ~해 받다'로 해석하며, 시혜를 받는 주체가 화자·내 편일 때 쓰입니다.",
+      "137": "대상이 어떤 행동을 할 수 있도록 허락하거나 보내 주는 사역+수수 표현입니다.\n• '시키다 + 해 주다'가 합쳐져 '~하게 해 주다'라는 뜻이 됩니다."
+    };
+
+    const MEMORY_TIPS = {
+      "001": "암기 팁: '間(あいだ)'은 '사이·동안'. 문장 전체를 감싸는 기간이면 あいだ, 그 안에 딱 일어난 사건이면 あいだに로 연결해 보세요.",
+      "002": "암기 팁: 'いくら'는 '아무리'라는 뜻의 부사! 뒤를 〜ても/〜でも로 닫아 '아무리 ~해도' 세트로 외우면 쉽습니다.",
+      "003": "암기 팁: '一方(いっぽう)'는 '한쪽'. '이쪽은 ~하는 한편, 저쪽은 ~하다'라고 시소처럼 양쪽을 떠올리세요.",
+      "004": "암기 팁: 'うち'는 '안쪽·범위 안'. 상태가 바뀌기 전의 시간 안쪽(〜うちに)이라는 이미지를 그리면 헷갈리지 않습니다.",
+      "005": "암기 팁: 동사 의지형(行こう·食べよう) + と思う = '가려고 생각한다'. 먼저 의지형으로 바꾼 뒤 思う를 붙이세요.",
+      "006": "암기 팁: 〜(よ)うとする는 '행동 직전의 시도'. 막 입을 열려 하거나 웃으려 하는 찰나를 떠올리세요.",
+      "007": "암기 팁: おかげ(お陰)의 '陰'은 '그늘·보호'. 좋은 그늘을 얻어 좋은 결과가 나왔다고 외우면 긍정 문맥이 잡힙니다.",
+      "008": "암기 팁: 동사 ます형에서 'ます'를 떼고 終わる를 붙이면 '다 ~하다'. 食べ終わる(다 먹다), 読み終わる(다 읽다).",
+      "009": "암기 팁: 匂いがする(냄새가 나다), 音がする(소리가 나다), 感じがする(느낌이 들다)처럼 '감각 명사 + がする'로 묶어 외우세요.",
+      "010": "암기 팁: 형용사 어미를 고쳐 〜がる/〜がっている를 붙이면 '남이 ~해하다'. 나(1인칭)가 아니라 제3자 관찰용입니다.",
+      "011": "암기 팁: 질문에 답할 때 '왜냐하면 말이지…(かというと)', 성향을 말할 때 '말하자면…(かといえば)'로 이어 보세요.",
+      "012": "암기 팁: 必ずしも는 '항상·꼭'이지만 뒤가 부정이라서 '꼭 ~인 것만은 아니다'가 됩니다. 끝까지 부정을 확인하세요.",
+      "013": "암기 팁: かもしれない는 '아마 ~일지도'. な형용사·명사는 だ를 빼고 바로 かもしれない를 붙입니다.",
+      "014": "암기 팁: から(출발) ~ にかけて(도착 구간). 朝から夕方にかけて(아침부터 저녁에 걸쳐).",
+      "015": "암기 팁: 代わり(대신)에 に를 붙여 'A 대신 B'. 명사 뒤에는 の를 넣어 '명사 + の代わりに'.",
+      "016": "암기 팁: 切る(자르다·끝내다)에서 온 표현! 食べきる(다 먹다), 走りきる(완주하다)처럼 '끝까지 해치움'을 떠올리세요.",
+      "017": "암기 팁: '〜くする(い형용사)', '〜にする(な형용사·명사)' + する = '어떤 상태로 만들다'.",
+      "018": "암기 팁: くせに는 '버릇·성향 주제에'라는 비난 뉘앙스! 명사 뒤에는 の를 붙여 '〜のくせに'.",
+      "019": "암기 팁: なる(되다) 앞에 い형용사는 く, な형용사·명사는 に를 붙여 '변화'를 나타냅니다.",
+      "020": "암기 팁: くらい/ぐらい는 '정도'. '걸을 수 없을 정도(歩けないくらい)'처럼 정도를 잴 때 씁니다.",
+      "021": "암기 팁: 보통형 + こと = '~하는 것/일'. 추상적 일·이야기·사실을 가리킬 때 자주 쓰입니다.",
+      "022": "암기 팁: 'どんなに〜ことか(얼마나 ~했던가)'처럼 감탄문 패턴으로 함께 외우면 기억하기 좋습니다.",
+      "023": "암기 팁: 현재/일반 습관은 '사전형/ない형 + ことがある', 과거 경험은 'た형 + ことがある'로 구분하세요.",
+      "024": "암기 팁: '〜ことから'는 'A라는 사실로부터 ~라고 불린다/판단된다'처럼 근거를 제시할 때 쓰입니다.",
+      "025": "암기 팁: '동사 사전형 + ことができる'은 회화·설명문 어디서나 쓸 수 있는 안전한 가능 표현입니다.",
+      "026": "암기 팁: '〜ことで'는 '~함으로 인해(결과·변화)'를 연결하는 다리 역할을 합니다.",
+      "027": "암기 팁: ことにする는 '내 결정(する)', ことになる는 '자연스러운 결과·결정(なる)'으로 대비해 외우세요.",
+      "028": "암기 팁: ことになっている는 '규칙·일정으로 정해져 있다'는 고정된 상태에 자주 쓰입니다.",
+      "029": "암기 팁: '시간조차 없다(時間さえない)', '이름조차 모른다(名前さえ知らない)'처럼 극단적 강조에 씁니다.",
+      "030": "암기 팁: '〜さえ〜ば'는 '~하기만 하면'이라는 최소 조건 강조! 飲みさえすれば(마시기만 하면).",
+      "031": "암기 팁: '〜し、〜し'는 이유를 여러 개 줄줄이 댈 때 편한 구어 접속입니다.",
+      "032": "암기 팁: 'しか + 부정형'은 한 세트! 긍정형과 함께 쓰지 않도록 주의하세요.",
+      "033": "암기 팁: 'すぎる'는 '넘치다·지나치다'. 熱すぎる(너무 뜨겁다), 多すぎる(너무 많다).",
+      "034": "암기 팁: 'ずに'는 '〜ないで'의 줄임형 느낌이지만 する만 예외로 'せずに'가 됩니다.",
+      "035": "암기 팁: せいで는 '탓에'라는 선명한 원인, せいか는 '~탓인지'라는 조심스러운 추측입니다.",
+      "036": "암기 팁: 降りそうだ(비가 올 것 같다 = 양태) vs 降るそうだ(비가 온다고 한다 = 전문). 앞모양을 꼭 보세요!",
+      "037": "암기 팁: そうもない는 '전혀 ~할 것 같지도 않다'로 부정 감정을 한층 더 끌어올립니다.",
+      "038": "암기 팁: だけでなく < ばかりでなく < ばかりか/に限らず 순으로 강조 강도가 올라갑니다.",
+      "039": "암기 팁: 'たことがある'는 '과거 경험'. た형(行った·食べた) 뒤에 ことがある를 붙입니다.",
+      "040": "암기 팁: '〜だす'는 '갑자기 ~하기 시작하다'. 泣きだす(울기 시작하다), 走りだす(달리기 시작하다).",
+      "041": "암기 팁: いくらだって(얼마든지), だれだって(누구라도)처럼 의문사+だって 패턴이 아주 유용합니다.",
+      "042": "암기 팁: 'たとえ〜ても'는 '설령 ~하더라도'. 문장 앞에 たとえ가 보이면 뒤를 〜ても로 맞추세요.",
+      "043": "암기 팁: ところだ는 '막 ~하려는 참(사전형) / 막 ~하는 중(ている) / 막 ~한 참(た형)' 세 얼굴을 가집니다.",
+      "044": "암기 팁: とたんに는 '타형 + とたんに'. 보자마자·듣자마자처럼 순식간의 연쇄 반응을 나타냅니다.",
+      "045": "암기 팁: 'たばかり'는 '방금/얼마 안 돼 ~한'. できたばかり(방금 만들어진)처럼 자주 쓰입니다.",
+      "046": "암기 팁: 'たびに'는 '매번 ~할 때마다'. 使うたびに(쓸 때마다), 聞くたびに(들을 때마다).",
+      "047": "암기 팁: 조언할 때는 'た형 + ほうがいい(〜하는 편이 좋아)'를 가장 많이 씁니다.",
+      "048": "암기 팁: 'まま'는 '그대로·채로'. 電気をつけたまま(불을 켠 채로)처럼 상태를 유지합니다.",
+      "049": "암기 팁: 목적('~하기 위해')은 사전형/명사+の+ために, 원인('~때문에')은 보통형/な형용사+な+ため입니다.",
+      "050": "암기 팁: '명사 + だらけ'는 '~투성이'. 間違いだらけ(실수투성이), 泥だらけ(진흙투성이).",
+      "051": "암기 팁: 'た형+り、た형+りする'는 대표 행동 나열! 読んだり書いたりする(읽기도 하고 쓰기도 하다).",
+      "052": "암기 팁: 'だろうと思う'는 '~일 것이라고 생각한다'로 부드럽게 추측을 덧붙일 때 씁니다.",
+      "053": "암기 팁: 'ます형 어간 + 続ける'는 '계속 ~하다'. 働き続ける(계속 일하다).",
+      "054": "암기 팁: 회화에서 'って'가 보이면 '라는/라고/래/이란' 중 문맥에 맞는 뜻으로 골라 보세요.",
+      "055": "암기 팁: 'つもりだ'는 '~할 생각·작정이다'. 買うつもりだ(살 생각이다), 買わないつもりだ(안 살 생각이다).",
+      "056": "암기 팁: '타동사 て형 + ある'는 '미리 해 둔 상태'를 나타냅니다. 書いてある(적혀 있다).",
+      "057": "암기 팁: 'ている'는 진행('~하고 있다')과 결과 상태('~해져 있다') 두 가지로 해석됩니다.",
+      "058": "암기 팁: '명사 + でいい'는 '~로 충분하다·괜찮다'. 水でいい(물로 괜찮다).",
+      "059": "암기 팁: 'ておく'는 '미리 해 두다·그대로 두다'. 調べておく(미리 조사해 두다).",
+      "060": "암기 팁: 'てから'는 '동작 완료 후', 'あとで'는 '시간적 후행'. 둘 다 순서를 나타냅니다.",
+      "061": "암기 팁: 'てからでないと〜ない'는 '~한 후가 아니면 안 된다'는 필수 선행 조건입니다.",
+      "062": "암기 팁: 'てくる'는 다가옴·변화 시작, 'ていく'는 멀어짐·앞으로의 변화로 방향을 잡으세요.",
+      "063": "암기 팁: 'てしまう'는 '다 해 버리다' 또는 '아차, ~해 버렸네'라는 아쉬움의 뉘앙스를 줍니다.",
+      "064": "암기 팁: 'てたまらない'는 '너무 ~해서 견딜 수 없다'. 眠くてたまらない(너무 졸려서 견딜 수 없다).",
+      "065": "암기 팁: 'てほしい'는 '~해 주었으면 좋겠다'는 바람을 나타냅니다.",
+      "066": "암기 팁: 'てみる'는 '한번 ~해 보다'. 食べてみる(한번 먹어 보다).",
+      "067": "암기 팁: 'ても'는 '~해도/하더라도'. 雨が降っても(비가 와도).",
+      "068": "암기 팁: 'てもいい / てもかまわない'는 허락·동의 표현으로 회화에서 필수입니다.",
+      "069": "암기 팁: 'ても仕方がない'는 '어쩔 수 없다·소용없다'. 泣いても仕方がない(울어 봐야 소용없다).",
+      "070": "암기 팁: 'てばかりいる'는 '~하기만 하다'로 습관·행동을 꼬집을 때 씁니다.",
+      "071": "암기 팁: 'てよかった'는 '~해서 다행이다'. 間に合ってよかった(시간 맞춰서 다행이다).",
+      "072": "암기 팁: 'という'는 'A라는 B'처럼 앞말로 뒷말을 설명·명명할 때 씁니다.",
+      "073": "암기 팁: 'というと / といえば'는 '~라고 하면'으로 대화의 화제를 열 때 딱 좋습니다.",
+      "074": "암기 팁: 'というのは'은 '~이라는 것은'으로 뜻이나 정의를 풀 때 자주 쓰입니다.",
+      "075": "암기 팁: 'とおりに / どおり'는 '~대로'. 思ったとおり(생각한 대로).",
+      "076": "암기 팁: 'と思う'는 보통형 뒤에 붙어 '~라고 생각한다'를 만듭니다.",
+      "077": "암기 팁: 'とか〜とか'는 '~라든가 ~라든가'로 여러 예시를 가볍게 묶을 때 씁니다.",
+      "078": "암기 팁: ところだ는 '막 ~하려는 참(사전형) / 막 ~하는 중(ている) / 막 ~한 참(た형)'으로 시점을 나눕니다.",
+      "079": "암기 팁: 'としたら / とすれば / とすると'는 모두 '만약 ~라고 가정한다면'이라는 뜻입니다.",
+      "080": "암기 팁: '명사 + として'는 '~로서'라는 자격·입장·역할을 나타냅니다.",
+      "081": "암기 팁: 'としても'는 '설령 ~라고 해도'라는 가정 양보 표현입니다.",
+      "082": "암기 팁: '途中(とちゅう)'는 '가는 길·중간 과정'. 帰る途中(돌아가는 길에).",
+      "083": "암기 팁: 'とともに'는 '함께' 또는 '~함에 따라(비례 변화)'로 외우세요.",
+      "084": "암기 팁: '동사 사전형 + な'는 강한 금지('~하지 마라')이므로 표지판·경고 문맥을 떠올리세요.",
+      "085": "암기 팁: 'ないといけない / なくてはいけない / なければならない'는 모두 '~해야 한다'입니다.",
+      "086": "암기 팁: 'ます형 어간 + 直す'는 '다시 고쳐 ~하다'. 書き直す(다시 쓰다), 見直す(다시 보다).",
+      "087": "암기 팁: 'ながら'는 '동시 동작(~하면서)'과 '역접(~이지만)' 두 가지를 함께 기억하세요.",
+      "088": "암기 팁: 'なんか'는 '같은 건·따위'로 구어에서 낮추거나 가볍게 말할 때 쓰입니다.",
+      "089": "암기 팁: 'なんて'는 놀람('~라니'), 경멸('~따위'), 예시('~같은 거') 등 문맥에 따라 뉘앙스가 달라집니다.",
+      "090": "암기 팁: 'に関して'는 '~에 관해서'로 공적·설명적 문맥에서 자주 쓰입니다.",
+      "091": "암기 팁: 'ます형 어간 + にくい'는 '~하기 어렵다·잘 안 ~하다'. 忘れにくい(잘 잊히지 않다).",
+      "092": "암기 팁: 'に比べて / と比べて'는 '~에 비해'. 비교 기준을 세울 때 씁니다.",
+      "093": "암기 팁: 'に加えて'는 '~에 더해서'. 기본 조건에 추가 요소를 얹을 때 좋습니다.",
+      "094": "암기 팁: 'にしたがって'는 '~함에 따라'. 시간이 흐르거나 수치가 변할 때 잘 어울립니다.",
+      "095": "암기 팁: '명사 + にする'는 선택·결정 표현! '이걸로 할게요(これにします)'.",
+      "096": "암기 팁: 'に対して'는 '대상(~에 대해)' 또는 '대조(~에 반해)'로 쓰입니다.",
+      "097": "암기 팁: 'に違いない'는 '~임에 틀림없다'. 확신에 찬 추측을 나타냅니다.",
+      "098": "암기 팁: 'について'는 '~에 대해서'. 발표·토론·기사 주제를 말할 때 필수입니다.",
+      "099": "암기 팁: 'にとって'는 '~에게 있어서'. 평가의 주체·기준을 나타냅니다.",
+      "100": "암기 팁: 'には'는 목적 방법('~하려면') 또는 대상 평가('~에게는')로 쓰입니다.",
+      "101": "암기 팁: 'に反して'는 '예상·기대에 어긋나게(~에 반해서)'라는 뜻입니다.",
+      "102": "암기 팁: 'によって / により / による'는 '~에 의해 / ~에 따라'로 폭넓게 쓰입니다.",
+      "103": "암기 팁: '보통형 + の'는 문장 속 동사·형용사를 명사처럼 만들어 줍니다.",
+      "104": "암기 팁: 'のに'는 예상 밖 역접('~인데도')과 목적·소요 시간('~하는 데')을 구분해 읽으세요.",
+      "105": "암기 팁: 'のだ / んだ'는 '설명·사정·강조'를 담는 말끝 표현! 회화에서는 んだ가 자연스럽습니다.",
+      "106": "암기 팁: 'ます형 어간 + はじめる'는 '~하기 시작하다'. 降りだす보다 조금 더 차분한 시작 느낌입니다.",
+      "107": "암기 팁: 'はずがない'는 '~할 리가 없다'. 절대 그렇지 않다고 단언할 때 씁니다.",
+      "108": "암기 팁: 'はずだ'는 '~일 것이다(근거 있는 추측)'. 아마 ~할 터이라는 기대가 담깁니다.",
+      "109": "암기 팁: 'ば〜ほど'는 'A하면 할수록 더욱 B하다'. すればするほど(하면 할수록).",
+      "110": "암기 팁: 'べきだ'는 '마땅히 ~해야 한다'. 見るべきだ(봐야 한다), すべきだ(해야 한다).",
+      "111": "암기 팁: 'ほど〜ない'는 'A만큼 ~하지 않다'. 비교 대상의 정도에 못 미칠 때 씁니다.",
+      "112": "암기 팁: 'みたいだ'는 구어에서 가장 흔한 '~인 것 같다 / ~같다' 표현입니다.",
+      "113": "암기 팁: 'ます형 어간 + やすい'는 '~하기 쉽다·편하다'. 使いやすい(쓰기 편하다).",
+      "114": "암기 팁: 'ようだ / ような / ように'는 추측·비유·예시를 나타내는 대표 문법입니다.",
+      "115": "암기 팁: 'ようなら'는 '~인 것 같으면'이라는 조건 가정 표현입니다.",
+      "116": "암기 팁: 'ように / ないように'는 '~하도록 / ~하지 않도록' 목표·방향을 나타냅니다.",
+      "117": "암기 팁: 'ようにする / ないようにする'는 '습관·노력으로 ~하도록 하다 / 하지 않도록 하다'입니다.",
+      "118": "암기 팁: 'ようになる'는 '없던 능력·상태가 생기다'. 話せるようになる(말할 수 있게 되다).",
+      "119": "암기 팁: 명사+らしい는 '~답다', 보통형+らしい는 '~인 것 같다(추측)'로 갈라집니다.",
+      "120": "암기 팁: 'わけだ'는 '그런 까닭에 ~한 셈이다'. 납득·결론의 느낌을 줍니다.",
+      "121": "암기 팁: 'わけではない'는 '꼭 ~인 것만은 아니다'라는 부분 부정입니다.",
+      "122": "암기 팁: 'をきっかけに'는 '사건·경험을 계기로'라는 전환점을 나타냅니다.",
+      "123": "암기 팁: 'を込めて'는 '마음·정성·애정을 담아서'라는 정성 표현입니다.",
+      "124": "암기 팁: 'を中心に'는 '~을 중심으로'. 핵심 대상·인물·지역을 가리킵니다.",
+      "125": "암기 팁: 'を通して'는 '~을 통해서'. 수단·매체·경험을 거쳐 이어질 때 씁니다.",
+      "126": "암기 팁: 사역형 '(さ)せる'는 '시키다 / 하게 하다'. 1그룹 あ단+せる, 2그룹 어간+させる, 3그룹 させる/こさせる.",
+      "127": "암기 팁: '(さ)せてください'는 '~하게 해 주세요'로 정중히 허락을 구할 때 유용합니다.",
+      "128": "암기 팁: '(ら)れる'는 수동·가능·존경 등 문맥이 넓으므로 앞뒤 주어와 동사 형태를 함께 보세요.",
+      "129": "암기 팁: '(さ)せられる'는 '사역 + 수동' 결합! '억지로/어쩔 수 없이 ~하게 되다'로 외우면 쉽습니다.",
+      "130": "암기 팁: 'たら'는 타형 + ら! 가정(~하면), 계기(~하니), 과거 발견(~했더니) 세 가지를 기억하세요.",
+      "131": "암기 팁: 'と'는 자연·습관·결과가 이어지는 '~하면'. 뒤에 명령·의지·권유가 오지 않도록 주의하세요.",
+      "132": "암기 팁: 'なら'는 상대 말이나 화제를 받아 '~라면 / ~한다면'이라고 연결할 때 씁니다.",
+      "133": "암기 팁: 'ば'는 가정 조건 '~하면'. 1그룹 え단+ば, 2그룹 어간+れば, い형용사 ければ.",
+      "134": "암기 팁: 'てやる / てあげる'는 내가 남에게 해 주는 동작! 아랫사람·동식물·친근한 대상엔 てやる도 쓰입니다.",
+      "135": "암기 팁: 'てくれる'은 남이 나(또는 내 편)에게 해 주는 동작입니다.",
+      "136": "암기 팁: 'てもらう'는 내가 남에게 부탁하거나 받아서 하는 '~해 받다' 표현입니다.",
+      "137": "암기 팁: '(さ)せてやる / (さ)せてあげる'는 '~하게 해 주다'로 허락·배려의 뜻을 담습니다."
+    };
+
+    const VOCAB_BANK = {
+      "試験": {
+        reading: "しけん (시켄)",
+        meaning: "시험",
+        hanzi: "핵심: 試(시험할 시) + 験(시험할 험) → 실력을 시험해 보는 일\n좌우·구조: 試는 왼쪽 言(말씀 언) + 오른쪽 式(법 식) / 験은 왼쪽 馬(말 마) + 오른쪽 僉(다 함께 첩·검증의 의미)"
+      },
+      "間": {
+        reading: "あいだ (아이다) / かん (칸)",
+        meaning: "사이, 동안",
+        hanzi: "핵심: 門(문 문) + 日(날 일) → 문틈 사이로 비치는 해·시간의 틈새와 기간\n좌우·구조: 바깥 門(문) 안에 日(날·해)이 자리한 문간(門間) 구조"
+      },
+      "静か": {
+        reading: "しずか (시즈카)",
+        meaning: "조용함, 고요함",
+        hanzi: "핵심: 靜(고요할 정)의 일본 약자 → 소란스럽지 않고 차분한 상태\n좌우·구조: 왼쪽 青(푸를 청) + 오른쪽 爭(다툴 쟁) 계열의 정자에서 유래하며, 소란이 가라앉은 고요함을 뜻함"
+      },
+      "昨日": {
+        reading: "きのう (키노-)",
+        meaning: "어제",
+        hanzi: "핵심: 昨(어제 작) + 日(날 일) → 바로 지나간 어젯날\n좌우·구조: 昨은 왼쪽 日(날 일) + 오른쪽 乍(문득 사·잠깐) → 지나간 하루"
+      },
+      "寝る": {
+        reading: "ねる (네루)",
+        meaning: "자다, 눕다",
+        hanzi: "핵심: 寢(잘 침)의 일본 약자 → 누워서 잠을 자다\n좌우·구조: 宀(집 면·지붕) 아래 寑의 간략형으로, 지붕 아래 누워 쉬는 모습에서 출발"
+      },
+      "地震": {
+        reading: "じしん (지신)",
+        meaning: "지진",
+        hanzi: "핵심: 地(땅 지) + 震(벼락·흔들릴 진) → 땅이 흔들리는 현상\n좌우·구조: 地는 왼쪽 土(흙 토) + 오른쪽 也(어조사 야) / 震은 위 雨(비 우) + 아래 辰(별·용 진)"
+      },
+      "食べる": {
+        reading: "たべる (타베루)",
+        meaning: "먹다",
+        hanzi: "핵심: 食(밥 식) + べる → 음식을 먹고 섭취하다\n좌우·구조: 食(먹을 식)의 간자체 한자 식(食)을 어근으로 삼은 동사"
+      },
+      "太る": {
+        reading: "ふとる (후토루)",
+        meaning: "살찌다, 굵어지다",
+        hanzi: "핵심: 太(클 태) + る → 몸이나 부피가 살찌고 커지다\n좌우·구조: 大(큰 대) 아래 점을 찍어 '더욱 크고 굵다'는 뜻을 나타낸 한자"
+      },
+      "体": {
+        reading: "からだ (카라다)",
+        meaning: "몸, 신체",
+        hanzi: "핵심: 體(몸 체)의 일본 약자 → 사람의 몸 전체\n좌우·구조: 왼쪽 亻(사람 인 변) + 오른쪽 本(근본 본) → 사람의 근본이 되는 몸"
+      },
+      "欲しい": {
+        reading: "ほしい (호시-)",
+        meaning: "갖고 싶다, 원하다",
+        hanzi: "핵심: 欲(바랄 욕)과 통하는 감각 → 가지고 싶고 바라는 마음\n좌우·구조: 欲은 왼쪽 谷(골짜기 곡) + 오른쪽 欠(하품 흠·바랄 흠)"
+      },
+      "優秀": {
+        reading: "ゆうしゅう (유-슈-)",
+        meaning: "우수함, 뛰어남",
+        hanzi: "핵심: 優(넉넉할·뛰어날 우) + 秀(빼어날 수) → 실력이나 자질이 매우 뛰어남\n좌우·구조: 優는 왼쪽 亻(사람 인 변) + 오른쪽 憂(근심 우) / 秀는 위 禾(벼 화) + 아래 乃(이에 내)"
+      },
+      "大学": {
+        reading: "だいがく (다이가쿠)",
+        meaning: "대학",
+        hanzi: "핵심: 大(큰 대) + 學(배울 학)의 약자 → 고등 학문을 배우는 곳\n좌우·구조: 學은 위 𥝌(배울 학 상부) + 아래 子(아들 자) → 아이들이 스승 밑에서 배우는 모습"
+      },
+      "出る": {
+        reading: "でる (데루)",
+        meaning: "나오다, 졸업하다, 참석하다",
+        hanzi: "핵심: 出(날 출) + る → 안팎으로 나가거나 나타나다\n좌우·구조: 겹쳐진 산·초목이 위로 뻗어 나오는 형상에서 비롯된 한자"
+      },
+      "仕事": {
+        reading: "しごと (시고토)",
+        meaning: "일, 업무",
+        hanzi: "핵심: 仕(섬길 사) + 事(일 사) → 맡아서 하는 일이나 직무\n좌우·구조: 仕는 왼쪽 亻(사람 인 변) + 오른쪽 士(선비 사) / 事는 윗부분과 아래 亅의 결합"
+      },
+      "出来る": {
+        reading: "できる (데키루)",
+        meaning: "할 수 있다, 완성되다",
+        hanzi: "핵심: 出(날 출) + 來(올 래)의 표기 → 능력이나 조건이 갖추어져 이루어지다\n좌우·구조: 來는 보리·곡식 이삭의 모양에서 나온 한자이며, できる는 가능·완성을 뜻함"
+      },
+      "意味": {
+        reading: "いみ (이미)",
+        meaning: "의미, 뜻",
+        hanzi: "핵심: 意(뜻 의) + 味(맛 미) → 말이나 행동이 지닌 뜻과 맛(깊이)\n좌우·구조: 意는 위 立(설 립) + 日(날 일) + 아래 心(마음 심) / 味는 왼쪽 口(입 구) + 오른쪽 未(아닐 미)"
+      },
+      "彼": {
+        reading: "かれ (카레)",
+        meaning: "그, 저 사람",
+        hanzi: "핵심: 彼(저 피) → 화자·청자 외에 떨어져 가리키는 그 사람\n좌우·구조: 왼쪽 彳(자축거릴 척·길 갈 척) + 오른쪽 皮(가죽 피) → 길 건너·저편의 대상"
+      },
+      "俳優": {
+        reading: "はいゆう (하이유-)",
+        meaning: "배우",
+        hanzi: "핵심: 俳(광대·배우 배) + 優(배우·뛰어날 우) → 연기하는 사람\n좌우·구조: 둘 다 왼쪽에 亻(사람 인 변)이 있어 '사람'과 관련된 글자임을 알 수 있음"
+      },
+      "活躍": {
+        reading: "かつやく (카츠야쿠)",
+        meaning: "활약",
+        hanzi: "핵심: 活(살 활) + 躍(뛸 약) → 힘차게 움직이며 뛰어나게 활동함\n좌우·구조: 活은 왼쪽 氵(물 수 변) + 오른쪽 舌(혀 설) / 躍은 왼쪽 足(발 족) + 오른쪽 翟(새 깃털 적)"
+      },
+      "監督": {
+        reading: "かんとく (칸토쿠)",
+        meaning: "감독",
+        hanzi: "핵심: 監(볼 감) + 督(살필 독) → 전체를 살피고 이끌며 지휘하는 자리\n좌우·구조: 監은 위 臥·臣 계열 + 아래 皿(그릇 명) / 督은 위 叔(아저씨 숙) + 아래 目(눈 목)"
+      },
+      "高い": {
+        reading: "たかい (타카이)",
+        meaning: "높다, (값이) 비싸다",
+        hanzi: "핵심: 高(높을 고) + い → 키·건물·가격·수준 등이 높다\n좌우·구조: 성루·누각의 높은 모습을 본뜬 상형문자 高"
+      },
+      "評価": {
+        reading: "ひょうか (효-카)",
+        meaning: "평가",
+        hanzi: "핵심: 評(평할 평) + 価(값 가) → 가치나 수준을 따져 매김\n좌우·구조: 評은 왼쪽 言(말씀 언) + 오른쪽 平(평평할 평) / 価는 왼쪽 亻(사람 인 변) + 오른쪽 西"
+      },
+      "受ける": {
+        reading: "うける (우케루)",
+        meaning: "받다, 치르다, 당하다",
+        hanzi: "핵심: 受(받을 수) + ける → 건네받는 것을 받아들이다\n좌우·구조: 위 爪(손톱 조)와 冖 + 아래 又(또 우·손 모양) → 손에서 손으로 받는 모습"
+      },
+      "人": {
+        reading: "ひと (히토)",
+        meaning: "사람",
+        hanzi: "핵심: 人(사람 인) → 사람, 인류\n좌우·구조: 두 획이 서로 기대어 서 있는 사람의 옆모습에서 유래"
+      },
+      "働く": {
+        reading: "はたらく (하타라쿠)",
+        meaning: "일하다, 작용하다",
+        hanzi: "핵심: 働(일할 동) → 몸과 힘을 써서 일하다\n좌우·구조: 왼쪽 亻(사람 인 변) + 오른쪽 動(움직일 동) → 사람이 움직이며 일하는 모습"
+      },
+      "病気": {
+        reading: "びょうき (뵤-키)",
+        meaning: "병, 질병",
+        hanzi: "핵심: 病(병 병) + 氣(기운 기) → 몸의 기운이 상해 생긴 병\n좌우·구조: 病은 疒(병들 녁) + 丙(병 병) / 氣는 气(기운 기)의 간자체"
+      },
+      "日本": {
+        reading: "にほん / にっぽん (니혼 / 닛폰)",
+        meaning: "일본",
+        hanzi: "핵심: 日(해 일) + 本(근본 본) → 해가 뜨는 근원·일본\n좌우·구조: 本은 木(나무 목) 아래에 획을 그어 뿌리·근본을 뜻함"
+      },
+      "来る": {
+        reading: "くる (쿠루)",
+        meaning: "오다",
+        hanzi: "핵심: 來(올 래) → 이쪽으로 다가오다\n좌우·구조: 곡식 줄기 모양에서 출발해 '오다'의 뜻으로 쓰이는 불규칙 동사(3그룹)"
+      },
+      "日本語": {
+        reading: "にほんご (니혼고)",
+        meaning: "일본어",
+        hanzi: "핵심: 日本(일본) + 語(말씀 어) → 일본의 언어\n좌우·구조: 語는 왼쪽 言(말씀 언) + 오른쪽 吾(나 오) → 말과 언어"
+      },
+      "新聞": {
+        reading: "しんぶん (신분)",
+        meaning: "신문",
+        hanzi: "핵심: 新(새 신) + 聞(들을 문) → 새 소식을 듣고 전하는 매체\n좌우·구조: 新은 왼쪽 立(설 립) + 木(나무 목) + 오른쪽 斤(도끼 근) / 聞은 바깥 門(문) 안 耳(귀 이)"
+      },
+      "読む": {
+        reading: "よむ (요무)",
+        meaning: "읽다",
+        hanzi: "핵심: 讀(읽을 독)의 일본 약자 → 글자나 책을 읽다\n좌우·구조: 왼쪽 言(말씀 언) + 오른쪽 賣(팔 매의 약자) → 소리 내어 읽다"
+      },
+      "帰る": {
+        reading: "かえる (카에루)",
+        meaning: "돌아가다, 귀가하다",
+        hanzi: "핵심: 歸(돌아갈 귀)의 일본 약자 → 원래 있던 곳·집으로 돌아가다\n좌우·구조: 왼쪽 𠂊 + 帚(비 추) 계열 + 오른쪽 追 계열의 간략형"
+      },
+      "全部": {
+        reading: "ぜんぶ (젠부)",
+        meaning: "전부, 모두",
+        hanzi: "핵심: 全(온전할 전) + 部(거듭할·부분 부) → 빠짐없는 전체\n좌우·구조: 全은 위 入(들 입) + 아래 王(구슬 옥) / 部는 왼쪽 咅 + 오른쪽 阝(고을 부)"
+      },
+      "来年": {
+        reading: "らいねん (라이넨)",
+        meaning: "내년, 다음 해",
+        hanzi: "핵심: 來(올 래) + 年(해 년) → 다가오는 해\n좌우·구조: 來(오다) + 年(한 해) → 앞으로 올 해"
+      },
+      "行く": {
+        reading: "いく (이쿠)",
+        meaning: "가다",
+        hanzi: "핵심: 行(다닐 행) → 목적지로 이동하다\n좌우·구조: 彳(길 갈 척)과 亍이 합쳐진 글자이며, 行く(いく)는 1그룹 동사"
+      },
+      "思う": {
+        reading: "おもう (오모우)",
+        meaning: "생각하다, 느끼다",
+        hanzi: "핵심: 思(생각할 사) + う → 마음속으로 헤아리고 생각하다\n좌우·구조: 위 田(밭 전) + 아래 心(마음 심) → 마음속에서 생각을 가꾸는 모습"
+      },
+      "笑う": {
+        reading: "わらう (와라우)",
+        meaning: "웃다",
+        hanzi: "핵심: 笑(웃을 소) + う → 웃음을 짓다\n좌우·구조: 위 竹(대나무 죽) + 아래 夭(어릴 요) → 바람에 흔들리는 대나무처럼 가볍게 웃는 모습"
+      },
+      "歯": {
+        reading: "は (하)",
+        meaning: "이, 치아",
+        hanzi: "핵심: 齒(이 치)의 일본 약자 → 입안의 치아\n좌우·구조: 위 止(그칠 지) + 아래 歯(어금니 치 간략형)"
+      },
+      "痛い": {
+        reading: "いたい (이타이)",
+        meaning: "아프다",
+        hanzi: "핵심: 痛(아플 통) + い → 몸이나 마음이 아프다\n좌우·구조: 疒(병들 녁) 안에 甬(길 용) → 병이 들어 아픈 감각"
+      },
+      "一生懸命": {
+        reading: "いっしょうけんめい (잇쇼-켄메-)",
+        meaning: "열심히, 있는 힘을 다해",
+        hanzi: "핵심: 一生(일생) + 懸命(목숨을 걸음) → 온 힘을 다해 전력을 쏟음\n좌우·구조: 懸은 위 縣(매달 현) + 아래 心(마음 심) / 命은 위 亼 + 아래 卩(병부 절)"
+      },
+      "勉強": {
+        reading: "べんきょう (벤쿄-)",
+        meaning: "공부",
+        hanzi: "핵심: 勉(힘쓸 면) + 強(굳셀 강) → 힘써 애쓰며 학업에 매진함\n좌우·구조: 勉은 왼쪽 免(면할 면) + 오른쪽 力(힘 력) / 強은 왼쪽 弓(활 궁) + 오른쪽 虫"
+      },
+      "成績": {
+        reading: "せいせき (세-세키)",
+        meaning: "성적, 성과",
+        hanzi: "핵심: 成(이룰 성) + 績(길쌈할·공적 적) → 노력 끝에 이룬 결과나 점수\n좌우·구조: 績은 왼쪽 糸(실 사) + 오른쪽 責(책임질 책)"
+      },
+      "上がる": {
+        reading: "あがる (아가루)",
+        meaning: "오르다, 올라가다",
+        hanzi: "핵심: 上(위 상) + がる → 위쪽으로 올라가다\n좌우·구조: 기준선 위에 점을 찍어 '위'를 나타낸 한자 上에서 비롯"
+      },
+      "片づける": {
+        reading: "かたづける (카타즈케루)",
+        meaning: "정리하다, 치우다",
+        hanzi: "핵심: 片(조각 편) + づける → 흐트러진 물건을 한쪽으로 가지런히 정리하다\n좌우·구조: 片은 木(나무 목)의 반쪽 모양에서 나온 한자로 '한쪽·조각'의 뜻을 가짐"
+      },
+      "喫茶店": {
+        reading: "きっさてん (킷사텐)",
+        meaning: "다방, 카페",
+        hanzi: "핵심: 喫(마실 끽) + 茶(차 다) + 店(가게 점) → 차나 커피를 마시는 가게\n좌우·구조: 喫은 왼쪽 口(입 구) + 오른쪽 契(맺을 계) / 店은 广(집 엄) + 占(점칠 점)"
+      },
+      "入る": {
+        reading: "はいる (하이루)",
+        meaning: "들어가다, 들어오다",
+        hanzi: "핵심: 入(들 입) + る → 안쪽으로 들어가다\n좌우·구조: 두 획이 안쪽으로 파고드는 모양에서 유래한 한자"
+      },
+      "匂い": {
+        reading: "におい (니오이)",
+        meaning: "냄새, 향기",
+        hanzi: "핵심: 匂(냄새 구/향기) + い → 코로 맡는 냄새나 향기\n좌우·구조: 바깥 勹(쌀 포) 안에 匕(비수 비) → 감싸 안은 기운·냄새"
+      },
+      "辺り": {
+        reading: "あたり (아타리)",
+        meaning: "부근, 주변",
+        hanzi: "핵심: 邊(가 변)의 일본 약자 → 어떤 곳의 주위나 일대\n좌우·구조: 辶(쉬엄쉬엄 갈 착) 안에 𧆨(변두리 변의 약자)"
+      },
+      "夜": {
+        reading: "よる (요루)",
+        meaning: "밤",
+        hanzi: "핵심: 夜(밤 야) → 해가 지고 어두운 시간\n좌우·구조: 위 亠 + 아래 亦(또 역)의 변형으로 밤의 어둠을 나타냄"
+      },
+      "遅い": {
+        reading: "おそい (오소이)",
+        meaning: "늦다",
+        hanzi: "핵심: 遅(늦을 지) + い → 시각이나 속도가 늦다\n좌우·구조: 왼쪽 辶(길 갈 착) + 오른쪽 犀(무소 서) → 느릿느릿 나아감"
+      },
+      "音": {
+        reading: "おと (오토)",
+        meaning: "소리",
+        hanzi: "핵심: 音(소리 음) → 귀에 들리는 소리\n좌우·구조: 위 立(설 립) + 아래 日(날 일) → 입에서 울려 나오는 소리"
+      },
+      "話": {
+        reading: "はなし (하나시)",
+        meaning: "이야기, 말",
+        hanzi: "핵심: 話(말씀 화) → 주고받는 말이나 이야기\n좌우·구조: 왼쪽 言(말씀 언) + 오른쪽 舌(혀 설) → 혀를 움직여 하는 말"
+      },
+      "不思議": {
+        reading: "ふしぎ (후시기)",
+        meaning: "이상함, 불가사의함",
+        hanzi: "핵심: 不(아닐 불) + 思(생각할 사) + 議(의논할 의) → 상식이나 생각으로 헤아리기 어려운 신기함\n좌우·구조: 議는 왼쪽 言(말씀 언) + 오른쪽 義(옳을 의)"
+      },
+      "柔道": {
+        reading: "じゅうどう (쥬-도-)",
+        meaning: "유도",
+        hanzi: "핵심: 柔(부드러울 유) + 道(길 도) → 부드러움으로 굳셈을 제압하는 무도\n좌우·구조: 柔는 위 矛(창 모) + 아래 木(나무 목) / 道는 辶 + 首(머리 수)"
+      },
+      "興味": {
+        reading: "きょうみ (쿄-미)",
+        meaning: "흥미, 관심",
+        hanzi: "핵심: 興(일으킬 흥) + 味(맛 미) → 마음이 끌리고 재미를 느끼는 상태\n좌우·구조: 興은 위 臼(절구 구) + 양옆 同 계열 + 아래 八"
+      },
+      "私": {
+        reading: "わたし (와타시)",
+        meaning: "저, 나",
+        hanzi: "핵심: 私(사사 사) → 나, 개인\n좌우·구조: 왼쪽 禾(벼 화) + 오른쪽 厶(사사로울 사) → 내 몫의 벼·나 자신"
+      },
+      "一人": {
+        reading: "ひとり (히토리)",
+        meaning: "혼자, 한 사람",
+        hanzi: "핵심: 一(한 일) + 人(사람 인) → 한 사람, 혼자\n좌우·구조: 수(數) '一'과 '人'의 결합"
+      },
+      "好き": {
+        reading: "すき (스키)",
+        meaning: "좋아함, 마음에 듦",
+        hanzi: "핵심: 好(좋을 호) + き → 좋아하고 마음에 드는 느낌\n좌우·구조: 왼쪽 女(여자 녀) + 오른쪽 子(아들 자) → 어머니가 아이를 사랑하는 모습"
+      },
+      "料理": {
+        reading: "りょうり (료-리)",
+        meaning: "요리",
+        hanzi: "핵심: 料(헤아릴 료) + 理(다스릴 리) → 재료를 손질해 조리함\n좌우·구조: 料는 왼쪽 斗(말 두) + 오른쪽 米(쌀 미) / 理는 왼쪽 王(구슬 옥) + 오른쪽 里(마을 리)"
+      },
+      "怒る": {
+        reading: "おこる (오코루)",
+        meaning: "화내다, 성내다",
+        hanzi: "핵심: 怒(성낼 노) + る → 화를 내다\n좌우·구조: 위 奴(종 노) + 아래 心(마음 심) → 마음속에 쌓인 분노"
+      },
+      "言い方": {
+        reading: "いいかた (이이카타)",
+        meaning: "말투, 말하는 방식",
+        hanzi: "핵심: 言う(말하다) + 方(방법 방) → 말하는 어조나 방식\n좌우·구조: 方은 방위·방법을 뜻하는 한자"
+      },
+      "朝": {
+        reading: "あさ (아사)",
+        meaning: "아침",
+        hanzi: "핵심: 朝(아침 조) → 해가 돋는 아침 시간\n좌우·구조: 왼쪽 𠦝(초목이 자라는 모습) + 오른쪽 月(달 월) → 아침 해와 달이 함께 뜨는 시간"
+      },
+      "夕方": {
+        reading: "ゆうがた (유-가타)",
+        meaning: "저녁, 해거름",
+        hanzi: "핵심: 夕(저녁 석) + 方(쪽·때 방) → 해 질 녘, 저녁 무렵\n좌우·구조: 夕은 반달 모양에서 온 '저녁' 한자"
+      },
+      "雨": {
+        reading: "あめ (아메)",
+        meaning: "비",
+        hanzi: "핵심: 雨(비 우) → 하늘에서 내리는 비\n좌우·구조: 위 하늘(一) 아래 빗방울이 떨어지는 모습을 본뜬 상형문자"
+      },
+      "降る": {
+        reading: "ふる (후루)",
+        meaning: "(비·눈·서리 등이) 내리다",
+        hanzi: "핵심: 降(내릴 강) + る → 위에서 아래로 떨어져 내리다\n좌우·구조: 왼쪽 阝(언덕 부) + 오른쪽 夅(내려올 강) → 언덕·하늘에서 내려옴"
+      },
+      "見る": {
+        reading: "みる (미루)",
+        meaning: "보다",
+        hanzi: "핵심: 見(볼 견) + る → 눈으로 보거나 살피다\n좌우·구조: 위 目(눈 목) + 아래 儿(사람 인 다리 모양)"
+      },
+      "明日": {
+        reading: "あした (아시타) / あす (아스)",
+        meaning: "내일",
+        hanzi: "핵심: 明(밝을 명) + 日(날 일) → 밝아 오는 다음 날\n좌우·구조: 明은 왼쪽 日(해 일) + 오른쪽 月(달 월) → 해와 달이 합쳐진 밝음"
+      },
+      "英単語": {
+        reading: "えいたんご (에-탄고)",
+        meaning: "영단어",
+        hanzi: "핵심: 英(꽃부리·영국 영) + 單(홑 단) + 語(말씀 어) → 영어 낱말\n좌우·구조: 單의 약자 単(위 ㅂ + 아래 十) + 語"
+      },
+      "覚える": {
+        reading: "おぼえる (오보에루)",
+        meaning: "외우다, 기억하다, 깨닫다",
+        hanzi: "핵심: 覺(깨달을 각)의 일본 약자 → 머릿속에 익혀 기억하다\n좌우·구조: 위 𥝌 + 아래 見(볼 견)의 간략형"
+      },
+      "難しい": {
+        reading: "むずかしい (무즈카시이)",
+        meaning: "어렵다, 까다롭다",
+        hanzi: "핵심: 難(어려울 난) + しい → 해내기 어렵거나 까다롭다\n좌우·구조: 難은 왼쪽 𦰩 + 오른쪽 隹(새 추)"
+      },
+      "足": {
+        reading: "あし (아시)",
+        meaning: "발, 다리",
+        hanzi: "핵심: 足(발 족) → 다리, 발\n좌우·구조: 위 口(무릎·발등) + 아래 止(발 모양)"
+      },
+      "怪我": {
+        reading: "けが (케가)",
+        meaning: "부상, 상처",
+        hanzi: "핵심: 怪(기이할 괴) + 我(나 아) → 뜻밖의 다침·부상\n좌우·구조: 怪는 왼쪽 忄(마음 심 변) + 오른쪽 圣"
+      },
+      "最後": {
+        reading: "さいご (사이고)",
+        meaning: "마지막, 끝",
+        hanzi: "핵심: 最(가장 최) + 後(뒤 후) → 맨 끝, 마지막\n좌우·구조: 後는 왼쪽 彳 + 오른쪽 幺·彳·夂"
+      },
+      "走る": {
+        reading: "はしる (하시루)",
+        meaning: "달리다, 뛰다",
+        hanzi: "핵심: 走(달릴 주) + る → 발을 빠르게 움직여 달리다\n좌우·구조: 위 土(땅·발자국) + 아래 龰(발 모양)"
+      },
+      "量": {
+        reading: "りょう (료-)",
+        meaning: "양, 분량",
+        hanzi: "핵심: 量(헤아릴 량) → 양, 분량, 정도\n좌우·구조: 위 旦(아침 단) + 아래 里(마을 리)"
+      },
+      "多い": {
+        reading: "おおい (오오이)",
+        meaning: "많다",
+        hanzi: "핵심: 多(많을 다) + い → 수나 양이 많다\n좌우·구조: 夕(저녁 석)을 두 개 겹쳐 밤이 겹겹이 쌓인 많음을 나타냄"
+      },
+      "子供": {
+        reading: "こども (코도모)",
+        meaning: "아이, 어린이",
+        hanzi: "핵심: 子(아들 자) + 供(이바지할·함께할 공) → 아이, 어린아이\n좌우·구조: 供은 왼쪽 亻(사람 인 변) + 오른쪽 共(함께 공)"
+      },
+      "お金持ち": {
+        reading: "おかねもち (오카네모치)",
+        meaning: "부자, 돈 많은 사람",
+        hanzi: "핵심: 金(쇠·돈 금) + 持ち(가짐) → 돈을 많이 가진 사람\n좌우·구조: 持는 왼쪽 扌(손수 변) + 오른쪽 寺(절 사)"
+      },
+      "部長": {
+        reading: "ぶちょう (부쵸-)",
+        meaning: "부장",
+        hanzi: "핵심: 部(부서 부) + 長(길·어른 장) → 부서의 책임자\n좌우·구조: 長은 길다·우두머리라는 뜻의 한자"
+      },
+      "部下": {
+        reading: "ぶか (부카)",
+        meaning: "부하, 부하 직원",
+        hanzi: "핵심: 部(부서 부) + 下(아래 하) → 조직·부서에서 아래 직급에 있는 사람\n좌우·구조: 下는 기준선 아래에 점을 찍은 상형문자"
+      },
+      "厳しい": {
+        reading: "きびしい (키비시이)",
+        meaning: "엄격하다, 가혹하다, 매섭다",
+        hanzi: "핵심: 嚴(엄할 엄)의 일본 약자 → 기준이나 태도가 엄격하다\n좌우·구조: 위 𠮛 두 개와 아래 敢 계열이 합쳐진 엄격한 느낌의 한자"
+      },
+      "音楽": {
+        reading: "おんがく (온가쿠)",
+        meaning: "음악",
+        hanzi: "핵심: 音(소리 음) + 樂(즐길·음악 락) → 조화로운 소리와 즐거움\n좌우·구조: 樂의 일본 약자 楽은 위 白(흰 백) 계열 + 아래 木(나무 목)"
+      },
+      "聞く": {
+        reading: "きく (키쿠)",
+        meaning: "듣다, 묻다",
+        hanzi: "핵심: 聞(들을 문)과 통하는 감각 → 소리를 듣거나 질문을 하다\n좌우·구조: 聞く는 1그룹 동사로 '듣다'와 '묻다'를 모두 아우름"
+      },
+      "頭": {
+        reading: "あたま (아타마)",
+        meaning: "머리",
+        hanzi: "핵심: 頭(머리 두) → 머리, 두뇌\n좌우·구조: 왼쪽 豆(콩 두·제기 모양) + 오른쪽 頁(머리 혈)"
+      },
+      "歌手": {
+        reading: "かしゅ (카슈)",
+        meaning: "가수",
+        hanzi: "핵심: 歌(노래 가) + 手(손·사람 수) → 노래를 부르는 사람\n좌우·구조: 歌는 왼쪽 哥(형 가) + 오른쪽 欠(하품·노래 흠)"
+      },
+      "有名": {
+        reading: "ゆうめい (유-메-)",
+        meaning: "유명함",
+        hanzi: "핵심: 有(있을 유) + 名(이름 명) → 이름이 널리 알려져 있음\n좌우·구조: 有는 왼쪽 𠂊 + 오른쪽 月(고기 육) / 名은 위 夕(저녁 석) + 아래 口(입 구)"
+      },
+      "前": {
+        reading: "まえ (마에)",
+        meaning: "앞, 전(前)",
+        hanzi: "핵심: 前(앞 전) → 공간의 앞이나 시간의 이전\n좌우·구조: 위 止·月 계열 + 오른쪽 刂(칼 도 방)"
+      },
+      "パン屋": {
+        reading: "ぱんや (판야)",
+        meaning: "빵집",
+        hanzi: "핵심: パン(빵) + 屋(집 옥) → 빵을 팔거나 굽는 가게\n좌우·구조: 屋은 위 尸(주검 시·집 모양) + 아래 至(이를 지)"
+      },
+      "立つ": {
+        reading: "たつ (타츠)",
+        meaning: "서다, 일어서다",
+        hanzi: "핵심: 立(설 립) + つ → 발을 딛고 일어서다\n좌우·구조: 위 点·一 + 아래 大 → 땅 위에 꼿꼿이 선 모습"
+      },
+      "歩く": {
+        reading: "あるく (아루쿠)",
+        meaning: "걷다",
+        hanzi: "핵심: 歩(걸을 보) + く → 걸어서 이동하다\n좌우·구조: 歩의 약자 歩는 위 止(발 지) + 아래 少(적을 소)"
+      },
+      "風": {
+        reading: "かぜ (카제)",
+        meaning: "바람",
+        hanzi: "핵심: 風(바람 풍) → 공기의 흐름, 바람\n좌우·구조: 바깥 几(안석 궤/바람 틀) 안에 虫(벌레 충) → 바람의 기운"
+      },
+      "吹く": {
+        reading: "ふく (후쿠)",
+        meaning: "(바람이) 불다, (휘파람·악기 등을) 불다",
+        hanzi: "핵심: 吹(불 취) + く → 숨이나 바람을 불어내다\n좌우·구조: 왼쪽 口(입 구) + 오른쪽 欠(하품·바람 흠)"
+      },
+      "事故": {
+        reading: "じこ (지코)",
+        meaning: "사고",
+        hanzi: "핵심: 事(일 사) + 故(연고·사고 고) → 뜻밖의 사건이나 사고\n좌우·구조: 故는 왼쪽 古(옛 고) + 오른쪽 攵(칠 복)"
+      },
+      "生きる": {
+        reading: "いきる (이키루)",
+        meaning: "살다, 살아가다",
+        hanzi: "핵심: 生(살 생) + きる → 생명을 이어 가다\n좌우·구조: 生은 땅(一) 위에 새싹이 돋아나는 상형문자"
+      },
+      "書く": {
+        reading: "かく (카쿠)",
+        meaning: "쓰다, 적다",
+        hanzi: "핵심: 書(글 서)와 통하는 동작 → 글씨나 그림을 쓰다\n좌우·구조: 書는 위 聿(붓 율) + 아래 日(날 일)"
+      },
+      "本": {
+        reading: "ほん (혼)",
+        meaning: "책, 근본",
+        hanzi: "핵심: 本(근본 본) → 책, 뿌리\n좌우·구조: 木(나무 목) 아래 가로획을 그어 뿌리·밑동을 표시"
+      },
+      "探す": {
+        reading: "さがす (사가스)",
+        meaning: "찾다, 수색하다",
+        hanzi: "핵심: 探(찾을 탐) + す → 두리번거리며 찾아내다\n좌우·구조: 왼쪽 扌(손수 변) + 오른쪽 深(깊을 심의 약자)"
+      },
+      "課長": {
+        reading: "かちょう (카쵸-)",
+        meaning: "과장",
+        hanzi: "핵심: 課(과목·부과 과) + 長(어른·장 장) → 회사의 과(課)를 맡은 직책\n좌우·구조: 課는 왼쪽 言(말씀 언) + 오른쪽 果(열매 과)"
+      },
+      "就職": {
+        reading: "しゅうしょく (슈-쇼쿠)",
+        meaning: "취직",
+        hanzi: "핵심: 就(나아갈·취할 취) + 職(직업 직) → 직장에 들어가 일하게 됨\n좌우·구조: 就는 위 京(서울 경) + 아래 尤 / 職은 왼쪽 耳(귀 이) + 오른쪽 戠"
+      },
+      "決まる": {
+        reading: "きまる (키마루)",
+        meaning: "정해지다, 결정되다",
+        hanzi: "핵심: 決(결단할 결) + まる → 사안이나 일정이 확정되다\n좌우·구조: 왼쪽 氵(물 수 변) + 오른쪽 夬(트일 쾌) → 물꼬를 터 결정함"
+      },
+      "母": {
+        reading: "はは (하하)",
+        meaning: "어머니 (자기 어머니)",
+        hanzi: "핵심: 母(어머니 모) → 어머니\n좌우·구조: 가슴·젖가슴을 강조한 女(여자 녀)의 변형에서 유래"
+      },
+      "喜ぶ": {
+        reading: "よろこぶ (요로코부)",
+        meaning: "기뻐하다",
+        hanzi: "핵심: 喜(기쁠 희) + ぶ → 기쁨을 느끼다\n좌우·구조: 위 壴 + 아래 口(입 구) → 북을 치며 기뻐하는 모습"
+      },
+      "時々": {
+        reading: "ときどき (토키도키)",
+        meaning: "가끔, 때때로",
+        hanzi: "핵심: 時(때 시) + 時(때 시) → 때때로, 가끔\n좌우·구조: 時는 왼쪽 日(날 일) + 오른쪽 寺(절 시)"
+      },
+      "駅": {
+        reading: "えき (에키)",
+        meaning: "역",
+        hanzi: "핵심: 驛(역 역)의 일본 약자 → 기차·전철이 정차하는 역\n좌우·구조: 왼쪽 馬(말 마) + 오른쪽 尺(자 척) → 역참(驛)에서 유래"
+      },
+      "教授": {
+        reading: "きょうじゅ (쿄-쥬)",
+        meaning: "교수",
+        hanzi: "핵심: 教(가르칠 교) + 授(줄 수) → 학문을 가르치고 전수하는 직위\n좌우·구조: 教는 왼쪽 孝 + 오른쪽 攵 / 授는 왼쪽 扌(손수 변) + 오른쪽 受"
+      },
+      "見かける": {
+        reading: "みかける (미카케루)",
+        meaning: "문득 보다, 마주치다",
+        hanzi: "핵심: 見(보다) + かける → 지나가다 우연히 눈에 띄다\n좌우·구조: 見(보다) + 걸치다·시작하다의 かける"
+      },
+      "眠れる": {
+        reading: "ねむれる (네무레루)",
+        meaning: "잠들 수 있다",
+        hanzi: "핵심: 眠(잘 면)의 가능형 → 잠을 잘 수 있다\n좌우·구조: 왼쪽 目(눈 목) + 오른쪽 民(백성 민) → 눈을 감고 잠듦"
+      },
+      "富士山": {
+        reading: "ふじさん (후지산)",
+        meaning: "후지산",
+        hanzi: "핵심: 富士(후지) + 山(산 산) → 일본의 대표적인 산\n좌우·구조: 士(선비 사) + 富士山 → 산(山)은 세 봉우리 모양에서 나온 한자"
+      },
+      "見える": {
+        reading: "みえる (미에루)",
+        meaning: "보이다",
+        hanzi: "핵심: 見(보다) + える → 시야에 들어와 보이다\n좌우·구조: 見(보다)에서 파생된 자동사·가능 표현"
+      },
+      "呼ぶ": {
+        reading: "よぶ (요부)",
+        meaning: "부르다, 초대하다",
+        hanzi: "핵심: 呼(부를 호) + ぶ → 이름을 부르거나 사람을 청하다\n좌우·구조: 왼쪽 口(입 구) + 오른쪽 乎(어조사 호)"
+      },
+      "会議室": {
+        reading: "かいぎしつ (카이기시츠)",
+        meaning: "회의실",
+        hanzi: "핵심: 會議(회의) + 室(집·방 실) → 회의를 여는 방\n좌우·구조: 會(모일 회) + 議(의논할 의) + 室(방)"
+      },
+      "予約": {
+        reading: "よやく (요야쿠)",
+        meaning: "예약",
+        hanzi: "핵심: 豫(미리 예)의 일본 약자 + 約(맺을 약) → 미리 약속해 둠\n좌우·구조: 予(미리 예) + 約(왼쪽 糸 실 사 + 오른쪽 勺 구기 작)"
+      },
+      "利用": {
+        reading: "りよう (리요-)",
+        meaning: "이용",
+        hanzi: "핵심: 利(이로울 리) + 用(쓸 용) → 이롭게 활용함\n좌우·구조: 利는 왼쪽 禾(벼 화) + 오른쪽 刂(칼 도) / 用은 쓰다·사용하다"
+      },
+      "留学": {
+        reading: "りゅうがく (류-가쿠)",
+        meaning: "유학",
+        hanzi: "핵심: 留(머무를 류) + 學(배울 학) → 외국에 머무르며 공부함\n좌우·구조: 留는 위 卯 + 아래 田(밭 전) → 머물러 지냄"
+      },
+      "異なる": {
+        reading: "ことなる (코토나루)",
+        meaning: "다르다, 상이하다",
+        hanzi: "핵심: 異(다를 이) + なる → 서로 같지 않고 다르다\n좌우·구조: 위 田(밭 전) + 아래 共(함께 공) → 남다른 모양"
+      },
+      "文化": {
+        reading: "ぶんか (분카)",
+        meaning: "문화",
+        hanzi: "핵심: 文(글·문명 문) + 化(될 화) → 사회가 일군 생활 양식과 정신\n좌우·구조: 化는 왼쪽 亻(사람 인 변) + 오른쪽 匕 → 변해 감"
+      },
+      "持つ": {
+        reading: "もつ (모츠)",
+        meaning: "가지다, 들다, 지니다",
+        hanzi: "핵심: 持(가질 지)와 통하는 동작 → 손에 들거나 마음·시간을 가지다\n좌우·구조: 持つ는 1그룹 동사"
+      },
+      "健康": {
+        reading: "けんこう (켄코-)",
+        meaning: "건강",
+        hanzi: "핵심: 健(건강할 건) + 康(편안할 강) → 몸과 마음이 튼튼하고 편안함\n좌우·구조: 健은 왼쪽 亻(사람 인 변) + 오른쪽 建(세울 건) / 康은 广 + 隶 계열"
+      },
+      "お酒": {
+        reading: "おさけ (오사케)",
+        meaning: "술",
+        hanzi: "핵심: お(미화 접두어) + 酒(술 주) → 술\n좌우·구조: 酒는 왼쪽 氵(물 수 변) + 오른쪽 酉(닭 유·술독 유)"
+      },
+      "飲む": {
+        reading: "のむ (노무)",
+        meaning: "마시다",
+        hanzi: "핵심: 飲(마실 음) + む → 물·차·술 등을 마시다\n좌우·구조: 飲은 왼쪽 食(밥 식) + 오른쪽 欠(하품·마실 흠)"
+      },
+      "電車": {
+        reading: "でんしゃ (덴샤)",
+        meaning: "전철, 전차",
+        hanzi: "핵심: 電(번개·전기 전) + 車(수레·차 거) → 전기로 달리는 철도 차량\n좌우·구조: 電의 약자 電(위 雨 비 우 + 아래 申/电)"
+      },
+      "乗る": {
+        reading: "のる (노루)",
+        meaning: "타다, 올라타다",
+        hanzi: "핵심: 乘(탈 승)의 일본 약자 → 차·배·비행기 등에 타다\n좌우·구조: 乘은 나무 위에 사람이 올라탄 모습에서 유래"
+      },
+      "次": {
+        reading: "つぎ (츠기)",
+        meaning: "다음, 버금",
+        hanzi: "핵심: 次(다음 차) → 바로 뒤따르는 차례\n좌우·구조: 왼쪽 冫(얼음 빙·두 점) + 오른쪽 欠"
+      },
+      "時間": {
+        reading: "じかん (지칸)",
+        meaning: "시간",
+        hanzi: "핵심: 時(때 시) + 間(사이·동안 간) → 시각과 시각 사이의 시간\n좌우·구조: 時(때) + 間(사이)"
+      },
+      "待つ": {
+        reading: "まつ (마츠)",
+        meaning: "기다리다",
+        hanzi: "핵심: 待(기다릴 대) + つ → 사람이나 때가 오기를 기다리다\n좌우·구조: 待는 왼쪽 彳(길 갈 척) + 오른쪽 寺(절 사)"
+      },
+      "自動車": {
+        reading: "じどうしゃ (지도-샤)",
+        meaning: "자동차",
+        hanzi: "핵심: 自(스스로 자) + 動(움직일 동) + 車(차 거) → 스스로 동력으로 달리는 차\n좌우·구조: 動은 왼쪽 重(무거울 중) + 오른쪽 力(힘 력)"
+      },
+      "左側": {
+        reading: "ひだりがわ (히다리가와)",
+        meaning: "왼쪽, 좌측",
+        hanzi: "핵심: 左(왼 좌) + 側(옆·쪽 측) → 왼쪽 방향·쪽\n좌우·구조: 側은 왼쪽 亻(사람 인 변) + 오른쪽 則(법칙 칙)"
+      },
+      "忙しい": {
+        reading: "いそがしい (이소가시이)",
+        meaning: "바쁘다",
+        hanzi: "핵심: 忙(바쁠 망) + しい → 할 일이 많아 바쁘다\n좌우·구조: 왼쪽 忄(마음 심 변) + 오른쪽 亡(망할 망) → 마음이 바쁨"
+      },
+      "ご飯": {
+        reading: "ごはん (고한)",
+        meaning: "밥, 식사",
+        hanzi: "핵심: ご(정중/미화 접두어) + 飯(밥 반) → 밥, 끼니\n좌우·구조: 飯은 왼쪽 食(밥 식) + 오른쪽 反(돌이킬 반)"
+      },
+      "薬": {
+        reading: "くすり (쿠스리)",
+        meaning: "약",
+        hanzi: "핵심: 藥(약 약)의 일본 약자 → 병을 고치거나 증상을 완화하는 약\n좌우·구조: 위 艹(풀 초) + 아래 樂의 간략형"
+      },
+      "熱": {
+        reading: "ねつ (네츠)",
+        meaning: "열",
+        hanzi: "핵심: 熱(더울·열 열) → 체온이나 기온의 열기\n좌우·구조: 위 埶 + 아래 灬(불 화 발)"
+      },
+      "下がる": {
+        reading: "さがる (사가루)",
+        meaning: "내려가다, 떨어지다",
+        hanzi: "핵심: 下(아래 하) + がる → 높이·온도·수준 등이 내려가다\n좌우·구조: 下(아래)에서 파생된 자동사"
+      },
+      "疲れる": {
+        reading: "つかれる (츠카레루)",
+        meaning: "피곤하다, 지치다",
+        hanzi: "핵심: 疲(피곤할 피) + れる → 몸이나 마음이 피로해지다\n좌우·구조: 疒(병들 녁) 안에 皮(가죽 피)"
+      },
+      "お腹": {
+        reading: "おなか (오나카)",
+        meaning: "배, 뱃속",
+        hanzi: "핵심: お(접두어) + 中(가운데 중) / 腹(배 복) → 배, 속\n좌우·구조: 腹은 왼쪽 月(고기 육) + 오른쪽 復(돌아올 복)"
+      },
+      "郵便局": {
+        reading: "ゆうびんきょく (유-빈쿄쿠)",
+        meaning: "우체국",
+        hanzi: "핵심: 郵便(우편) + 局(관청·국 국) → 우편 업무를 보는 기관\n좌우·구조: 郵는 왼쪽 垂 + 오른쪽 阝 / 便(편리할 편·편지 편)"
+      },
+      "開く": {
+        reading: "あく / ひらく (아쿠 / 히라쿠)",
+        meaning: "열리다, 열다",
+        hanzi: "핵심: 開(열 개) + く → 문이나 가게·행사 등이 열리다\n좌우·구조: 바깥 門(문 문) 안에 두 손(廾)으로 빗장을 여는 모습"
+      },
+      "お茶": {
+        reading: "おちゃ (오챠)",
+        meaning: "차 (녹차·홍차 등)",
+        hanzi: "핵심: お(접두어) + 茶(차 다) → 마시는 차\n좌우·구조: 茶는 위 艹(풀 초) + 아래 人 + 木"
+      },
+      "熱い": {
+        reading: "あつい (아츠이)",
+        meaning: "(물건·음식 등이) 뜨겁다",
+        hanzi: "핵심: 熱(뜨거울 열) + い → 만지거나 먹기에 뜨겁다\n좌우·구조: 暑い(날씨가 덥다)와 발음은 같지만 熱い는 '뜨겁다'를 뜻함"
+      },
+      "最近": {
+        reading: "さいきん (사이킨)",
+        meaning: "최근",
+        hanzi: "핵심: 最(가장 최) + 近(가까울 근) → 현재와 가장 가까운 시기\n좌우·구조: 近은 왼쪽 辶 + 오른쪽 斤(도끼 근)"
+      },
+      "気": {
+        reading: "き (키)",
+        meaning: "기분, 마음, 기운",
+        hanzi: "핵심: 氣(기운 기)의 일본 약자 → 기분, 신경, 기운\n좌우·구조: 気がする(느낌이 들다), 気がする(신경 쓰다) 등 관용구가 많음"
+      },
+      "やせる": {
+        reading: "やせる (야세루)",
+        meaning: "살이 빠지다, 야위다",
+        hanzi: "핵심: 痩(파리할 수)와 통하는 뜻 → 체중이 줄고 야위다\n좌우·구조: 2그룹 동사로 痩せた(살 빠진) 형태로 자주 쓰임"
+      },
+      "風邪": {
+        reading: "かぜ (카제)",
+        meaning: "감기",
+        hanzi: "핵심: 風(바람 풍) + 邪(간사할·사기 사) → 감기\n좌우·구조: 옛날에 바람 기운이 몸에 들어 감기가 든다고 여긴 데서 유래"
+      },
+      "感じる": {
+        reading: "かんじる (칸지루)",
+        meaning: "느끼다",
+        hanzi: "핵심: 感(느낄 감) + じる → 감각이나 마음으로 느끼다\n좌우·구조: 感은 위 咸(다 함) + 아래 心(마음 심)"
+      },
+      "暗い": {
+        reading: "くらい (쿠라이)",
+        meaning: "어둡다",
+        hanzi: "핵심: 暗(어두울 암) + い → 빛이 적어 어둡다\n좌우·구조: 暗은 왼쪽 日(날 일) + 오른쪽 音(소리 음)"
+      },
+      "競技": {
+        reading: "きょうぎ (쿄-기)",
+        meaning: "경기",
+        hanzi: "핵심: 競(겨룰 경) + 技(재주 기) → 기량을 겨루는 시합·경기\n좌우·구조: 競은 위 立(설 립) + 아래 兄 두 개 / 技는 왼쪽 扌(손수 변) + 오른쪽 支"
+      },
+      "優勝": {
+        reading: "ゆうしょう (유-쇼-)",
+        meaning: "우승",
+        hanzi: "핵심: 優(뛰어날 우) + 勝(이길 승) → 대회에서 1등을 차지함\n좌우·구조: 勝은 왼쪽 月(고기 육) + 오른쪽 朕 계열"
+      },
+      "選手": {
+        reading: "せんしゅ (센슈)",
+        meaning: "선수",
+        hanzi: "핵심: 選(가릴 선) + 手(손·사람 수) → 뽑혀서 경기에 나서는 사람\n좌우·구조: 選은 왼쪽 辶 + 오른쪽 巽"
+      },
+      "代表": {
+        reading: "だいひょう (다이효-)",
+        meaning: "대표",
+        hanzi: "핵심: 代(대신할 대) + 表(겉·나타낼 표) → 집단을 대신해 나서는 사람이나 상징\n좌우·구조: 表는 위 土 + 아래 衣(옷 의)"
+      },
+      "選ぶ": {
+        reading: "えらぶ (에라부)",
+        meaning: "고르다, 선택하다, 선발하다",
+        hanzi: "핵심: 選(가릴 선) + ぶ → 여럿 가운데 고르다\n좌우·구조: 1그룹 동사로 選ばれた(선발된) 같은 수동형도 자주 등장"
+      },
+      "原稿": {
+        reading: "げんこう (겐코-)",
+        meaning: "원고",
+        hanzi: "핵심: 原(근원 원) + 稿(원고 고) → 책·기사·연설 등의 초고\n좌우·구조: 原은 厂 + 泉 / 稿는 왼쪽 禾(벼 화) + 오른쪽 高(높을 고)"
+      },
+      "締め切り": {
+        reading: "しめきり (시메키리)",
+        meaning: "마감, 마감 기한",
+        hanzi: "핵심: 締め(닫음·조임) + 切り(끊음) → 접수나 제출을 닫는 기한\n좌우·구조: 締는 왼쪽 糸(실 사) + 오른쪽 帝"
+      },
+      "間に合う": {
+        reading: "まにあう (마니아우)",
+        meaning: "시간을 맞추다, 제시간에 되다",
+        hanzi: "핵심: 間(사이·틈) + に + 合う(맞다) → 정해진 때에 늦지 않고 맞다\n좌우·구조: 合은 위 亼 + 아래 口(입 구)"
+      },
+      "寒い": {
+        reading: "さむい (사무이)",
+        meaning: "(기온·날씨가) 춥다",
+        hanzi: "핵심: 寒(찰 한) + い → 날씨나 공기가 차갑고 춥다\n좌우·구조: 寒은 宀 + 艹 + 冫(얼음 빙)"
+      },
+      "苦手": {
+        reading: "にがて (니가테)",
+        meaning: "서툼, 싫어함, 약점",
+        hanzi: "핵심: 苦(괴로울·쓸 고) + 手(손·솜씨 수) → 다루기 어렵거나 서툰 상대·분야\n좌우·구조: 苦는 위 艹(풀 초) + 아래 古(옛 고)"
+      },
+      "工場": {
+        reading: "こうじょう (코-죠-)",
+        meaning: "공장",
+        hanzi: "핵심: 工(장인·일 공) + 場(마당·장소 장) → 물건을 만드는 시설\n좌우·구조: 場은 왼쪽 土(흙 토) + 오른쪽 昜"
+      },
+      "設備": {
+        reading: "せつび (세츠비)",
+        meaning: "설비",
+        hanzi: "핵심: 設(베풀 설) + 備(갖출 비) → 필요한 시설이나 장치\n좌우·구조: 設은 왼쪽 言 + 오른쪽 殳 / 備는 왼쪽 亻 + 오른쪽 備"
+      },
+      "周り": {
+        reading: "まわり (마와리)",
+        meaning: "주위, 주변, 둘레",
+        hanzi: "핵심: 周(둘레 주)와 통하는 뜻 → 중심을 둘러싼 주위\n좌우·구조: 周는 둘레를 감싼 모양의 한자"
+      },
+      "環境": {
+        reading: "かんきょう (칸쿄-)",
+        meaning: "환경",
+        hanzi: "핵심: 環(고리·둘레 환) + 境(지경 경) → 둘러싼 자연적·사회적 조건\n좌우·구조: 環은 왼쪽 王(구슬 옥) + 오른쪽 睘 / 境은 왼쪽 土 + 오른쪽 竟"
+      },
+      "妻": {
+        reading: "つま (츠마)",
+        meaning: "아내",
+        hanzi: "핵심: 妻(아내 처) → 아내\n좌우·구조: 위 聿 + 아래 女(여자 녀)"
+      },
+      "財産": {
+        reading: "ざいさん (자이산)",
+        meaning: "재산",
+        hanzi: "핵심: 財(재물 재) + 産(낳을·재산 산) → 소유한 돈이나 물건·자산\n좌우·구조: 財는 왼쪽 貝(조개 패·재물) + 오른쪽 才 / 産은 立 + 厂 + 生"
+      },
+      "家族": {
+        reading: "かぞく (카조쿠)",
+        meaning: "가족",
+        hanzi: "핵심: 家(집 가) + 族(겨레·가족 족) → 한 집안의 식구\n좌우·구조: 家는 위 宀(집 면) + 아래 豕(돼지 시) / 族은 왼쪽 方 + 오른쪽 矢"
+      },
+      "捨てる": {
+        reading: "すてる (스테루)",
+        meaning: "버리다",
+        hanzi: "핵심: 捨(버릴 사) + てる → 필요 없거나 못 견딜 것을 버리다\n좌우·구조: 왼쪽 扌(손수 변) + 오른쪽 舍(집 사)"
+      },
+      "肥満": {
+        reading: "ひまん (히만)",
+        meaning: "비만",
+        hanzi: "핵심: 肥(살찔 비) + 滿(찰 만) → 체지방이 과도하게 많은 상태\n좌우·구조: 肥는 왼쪽 月 + 오른쪽 巴 / 滿은 왼쪽 氵 + 오른쪽 滿"
+      },
+      "糖尿病": {
+        reading: "とうにょうびょう (토-뇨-뵤-)",
+        meaning: "당뇨병",
+        hanzi: "핵심: 糖(당분 당) + 尿(오줌 뇨) + 病(병 병) → 당뇨병\n좌우·구조: 糖은 왼쪽 米(쌀 미) + 오른쪽 唐 / 尿는 위 尸 + 아래 水"
+      },
+      "危険": {
+        reading: "きけん (키켄)",
+        meaning: "위험",
+        hanzi: "핵심: 危(위태로울 위) + 險(험할 험) → 해나 사고가 생길 수 있는 위태로움\n좌우·구조: 危는 위 𠂊 + 아래 厄 / 險은 왼쪽 阝 + 오른쪽 僉"
+      },
+      "学生": {
+        reading: "がくせい (가쿠세-)",
+        meaning: "학생",
+        hanzi: "핵심: 學(배울 학) + 生(날 생·학생 생) → 학교에서 배우는 사람\n좌우·구조: 學(배움) + 生(사람·생도)"
+      },
+      "家庭教師": {
+        reading: "かていきょうし (카테-쿄-시)",
+        meaning: "과외 교사, 가정교사",
+        hanzi: "핵심: 家庭(가정) + 教師(교사) → 집에서 개인 지도를 하는 교사\n좌우·구조: 庭은 广 + 廷 / 師는 왼쪽 帅 + 오른쪽 巾"
+      },
+      "会議中": {
+        reading: "かいぎちゅう (카이기츄-)",
+        meaning: "회의 중",
+        hanzi: "핵심: 會議(회의) + 中(가운데·~중 중) → 회의가 진행 중인 때\n좌우·구조: '〜中(ちゅう/じゅう)'는 '~하는 도중·전체'를 만드는 접미사"
+      },
+      "電話": {
+        reading: "でんわ (덴와)",
+        meaning: "전화",
+        hanzi: "핵심: 電(전기 전) + 話(말씀 화) → 전화기, 통화\n좌우·구조: 電(전기) + 話(말)"
+      },
+      "鳴る": {
+        reading: "なる (나루)",
+        meaning: "울리다, 소리가 나다",
+        hanzi: "핵심: 鳴(울 명) + る → 종·전화·바람 등이 소리를 내며 울리다\n좌우·구조: 왼쪽 口(입 구) + 오른쪽 鳥(새 조) → 새가 입을 벌려 우는 모습"
+      },
+      "手伝う": {
+        reading: "てつだう (테츠다우)",
+        meaning: "돕다, 거들다",
+        hanzi: "핵심: 手(손 수) + 伝う(전하다·거들다) → 일손을 거들어 돕다\n좌우·구조: 伝은 왼쪽 亻(사람 인 변) + 오른쪽 云"
+      },
+      "結婚": {
+        reading: "けっこん (켓콘)",
+        meaning: "결혼",
+        hanzi: "핵심: 結(맺을 결) + 婚(혼인할 혼) → 부부의 연을 맺음\n좌우·구조: 結은 왼쪽 糸(실 사) + 오른쪽 吉 / 婚은 왼쪽 女 + 오른쪽 昏"
+      },
+      "冗談": {
+        reading: "じょうだん (죠-단)",
+        meaning: "농담",
+        hanzi: "핵심: 冗(쓸데없을·여분 용) + 談(말씀 담) → 우스갯소리, 농담\n좌우·구조: 談은 왼쪽 言(말씀 언) + 오른쪽 炎"
+      },
+      "傷つける": {
+        reading: "きずつける (키즈츠케루)",
+        meaning: "상처 입히다, 해치다",
+        hanzi: "핵심: 傷(상처 상) + つける → 몸이나 마음에 상처를 주다\n좌우·구조: 傷은 왼쪽 亻(사람 인 변) + 오른쪽 易 계열"
+      },
+      "旅行": {
+        reading: "りょこう (료코-)",
+        meaning: "여행",
+        hanzi: "핵심: 旅(나그네·여행 려) + 行(다닐 행) → 떠나서 돌아다니는 여행\n좌우·구조: 旅는 왼쪽 方 + 오른쪽 𠂉·氏 계열"
+      },
+      "集める": {
+        reading: "あつめる (아츠메루)",
+        meaning: "모으다",
+        hanzi: "핵심: 集(모을 집) + める → 여러 곳의 것을 한데 모으다\n좌우·구조: 위 乚/木 계열 + 아래 隹(새 추) → 새들이 나무에 모여든 모습"
+      },
+      "男の人": {
+        reading: "おとこのひと (오토코노히토)",
+        meaning: "남자, 남성",
+        hanzi: "핵심: 男(사내 남) + の + 人(사람 인) → 남자 사람\n좌우·구조: 男은 위 田(밭 전) + 아래 力(힘 력) → 밭에서 힘을 쓰는 사내"
+      },
+      "手術": {
+        reading: "しゅじゅつ (슈쥬츠)",
+        meaning: "수술",
+        hanzi: "핵심: 手(손 수) + 術(기술·방법 술) → 외과적 처치·수술\n좌우·구조: 術은 바깥 行(다닐 행) 안에 朮"
+      },
+      "使う": {
+        reading: "つかう (츠카우)",
+        meaning: "사용하다, 쓰다",
+        hanzi: "핵심: 使(부릴·쓸 사)와 통하는 동작 → 도구·시간·돈 등을 쓰다\n좌우·구조: 使는 왼쪽 亻(사람 인 변) + 오른쪽 吏"
+      },
+      "たまる": {
+        reading: "たまる (타마루)",
+        meaning: "(물·돈·포인트·피로 등이) 쌓이다, 모이다",
+        hanzi: "핵심: 溜(모일 류)와 통하는 자동사 → 차곡차곡 쌓이다\n좌우·구조: 溜는 왼쪽 氵(물 수 변) + 오른쪽 留"
+      },
+      "家": {
+        reading: "いえ / うち (이에 / 우치)",
+        meaning: "집, 가정",
+        hanzi: "핵심: 家(집 가) → 집, 거주지\n좌우·구조: 위 宀(지붕·집 면) + 아래 豕(돼지 시)"
+      },
+      "電気": {
+        reading: "でんき (덴키)",
+        meaning: "전기, 조명·불",
+        hanzi: "핵심: 電(전기 전) + 氣(기운 기) → 전기, 전등\n좌우·구조: 일상 회화에서 전등(불)을 뜻할 때도 자주 쓰임"
+      },
+      "消す": {
+        reading: "けす (케스)",
+        meaning: "끄다, 지우다, 없애다",
+        hanzi: "핵심: 消(사라질·끌 소) + す → 불·전원·글씨 등을 끄거나 지우다\n좌우·구조: 왼쪽 氵(물 수 변) + 오른쪽 肖(닮을 초) → 물로 불을 끄듯 없앰"
+      },
+      "町": {
+        reading: "まち (마치)",
+        meaning: "거리, 마을, 시가지",
+        hanzi: "핵심: 町(밭두둑·마을 정) → 거리, 동네\n좌우·구조: 왼쪽 田(밭 전) + 오른쪽 丁(고무래 정)"
+      },
+      "計画": {
+        reading: "けいかく (케-카쿠)",
+        meaning: "계획",
+        hanzi: "핵심: 計(헤아릴 계) + 畫(그릴·계획 획) → 앞으로 할 일의 순서와 방법\n좌우·구조: 計는 왼쪽 言 + 오른쪽 十 / 畫의 약자 画"
+      },
+      "変更": {
+        reading: "へんこう (헨코-)",
+        meaning: "변경",
+        hanzi: "핵심: 變(변할 변)의 약자 変 + 更(고칠 경) → 일정이나 내용을 바꿈\n좌우·구조: 更은 위 一 + 아래 曳 계열"
+      },
+      "本棚": {
+        reading: "ほんだな (혼다나)",
+        meaning: "책장, 책꽂이",
+        hanzi: "핵심: 本(책 본) + 棚(선반 붕) → 책을 꽂아 두는 선반\n좌우·구조: 棚은 왼쪽 木(나무 목) + 오른쪽 朋(벗 붕)"
+      },
+      "掃除": {
+        reading: "そうじ (소-지)",
+        meaning: "청소",
+        hanzi: "핵심: 掃(쓸 소) + 除(덜·없앨 제) → 쓸고 닦아 깨끗이 함\n좌우·구조: 掃는 왼쪽 扌(손수 변) + 오른쪽 帚 / 除는 왼쪽 阝 + 오른쪽 余"
+      },
+      "友達": {
+        reading: "ともだち (토모다치)",
+        meaning: "친구, 벗",
+        hanzi: "핵심: 友(벗 우) + 達(통할·무리 달) → 친구\n좌우·구조: 達은 왼쪽 辶 + 오른쪽 幸 계열"
+      },
+      "遊ぶ": {
+        reading: "あそぶ (아소부)",
+        meaning: "놀다, 놀러 가다",
+        hanzi: "핵심: 遊(놀 유)와 통하는 동사 → 놀거나 여가를 보내다\n좌우·구조: 遊는 왼쪽 辶 + 오른쪽 斿"
+      },
+      "買い物": {
+        reading: "かいもの (카이모노)",
+        meaning: "쇼핑, 장보기",
+        hanzi: "핵심: 買い(삼) + 物(물건 물) → 물건을 사는 일\n좌우·구조: 物은 왼쪽 牛(소 우) + 오른쪽 勿(말 물)"
+      },
+      "税金": {
+        reading: "ぜいきん (제-킨)",
+        meaning: "세금",
+        hanzi: "핵심: 税(세금 세) + 金(돈·쇠 금) → 세금\n좌우·구조: 税는 왼쪽 禾(벼 화) + 오른쪽 兌"
+      },
+      "家計": {
+        reading: "かけい (카케-)",
+        meaning: "가계, 살림살이",
+        hanzi: "핵심: 家(집 가) + 計(헤아릴 계) → 가정의 수입과 지출\n좌우·구조: 家(집) + 計(헤아림)"
+      },
+      "続ける": {
+        reading: "つづける (츠즈케루)",
+        meaning: "계속하다, 이어 가다",
+        hanzi: "핵심: 續(이을 속)의 일본 약자 + ける → 끊지 않고 계속하다\n좌우·구조: 왼쪽 糸(실 사) + 오른쪽 売의 변형 → 실을 이어 감"
+      },
+      "映画": {
+        reading: "えいが (에-가)",
+        meaning: "영화",
+        hanzi: "핵심: 映(비출 영) + 畫(그림 화) → 스크린에 비추는 영상 예술\n좌우·구조: 映은 왼쪽 日(날 일) + 오른쪽 央(가운데 앙)"
+      },
+      "誘う": {
+        reading: "さそう (사소우)",
+        meaning: "권유하다, 꾀다, 초대하다",
+        hanzi: "핵심: 誘(꾈·이끌 유) + う → 함께 가거나 하자고 권하다\n좌우·구조: 왼쪽 言(말씀 언) + 오른쪽 秀"
+      },
+      "登山": {
+        reading: "とざん (토잔)",
+        meaning: "등산",
+        hanzi: "핵심: 登(오를 등) + 山(산 산) → 산에 오름\n좌우·구조: 登은 위 癶 + 아래 豆"
+      },
+      "本当に": {
+        reading: "ほんとうに (혼토-니)",
+        meaning: "정말로, 참으로",
+        hanzi: "핵심: 本當(본당)의 일본 표기 + に → 진실로, 정말로\n좌우·구조: 當의 약자 当(위 ⺌ + 아래 彐·一)"
+      },
+      "楽しい": {
+        reading: "たのしい (타노시이)",
+        meaning: "즐겁다, 재미있다",
+        hanzi: "핵심: 樂(즐길 락)과 통하는 감각 → 즐겁고 기분이 좋다\n좌우·구조: 楽しい는 い형용사로 楽しく(즐겁게), 楽しかった(즐거웠다)로 활용"
+      },
+      "会う": {
+        reading: "あう (아우)",
+        meaning: "만나다",
+        hanzi: "핵심: 會(만날 회) + う → 사람을 만나다\n좌우·구조: 1그룹 동사로 会った(만났다), 会わない(만나지 않는다)로 활용"
+      },
+      "飛行機": {
+        reading: "ひこうき (히코-키)",
+        meaning: "비행기",
+        hanzi: "핵심: 飛行(비행) + 機(기계 기) → 하늘을 나는 항공기\n좌우·구조: 飛(날 비) + 行(다닐 행) + 機(왼쪽 木 + 오른쪽 幾)"
+      },
+      "きっぷ": {
+        reading: "きっぷ (킷푸)",
+        meaning: "표, 티켓, 승차권",
+        hanzi: "핵심: 切符(절부)의 표기 → 표, 티켓\n좌우·구조: 切(끊을 절) + 符(부적·증표 부)"
+      },
+      "安心": {
+        reading: "あんしん (안신)",
+        meaning: "안심",
+        hanzi: "핵심: 安(편안할 안) + 心(마음 심) → 걱정 없이 마음이 놓임\n좌우·구조: 安은 위 宀(집 면) + 아래 女(여자 녀) → 집 안의 편안함"
+      },
+      "強い": {
+        reading: "つよい (츠요이)",
+        meaning: "강하다, 세다",
+        hanzi: "핵심: 強(굳셀 강) + い → 힘·바람·의지 등이 강하다\n좌우·구조: 強い는 い형용사로 強く(강하게), 強くなる(강해지다)로 활용"
+      },
+      "変わる": {
+        reading: "かわる (카와루)",
+        meaning: "바뀌다, 변하다",
+        hanzi: "핵심: 變(변할 변)의 약자 変 + る → 모양이나 상태·내용이 달라지다\n좌우·구조: 자동사로 쓰여 '스스로/저절로 변하다'라는 뜻"
+      },
+      "驚く": {
+        reading: "おどろく (오도로쿠)",
+        meaning: "놀라다",
+        hanzi: "핵심: 驚(놀랄 경) + く → 뜻밖의 일에 깜짝 놀라다\n좌우·구조: 驚은 위 敬(공경할 경) + 아래 馬(말 마)"
+      },
+      "朝ごはん": {
+        reading: "あさごはん (아사고한)",
+        meaning: "아침밥, 아침 식사",
+        hanzi: "핵심: 朝(아침) + ご飯(밥) → 아침에 먹는 식사\n좌우·구조: 朝(아침) + 飯(밥)"
+      },
+      "お風呂": {
+        reading: "おふろ (오후로)",
+        meaning: "목욕, 욕조",
+        hanzi: "핵심: お(접두어) + 風呂(목욕탕·욕조) → 목욕\n좌우·구조: 呂(등뼈 려) 두 개가 겹친 모양"
+      },
+      "宿題": {
+        reading: "しゅくだい (슈쿠다이)",
+        meaning: "숙제",
+        hanzi: "핵심: 宿(묵을·숙제 숙) + 題(제목·과제 제) → 집에서 해 오는 과제\n좌우·구조: 宿은 위 宀(집 면) + 아래 百 / 題는 왼쪽 是 + 오른쪽 頁"
+      },
+      "終わる": {
+        reading: "おわる (오와루)",
+        meaning: "끝나다, 마치다",
+        hanzi: "핵심: 終(끝날 종)과 통하는 뜻 → 일이나 과정이 끝나다\n좌우·구조: 終わる는 1그룹 동사로 終わった(끝났다), 終わって(끝나고)로 활용"
+      },
+      "試合": {
+        reading: "しあい (시아이)",
+        meaning: "시합, 경기",
+        hanzi: "핵심: 試(시험할 시) + 合(합할 합) → 실력을 겨루는 시합\n좌우·구조: 試(시험하다) + 合(맞서다·합치다)"
+      },
+      "記念写真": {
+        reading: "きねんしゃしん (키넨샤신)",
+        meaning: "기념사진",
+        hanzi: "핵심: 記念(기념) + 寫眞(사진) → 추억을 남기기 위해 찍는 사진\n좌우·구조: 記(기록할 기) + 念(생각할 념) + 寫(베낄 사) + 眞(참 진)"
+      },
+      "撮る": {
+        reading: "とる (토루)",
+        meaning: "(사진·영상 등을) 찍다",
+        hanzi: "핵심: 撮(찍을 촬) + る → 카메라로 사진이나 영상을 찍다\n좌우·구조: 왼쪽 扌(손수 변) + 오른쪽 最"
+      },
+      "歳": {
+        reading: "さい (사이)",
+        meaning: "살, 나이, 세(歲)",
+        hanzi: "핵심: 歲(해 세)의 일본 약자 → 나이, 연세\n좌우·구조: 위 止 + 아래 步의 간략형"
+      },
+      "近い": {
+        reading: "ちかい (치카이)",
+        meaning: "가깝다",
+        hanzi: "핵심: 近(가까울 근) + い → 거리나 시간·관계가 가깝다\n좌우·구조: 近い의 반의어는 遠い(とおい / 토오이 · 멀다)"
+      },
+      "店": {
+        reading: "みせ (미세)",
+        meaning: "가게, 상점",
+        hanzi: "핵심: 店(가게 점) → 상점, 매장\n좌우·구조: 위 广(집 엄) + 아래 占(점칠 점)"
+      },
+      "短い": {
+        reading: "みじかい (미지카이)",
+        meaning: "짧다",
+        hanzi: "핵심: 短(짧을 단) + い → 길이나 시간이 짧다\n좌우·구조: 왼쪽 矢(화살 시) + 오른쪽 豆(콩 두) → 화살과 콩의 길이 비교"
+      },
+      "花": {
+        reading: "はな (하나)",
+        meaning: "꽃",
+        hanzi: "핵심: 花(꽃 화) → 꽃\n좌우·구조: 위 艹(풀 초) + 아래 化(될 화) → 풀에서 피어난 꽃"
+      },
+      "咲く": {
+        reading: "さく (사쿠)",
+        meaning: "(꽃이) 피다",
+        hanzi: "핵심: 咲(웃을·꽃 필 소) + く → 꽃봉오리가 피어나다\n좌우·구조: 왼쪽 口(입 구) + 오른쪽 关"
+      },
+      "水": {
+        reading: "みず (미즈)",
+        meaning: "물",
+        hanzi: "핵심: 水(물 수) → 물\n좌우·구조: 흐르는 물줄기를 본뜬 상형문자"
+      },
+      "飲み物": {
+        reading: "のみもの (노미모노)",
+        meaning: "음료, 마실 것",
+        hanzi: "핵심: 飲み(마심) + 物(물건 물) → 음료수, 마실 거리\n좌우·구조: 飲む(마시다) + 物(물건)"
+      },
+      "暖かい": {
+        reading: "あたたかい (아타타카이)",
+        meaning: "따뜻하다, 온화하다",
+        hanzi: "핵심: 暖(따뜻할 난) + かい → 날씨나 분위기·마음이 따뜻하다\n좌우·구조: 왼쪽 日(날 일) + 오른쪽 爰"
+      },
+      "困る": {
+        reading: "こまる (코마루)",
+        meaning: "곤란하다, 난처하다",
+        hanzi: "핵심: 困(곤할 곤) + る → 형편이나 상황이 난처하고 곤란하다\n좌우·구조: 바깥 囗(에워쌀 위) 안에 木(나무 목) → 나무가 사방에 갇힌 답답함"
+      },
+      "動く": {
+        reading: "うごく (우고쿠)",
+        meaning: "움직이다, 작동하다",
+        hanzi: "핵심: 動(움직일 동) + く → 자리나 상태를 바꾸며 움직이다\n좌우·구조: 왼쪽 重(무거울 중) + 오른쪽 力(힘 력)"
+      },
+      "夜中": {
+        reading: "よなか (요나카)",
+        meaning: "한밤중, 밤중",
+        hanzi: "핵심: 夜(밤) + 中(가운데·속 중) → 깊은 밤중\n좌우·구조: 夜(밤) + 中(한가운데)"
+      },
+      "発表会": {
+        reading: "はっぴょうかい (핫표-카이)",
+        meaning: "발표회",
+        hanzi: "핵심: 發表(발표) + 會(모임 회) → 연구·연주·작품 등을 선보이는 모임\n좌우·구조: 發(필 발) + 表(나타낼 표) + 會(모임)"
+      },
+      "弾く": {
+        reading: "ひく (히쿠)",
+        meaning: "(피아노·기타 등 현악기·건반악기를) 연주하다, 퉁기다",
+        hanzi: "핵심: 彈(탄알·튕길 탄)의 일본 약자 + く → 손가락으로 악기를 연주하다\n좌우·구조: 왼쪽 弓(활 궁) + 오른쪽 単"
+      },
+      "不安": {
+        reading: "ふあん (후안)",
+        meaning: "불안",
+        hanzi: "핵심: 不(아닐 불) + 安(편안할 안) → 마음이 놓이지 않고 불안함\n좌우·구조: 不(아니다) + 安(편안하다)"
+      },
+      "父": {
+        reading: "ちち (치치)",
+        meaning: "아버지 (자기 아버지)",
+        hanzi: "핵심: 父(아버지 부) → 아버지\n좌우·구조: 손에 막대·도구를 든 어른 남성의 모습에서 유래"
+      },
+      "車": {
+        reading: "くるま (쿠루마)",
+        meaning: "차, 자동차, 수레",
+        hanzi: "핵심: 車(수레 거) → 바퀴가 달린 차·수레\n좌우·구조: 위에서 본 수레와 바퀴의 모양에서 유래"
+      },
+      "頼む": {
+        reading: "たのむ (타노무)",
+        meaning: "부탁하다, 의뢰하다, 의지하다",
+        hanzi: "핵심: 賴(힘입을 뢰)의 일본 약자 + む → 부탁하다\n좌우·구조: 왼쪽 束(묶을 속) + 오른쪽 貝(조개 패)"
+      },
+      "断る": {
+        reading: "ことわる (코토와루)",
+        meaning: "거절하다, 사양하다",
+        hanzi: "핵심: 斷(끊을 단)의 일본 약자 + る → 요청이나 제안을 거절하다\n좌우·구조: 断(끊을 단)에서 나온 1그룹 동사"
+      },
+      "反応": {
+        reading: "はんのう (한노-)",
+        meaning: "반응",
+        hanzi: "핵심: 反(되돌아올 반) + 應(응할 응) → 자극이나 말에 대해 나타나는 반응\n좌우·구조: 應의 약자 応(위 广 + 아래 亦/心 계열)"
+      },
+      "調べる": {
+        reading: "しらべる (시라베루)",
+        meaning: "조사하다, 살펴보다, 확인하다",
+        hanzi: "핵심: 調(고를·조사할 조) + べる → 자세히 살피고 조사하다\n좌우·구조: 왼쪽 言(말씀 언) + 오른쪽 周(두루 주)"
+      },
+      "一部": {
+        reading: "いちぶ (이치부)",
+        meaning: "일부",
+        hanzi: "핵심: 一(한 일) + 部(부분 부) → 전체 가운데 한 부분\n좌우·구조: 一(하나) + 部(부분)"
+      },
+      "損傷": {
+        reading: "そんしょう (손쇼-)",
+        meaning: "손상",
+        hanzi: "핵심: 損(덜·손상할 손) + 傷(상처 상) → 훼손되거나 다침\n좌우·구조: 損은 왼쪽 扌(손수 변) + 오른쪽 員"
+      },
+      "起きる": {
+        reading: "おきる (오키루)",
+        meaning: "일어나다, (사건·사고가) 발생하다",
+        hanzi: "핵심: 起(일어날 기) + きる → 잠에서 깨거나 일이 생기다\n좌우·구조: 왼쪽 走(달릴 주) + 오른쪽 己(몸 기)"
+      },
+      "吸う": {
+        reading: "すう (스우)",
+        meaning: "(숨·담배·공기 등을) 빨아들이다, 피우다",
+        hanzi: "핵심: 吸(들여 마실 흡) + う → 들이마시거나 피우다\n좌우·구조: 왼쪽 口(입 구) + 오른쪽 及(미칠 급)"
+      },
+      "何時": {
+        reading: "なんじ (난지)",
+        meaning: "몇 시",
+        hanzi: "핵심: 何(어찌·무엇 하) + 時(때·시 시) → 몇 시\n좌우·구조: 何는 왼쪽 亻(사람 인 변) + 오른쪽 可(옳을 가)"
+      },
+      "今日": {
+        reading: "きょう (쿄-)",
+        meaning: "오늘",
+        hanzi: "핵심: 今日(오늘) → 오늘\n좌우·구조: 今(이제 금) + 日(날 일) → 'きょう'로 읽는 특수 읽기(숙자훈)"
+      },
+      "隠す": {
+        reading: "かくす (카쿠스)",
+        meaning: "숨기다, 감추다",
+        hanzi: "핵심: 隱(숨을 은)의 일본 약자 + す → 남이 모르게 감추다\n좌우·구조: 왼쪽 阝(언덕 부) + 오른쪽 急 계열"
+      },
+      "弟": {
+        reading: "おとうと (오토-토)",
+        meaning: "남동생",
+        hanzi: "핵심: 弟(아우 제) → 남동생\n좌우·구조: 실을 감아 차례를 매는 모양에서 온 '아우' 한자"
+      },
+      "姉": {
+        reading: "あね (아네)",
+        meaning: "언니 / 누나 (자기 언니·누나)",
+        hanzi: "핵심: 姉(손위누이 자) → 자기 언니·누나\n좌우·구조: 왼쪽 女(여자 녀) + 오른쪽 市(저자 시)"
+      },
+      "合格": {
+        reading: "ごうかく (고-카쿠)",
+        meaning: "합격",
+        hanzi: "핵심: 合(합할·맞을 합) + 格(격식·기준 격) → 시험이나 기준에 통과함\n좌우·구조: 格은 왼쪽 木(나무 목) + 오른쪽 各(각각 각)"
+      },
+      "知らせ": {
+        reading: "しらせ (시라세)",
+        meaning: "소식, 알림",
+        hanzi: "핵심: 知(알 지) + らせ → 알리는 소식·전갈\n좌우·구조: 知는 왼쪽 矢(화살 시) + 오른쪽 口(입 구)"
+      },
+      "顔": {
+        reading: "かお (카오)",
+        meaning: "얼굴, 표정",
+        hanzi: "핵심: 顔(얼굴 안) → 얼굴, 표정\n좌우·구조: 왼쪽 彦 + 오른쪽 頁(머리 혈)"
+      },
+      "犬": {
+        reading: "いぬ (이누)",
+        meaning: "개",
+        hanzi: "핵심: 犬(개 견) → 개\n좌우·구조: 大(큰 대) 오른쪽 위에 점을 찍은 모양"
+      },
+      "飼う": {
+        reading: "かう (카우)",
+        meaning: "(동물·가축·반려동물 등을) 기르다, 사육하다",
+        hanzi: "핵심: 飼(기를 사) + う → 동물을 보살피며 기르다\n좌우·구조: 왼쪽 食(밥 식) + 오른쪽 司(맡을 사)"
+      },
+      "北海道": {
+        reading: "ほっかいどう (홋카이도-)",
+        meaning: "홋카이도",
+        hanzi: "핵심: 北(북녘 북) + 海(바다 해) + 道(길·도 도) → 일본 북부의 큰 섬 지역\n좌우·구조: 海는 왼쪽 氵(물 수 변) + 오른쪽 每(매양 매)"
+      },
+      "秋": {
+        reading: "あき (아키)",
+        meaning: "가을",
+        hanzi: "핵심: 秋(가을 추) → 가을\n좌우·구조: 왼쪽 禾(벼 화) + 오른쪽 火(불 화) → 벼가 익어 누렇게 된 가을"
+      },
+      "食欲": {
+        reading: "しょくよく (쇼쿠요쿠)",
+        meaning: "식욕",
+        hanzi: "핵심: 食(먹을 식) + 慾(욕심 욕)의 약자 欲 → 음식을 먹고 싶은 욕구\n좌우·구조: 食(먹음) + 欲(바램)"
+      },
+      "下水": {
+        reading: "げすい (게스이)",
+        meaning: "하수, 하수도",
+        hanzi: "핵심: 下(아래 하) + 水(물 수) → 쓰고 흘려보내는 더러운 물·하수\n좌우·구조: 下(아래) + 水(물)"
+      },
+      "台所": {
+        reading: "だいどころ (다이도코로)",
+        meaning: "부엌, 주방",
+        hanzi: "핵심: 臺(대 대)의 약자 台 + 所(곳 소) → 부엌, 주방\n좌우·구조: 所는 왼쪽 戶(지게 호) + 오른쪽 斤(도끼 근)"
+      },
+      "汚れる": {
+        reading: "よごれる (요고레루)",
+        meaning: "더러워지다",
+        hanzi: "핵심: 汚(더러울 오) + れる → 때나 먼지 등이 묻어 더러워지다\n좌우·구조: 왼쪽 氵(물 수 변) + 오른쪽 亏"
+      },
+      "部屋": {
+        reading: "へや (헤야)",
+        meaning: "방",
+        hanzi: "핵심: 部(부분 부) + 屋(집·방 옥) → 집 안의 방\n좌우·구조: 屋(집·방)에서 나온 일상 단어"
+      },
+      "説明書": {
+        reading: "せつめいしょ (세츠메-쇼)",
+        meaning: "설명서",
+        hanzi: "핵심: 説明(설명) + 書(글·책 서) → 사용법이나 내용을 적은 책자\n좌우·구조: 説의 약자 説(왼쪽 言 + 오른쪽 兑) + 明 + 書"
+      },
+      "組み立てる": {
+        reading: "くみたてる (쿠미타테루)",
+        meaning: "조립하다, 짜 맞추다",
+        hanzi: "핵심: 組み(엮음·조합) + 立てる(세우다) → 부품을 맞춰 세우며 조립하다\n좌우·구조: 組는 왼쪽 糸(실 사) + 오른쪽 且"
+      },
+      "予定": {
+        reading: "よてい (요테-)",
+        meaning: "예정",
+        hanzi: "핵심: 豫(미리 예)의 약자 予 + 定(정할 정) → 미리 세운 계획·일정\n좌우·구조: 定은 위 宀(집 면) + 아래 正(바를 정)"
+      },
+      "午後": {
+        reading: "ごご (고고)",
+        meaning: "오후",
+        hanzi: "핵심: 午(낮 오) + 後(뒤 후) → 정오 이후의 시간\n좌우·구조: 午前(오전)의 반대말로 함께 기억하면 좋습니다"
+      },
+      "始まる": {
+        reading: "はじまる (하지마루)",
+        meaning: "시작되다",
+        hanzi: "핵심: 始(비로소 시) + まる → 일이나 행사가 시작되다\n좌우·구조: 왼쪽 女(여자 녀) + 오른쪽 台"
+      },
+      "脂っこい": {
+        reading: "あぶらっこい (아부랏코이)",
+        meaning: "기름지다, 느끼하다",
+        hanzi: "핵심: 脂(기름 지) + っこい → 기름기가 많고 느끼하다\n좌우·구조: 왼쪽 月(고기·기름 육) + 오른쪽 旨(뜻 지)"
+      },
+      "条件": {
+        reading: "じょうけん (죠-켄)",
+        meaning: "조건",
+        hanzi: "핵심: 條(조목 조)의 약자 条 + 件(물건·조건 건) → 기준이나 전제 조건\n좌우·구조: 件은 왼쪽 亻(사람 인 변) + 오른쪽 牛(소 우)"
+      },
+      "家賃": {
+        reading: "やちん (야친)",
+        meaning: "집세, 월세",
+        hanzi: "핵심: 家(집 가) + 賃(삯·빌릴 임) → 집을 빌려 쓰는 요금\n좌우·구조: 賃은 왼쪽 任(맡길 임) + 오른쪽 貝(조개 패·돈)"
+      },
+      "安い": {
+        reading: "やすい (야스이)",
+        meaning: "(값이) 싸다, 저렴하다",
+        hanzi: "핵심: 安(편안할·쌀 안) + い → 가격이 싸다\n좌우·구조: 高い(비싸다)의 반대말"
+      },
+      "様々": {
+        reading: "さまざま (사마자마)",
+        meaning: "다양함, 가지각색",
+        hanzi: "핵심: 様(모양 양) + 々(중복 부호) → 여러 가지 모습과 종류\n좌우·구조: 様은 왼쪽 木(나무 목) + 오른쪽 羊(양 양)"
+      },
+      "番組": {
+        reading: "ばんぐみ (반구미)",
+        meaning: "방송 프로그램",
+        hanzi: "핵심: 番(차례·번 번) + 組(짤·편성할 조) → 라디오·TV 프로그램\n좌우·구조: 番은 위 釆 + 아래 田(밭 전)"
+      },
+      "楽器": {
+        reading: "がっき (갓키)",
+        meaning: "악기",
+        hanzi: "핵심: 樂(음악 락)의 약자 楽 + 具(갖출 구) → 음악을 연주하는 기구\n좌우·구조: 具는 위 目(눈 목) + 아래 八"
+      },
+      "合わせる": {
+        reading: "あわせる (아와세루)",
+        meaning: "맞추다, 합치다, 함께하다",
+        hanzi: "핵심: 合(합할 합) + わせる → 둘 이상을 맞추거나 합치다\n좌우·구조: 2그룹 동사로 合わせている(맞추고 있는) 형태로 쓰임"
+      },
+      "宝くじ": {
+        reading: "たからくじ (타카라쿠지)",
+        meaning: "복권",
+        hanzi: "핵심: 寶(보배 보)의 약자 宝 + くじ → 복권\n좌우·구조: 宝는 위 宀 + 아래 玉(구슬 옥)"
+      },
+      "当たる": {
+        reading: "あたる (아타루)",
+        meaning: "당첨되다, 맞다, 부딪히다",
+        hanzi: "핵심: 當(맞을 당)의 약자 当 + たる → 복권 당첨·예측 적중·접촉\n좌우·구조: 1그룹 동사로 当たった(당첨되었다)로 활용"
+      },
+      "何": {
+        reading: "なに / なん (나니 / 난)",
+        meaning: "무엇, 뭐",
+        hanzi: "핵심: 何(어찌·무엇 하) → 무엇\n좌우·구조: 뒤에 오는 발음(다행·나행·타행 등)에 따라 なん(何時·何分)으로 바뀌기도 함"
+      },
+      "始める": {
+        reading: "はじめる (하지메루)",
+        meaning: "시작하다",
+        hanzi: "핵심: 始(비로소 시) + める → 일이나 동작을 시작하다\n좌우·구조: 2그룹 타동사로 始めた(시작했다)로 활용"
+      },
+      "今回": {
+        reading: "こんかい (콘카이)",
+        meaning: "이번, 금회",
+        hanzi: "핵심: 今(이제 금) + 回(돌아올·번 회) → 이번 차례·이번 일\n좌우·구조: 回는 바깥 囗 안에 口가 겹친 모양"
+      },
+      "落ちる": {
+        reading: "おちる (오치루)",
+        meaning: "떨어지다, (시험에) 낙방하다",
+        hanzi: "핵심: 落(떨어질 락)과 통하는 동사 → 떨어지다\n좌우·구조: 落ちる는 2그룹 동사로 落ちた(떨어졌다)로 활용"
+      },
+      "途中": {
+        reading: "とちゅう (토츄-)",
+        meaning: "도중, 중간",
+        hanzi: "핵심: 途(길 도) + 中(가운데 중) → 가는 도중, 진행 중인 중간\n좌우·구조: 途는 왼쪽 辶 + 오른쪽 余"
+      },
+      "出席": {
+        reading: "しゅっせき (슛세키)",
+        meaning: "출석",
+        hanzi: "핵심: 出(날 출) + 席(자리 석) → 모임이나 수업 자리에 나감\n좌우·구조: 席은 위 广 + 아래 廿·巾"
+      },
+      "体力": {
+        reading: "たいりょく (타이료쿠)",
+        meaning: "체력",
+        hanzi: "핵심: 體(몸 체)의 약자 体 + 力(힘 력) → 신체의 힘과 지구력\n좌우·구조: 体(몸) + 力(힘)"
+      },
+      "技術": {
+        reading: "ぎじゅつ (기쥬츠)",
+        meaning: "기술",
+        hanzi: "핵심: 技(재주 기) + 術(기술 술) → 전문적인 솜씨와 방법\n좌우·구조: 技(재주) + 術(기술)"
+      },
+      "発展": {
+        reading: "はってん (핫텐)",
+        meaning: "발전",
+        hanzi: "핵심: 發(필 발) + 展(펼 전) → 더 크고 높은 단계로 나아감\n좌우·구조: 展은 위 尸 + 아래 衣 계열"
+      },
+      "生活": {
+        reading: "せいかつ (세-카츠)",
+        meaning: "생활",
+        hanzi: "핵심: 生(살 생) + 活(살아갈·움직일 활) → 일상적인 삶과 생활\n좌우·구조: 生(삶) + 活(살아 움직임)"
+      },
+      "便利": {
+        reading: "べんり (벤리)",
+        meaning: "편리함",
+        hanzi: "핵심: 便(편할 편) + 利(이로울 리) → 쓰기 편하고 이로움\n좌우·구조: 便은 왼쪽 亻 + 오른쪽 更 / 利는 왼쪽 禾 + 오른쪽 刂"
+      },
+      "手": {
+        reading: "て (테)",
+        meaning: "손",
+        hanzi: "핵심: 手(손 수) → 손\n좌우·구조: 손가락과 손바닥을 본뜬 상형문자"
+      },
+      "品物": {
+        reading: "しなもの (시나모노)",
+        meaning: "물건, 상품",
+        hanzi: "핵심: 品(물건 품) + 物(물건 물) → 물건, 상품\n좌우·구조: 品은 口 세 개가 모인 모양"
+      },
+      "さわる": {
+        reading: "さわる (사와루)",
+        meaning: "만지다, 손대다, 방해가 되다",
+        hanzi: "핵심: 觸(닿을 촉)과 통하는 동사 → 손으로 만지다\n좌우·구조: 1그룹 동사로 さわるな(만지지 마라) 형태로 자주 등장"
+      },
+      "洗濯": {
+        reading: "せんたく (센타쿠)",
+        meaning: "세탁, 빨래",
+        hanzi: "핵심: 洗(씻을 세) + 濯(씻을 탁) → 옷이나 천을 빨래함\n좌우·구조: 洗은 왼쪽 氵 + 오른쪽 先 / 濯은 왼쪽 氵 + 오른쪽 翟"
+      },
+      "過ごす": {
+        reading: "すごす (스고스)",
+        meaning: "보내다, 지내다",
+        hanzi: "핵심: 過(지날 과) + す → 시간이나 날을 보내다\n좌우·구조: 過는 왼쪽 辶 + 오른쪽 骨 계열"
+      },
+      "美術館": {
+        reading: "びじゅつかん (비쥬츠칸)",
+        meaning: "미술관",
+        hanzi: "핵심: 美術(미술) + 館(집·관 관) → 미술 작품을 전시·보관하는 곳\n좌우·구조: 美(아름다울 미) + 術 + 館(왼쪽 食 + 오른쪽 官)"
+      },
+      "建てる": {
+        reading: "たてる (타테루)",
+        meaning: "짓다, 세우다",
+        hanzi: "핵심: 建(세울 건) + てる → 건물·집 등을 짓다\n좌우·구조: 왼쪽 廴(길게 걸을 인) + 오른쪽 聿"
+      },
+      "一般": {
+        reading: "いっぱん (잇판)",
+        meaning: "일반",
+        hanzi: "핵심: 一(한 일) + 般(돌아갈·일반 반) → 보통·일반 대중\n좌우·구조: 般은 왼쪽 舟(배 주) + 오른쪽 殳"
+      },
+      "公開": {
+        reading: "こうかい (코-카이)",
+        meaning: "공개",
+        hanzi: "핵심: 公(공평할·공적 공) + 開(열 개) → 널리 일반에게 개방해 보여 줌\n좌우·구조: 公은 위 八 + 아래 厶 / 開(열다)"
+      },
+      "残念": {
+        reading: "ざんねん (잔넨)",
+        meaning: "유감, 안타까움, 아쉽다",
+        hanzi: "핵심: 殘(남을·해칠 잔) + 念(생각할 념) → 아쉽고 안타까운 마음\n좌우·구조: 殘의 약자 残(왼쪽 歹 + 오른쪽 戔)"
+      },
+      "君": {
+        reading: "きみ (키미)",
+        meaning: "너, 자네",
+        hanzi: "핵심: 君(임금·너 군) → 친근하거나 아랫사람에게 쓰는 '너'\n좌우·구조: 위 尹 + 아래 口(입 구)"
+      },
+      "負ける": {
+        reading: "まける (마케루)",
+        meaning: "지다, 패하다",
+        hanzi: "핵심: 負(질 부) + ける → 승부나 경쟁에서 지다\n좌우·구조: 위 刀 계열 + 아래 貝(조개 패)"
+      },
+      "上手": {
+        reading: "じょうず (죠-즈)",
+        meaning: "능숙함, 잘함",
+        hanzi: "핵심: 上(위·뛰어남 상) + 手(솜씨 수) → 솜씨가 좋고 능숙함\n좌우·구조: 上(위·뛰어남) + 手(솜씨)"
+      },
+      "辞める": {
+        reading: "やめる (야메루)",
+        meaning: "그만두다, 사직하다, 중단하다",
+        hanzi: "핵심: 辭(말씀 사)의 약자 辞 + める → 학교·직장·일 등을 그만두다\n좌우·구조: 2그룹 동사로 辞めた(그만두었다)로 활용"
+      },
+      "全然": {
+        reading: "ぜんぜん (젠젠)",
+        meaning: "전혀",
+        hanzi: "핵심: 全(온전할 전) + 然(그럴 연) → (부정과 함께) 전혀, 조금도\n좌우·구조: 然은 위 然의 상부 + 아래 灬(불 화 발)"
+      },
+      "問題": {
+        reading: "もんだい (몬다이)",
+        meaning: "문제",
+        hanzi: "핵심: 問(물을 문) + 題(제목·문제 제) → 해결하거나 답해야 할 문제\n좌우·구조: 問은 바깥 門(문) 안 口(입 구)"
+      },
+      "新婚旅行": {
+        reading: "しんこんりょこう (신콘료코-)",
+        meaning: "신혼여행",
+        hanzi: "핵심: 新婚(신혼) + 旅行(여행) → 결혼 직후 떠나는 여행\n좌우·구조: 新 + 婚(혼인) + 旅 + 行"
+      },
+      "現在": {
+        reading: "げんざい (겐자이)",
+        meaning: "현재",
+        hanzi: "핵심: 現(나타날 현) + 在(있을 재) → 지금 이 시각·현재\n좌우·구조: 現은 왼쪽 王(구슬 옥) + 오른쪽 見(볼 견)"
+      },
+      "調査中": {
+        reading: "ちょうさちゅう (쵸-사츄-)",
+        meaning: "조사 중",
+        hanzi: "핵심: 調査(조사) + 中(중) → 사실을 조사하고 있는 중\n좌우·구조: 調(조사) + 査(살필 사) + 中"
+      },
+      "紙袋": {
+        reading: "かみぶくろ (카미부쿠로)",
+        meaning: "종이봉투, 쇼핑백",
+        hanzi: "핵심: 紙(종이 지) + 袋(부대·봉투 대) → 종이로 만든 봉투\n좌우·구조: 紙는 왼쪽 糸(실 사) + 오른쪽 氏 / 袋는 위 代 + 아래 衣"
+      },
+      "野菜": {
+        reading: "やさい (야사이)",
+        meaning: "채소, 야채",
+        hanzi: "핵심: 野(들 야) + 菜(나물 채) → 채소, 야채\n좌우·구조: 野는 왼쪽 里 + 오른쪽 予 / 菜는 위 艹 + 아래 采"
+      },
+      "食料品": {
+        reading: "しょくりょうひん (쇼쿠료-힌)",
+        meaning: "식료품",
+        hanzi: "핵심: 食料(식량·식재료) + 品(물건 품) → 먹을거리 상품\n좌우·구조: 食 + 料 + 品"
+      },
+      "価格": {
+        reading: "かかく (카카쿠)",
+        meaning: "가격",
+        hanzi: "핵심: 價(값 가)의 약자 価 + 格(격식·수준 격) → 물건의 값·가격\n좌우·구조: 価(값) + 格(기준)"
+      },
+      "変動": {
+        reading: "へんどう (헨도-)",
+        meaning: "변동",
+        hanzi: "핵심: 變(변할 변)의 약자 変 + 動(움직일 동) → 변하여 움직임\n좌우·구조: 変(변함) + 動(움직임)"
+      },
+      "激しい": {
+        reading: "はげしい (하게시이)",
+        meaning: "심하다, 격렬하다, 거세다",
+        hanzi: "핵심: 激(격렬할 격) + しい → 정도나 세기가 매우 심하다\n좌우·구조: 왼쪽 氵(물 수 변) + 오른쪽 激의 우측"
+      },
+      "今年": {
+        reading: "ことし (코토시)",
+        meaning: "올해",
+        hanzi: "핵심: 今(이제 금) + 年(해 년) → 올해\n좌우·구조: 'ことし'로 읽는 대표 숙자훈 단어"
+      },
+      "去年": {
+        reading: "きょねん (쿄넨)",
+        meaning: "작년, 지난해",
+        hanzi: "핵심: 去(갈 거) + 年(해 년) → 지나간 작년\n좌우·구조: 去(가다·지나다) + 年(해)"
+      },
+      "少ない": {
+        reading: "すくない (스쿠나이)",
+        meaning: "적다",
+        hanzi: "핵심: 少(적을 소) + ない → 수나 양이 적다\n좌우·구조: 多い(많다)의 반대말"
+      },
+      "入会金": {
+        reading: "にゅうかいきん (뉴-카이킨)",
+        meaning: "입회금",
+        hanzi: "핵심: 入會(입회)의 약자 入会 + 金(돈 금) → 회원 가입 시 내는 돈\n좌우·구조: 入(들어가다) + 会(모임) + 金(돈)"
+      },
+      "収入": {
+        reading: "しゅうにゅう (슈-뉴-)",
+        meaning: "수입",
+        hanzi: "핵심: 收(거둘 수) + 入(들 입) → 벌어들인 돈·수입\n좌우·구조: 收는 왼쪽 糾 계열 + 오른쪽 攵(칠 복)"
+      },
+      "増える": {
+        reading: "ふえる (후에루)",
+        meaning: "늘다, 증가하다",
+        hanzi: "핵심: 增(더할 증)의 일본 약자 + える → 양이나 수가 늘어나다\n좌우·구조: 왼쪽 土(흙 토) + 오른쪽 曽"
+      },
+      "政府": {
+        reading: "せいふ (세-후)",
+        meaning: "정부",
+        hanzi: "핵심: 政(정사 정) + 府(관청·정부 부) → 나라를 다스리는 정부\n좌우·구조: 政은 왼쪽 正(바를 정) + 오른쪽 攵"
+      },
+      "農薬": {
+        reading: "のうやく (노-야쿠)",
+        meaning: "농약",
+        hanzi: "핵심: 農(농사 농) + 藥(약 약)의 약자 薬 → 병충해·잡초 방제용 약품\n좌우·구조: 農은 위 曲 + 아래 辰"
+      },
+      "規制": {
+        reading: "きせい (키세-)",
+        meaning: "규제",
+        hanzi: "핵심: 規(법도·규정 규) + 制(마를·제도 제) → 법이나 규칙으로 제한·통제함\n좌우·구조: 規는 왼쪽 夫 계열 + 오른쪽 見(볼 견)"
+      },
+      "強める": {
+        reading: "つよめる (츠요메루)",
+        meaning: "강화하다, 세게 하다",
+        hanzi: "핵심: 強(굳셀 강) + める → 힘이나 정도를 더 강하게 하다\n좌우·구조: 2그룹 타동사로 強めた(강화했다)로 활용"
+      },
+      "性格": {
+        reading: "せいかく (세-카쿠)",
+        meaning: "성격",
+        hanzi: "핵심: 性(성품 성) + 格(성격·격식 격) → 사람의 타고난 성질과 됨됨이\n좌우·구조: 性은 왼쪽 忄(마음 심 변) + 오른쪽 生"
+      },
+      "妹": {
+        reading: "いもうと (이모-토)",
+        meaning: "여동생",
+        hanzi: "핵심: 妹(손아래누이 매) → 여동생\n좌우·구조: 왼쪽 女(여자 녀) + 오른쪽 未(아닐 미)"
+      },
+      "活発": {
+        reading: "かっぱつ (캇파츠)",
+        meaning: "활발함",
+        hanzi: "핵심: 活(활발할 활) + 發(필 발)의 약자 発 → 생기가 넘치고 활발함\n좌우·구조: 活(살아 움직임) + 発(펼침)"
+      },
+      "犯人": {
+        reading: "はんにん (한닌)",
+        meaning: "범인",
+        hanzi: "핵심: 犯(범할 범) + 人(사람 인) → 죄나 범죄를 저지른 사람\n좌우·구조: 犯은 왼쪽 犭(개 견 변) + 오른쪽 巳"
+      },
+      "私たち": {
+        reading: "わたしたち (와타시타치)",
+        meaning: "우리들, 저희들",
+        hanzi: "핵심: 私(저·나) + たち(복수 접미사) → 우리들\n좌우·구조: '〜たち'는 사람·동물을 가리키는 복수 접미사"
+      },
+      "将来": {
+        reading: "しょうらい (쇼-라이)",
+        meaning: "장래, 미래",
+        hanzi: "핵심: 將(장차·앞으로 장)의 약자 将 + 來(올 래) → 앞으로 다가올 때·미래\n좌우·구조: 将(앞으로) + 来(오다)"
+      },
+      "希望": {
+        reading: "きぼう (키보-)",
+        meaning: "희망",
+        hanzi: "핵심: 希(바랄 희) + 望(바랄 망) → 앞으로 이루고 싶은 바람과 기대\n좌우·구조: 希는 위 爻 + 아래 巾 / 望은 위 亡·月 + 아래 王"
+      },
+      "話し合う": {
+        reading: "はなしあう (하나시아우)",
+        meaning: "서로 이야기하다, 논의하다",
+        hanzi: "핵심: 話し(이야기) + 合う(서로 맞다) → 마주 앉아 의견을 나누다\n좌우·구조: '동사 ます형 어간 + 合う'는 '서로 ~하다' 패턴"
+      },
+      "失敗": {
+        reading: "しっぱい (싯파이)",
+        meaning: "실패",
+        hanzi: "핵심: 失(잃을 실) + 敗(패할 패) → 목적을 이루지 못하거나 그르침\n좌우·구조: 敗는 왼쪽 貝(조개 패) + 오른쪽 攵"
+      },
+      "研究": {
+        reading: "けんきゅう (켄큐-)",
+        meaning: "연구",
+        hanzi: "핵심: 研(갈 연) + 究(다할·궁구할 구) → 진리나 원리를 깊이 탐구함\n좌우·구조: 研은 왼쪽 石(돌 석) + 오른쪽 開 계열 / 究는 위 穴 + 아래 九"
+      },
+      "指導": {
+        reading: "しどう (시도-)",
+        meaning: "지도",
+        hanzi: "핵심: 指(가리킬 지) + 導(이끌 도) → 방향을 가리키며 가르치고 이끌음\n좌우·구조: 指는 왼쪽 扌 + 오른쪽 旨 / 導는 왼쪽 道 계열 + 오른쪽 寸"
+      },
+      "嬉しい": {
+        reading: "うれしい (우레시이)",
+        meaning: "기쁘다, 반갑다",
+        hanzi: "핵심: 嬉(기쁠 희)와 통하는 감정 → 기쁘고 반갑다\n좌우·구조: 嬉는 왼쪽 女(여자 녀) + 오른쪽 喜(기쁠 희)"
+      },
+      "自転車": {
+        reading: "じてんしゃ (지텐샤)",
+        meaning: "자전거",
+        hanzi: "핵심: 自(스스로 자) + 轉(구를 전)의 약자 転 + 車(차 거) → 페달을 밟아 굴리는 차\n좌우·구조: 転은 왼쪽 車 + 오른쪽 云"
+      },
+      "予想": {
+        reading: "よそう (요소-)",
+        meaning: "예상",
+        hanzi: "핵심: 豫(미리 예)의 약자 予 + 想(생각할 상) → 미리 짐작하고 헤아림\n좌우·구조: 想은 위 相(서로 상) + 아래 心(마음 심)"
+      },
+      "集まる": {
+        reading: "あつまる (아츠마루)",
+        meaning: "모이다",
+        hanzi: "핵심: 集(모을 집) + まる → 여러 사람이 한곳에 모이다\n좌우·구조: 集める(타동사·모으다)와 集まる(자동사·모이다) 쌍으로 익히세요"
+      },
+      "訪問販売": {
+        reading: "ほうもんはんばい (호-몬한바이)",
+        meaning: "방문 판매",
+        hanzi: "핵심: 訪問(방문) + 販賣(판매)의 약자 販売 → 집이나 직장을 찾아가 물건을 팖\n좌우·구조: 訪(찾아갈 방) + 問(물을 문) + 販(팔 판) + 売(팔 매)"
+      },
+      "非常に": {
+        reading: "ひじょうに (히죠-니)",
+        meaning: "매우, 대단히",
+        hanzi: "핵심: 非常(비상·매우) + に → 보통을 넘어 아주 많이\n좌우·구조: 非(아닐 비) + 常(항상 상)"
+      },
+      "近づく": {
+        reading: "ちかづく (치카즈쿠)",
+        meaning: "가까워지다, 다가가다",
+        hanzi: "핵심: 近(가까울 근) + づく → 거리가 가까워지다\n좌우·구조: 近い(가깝다)에서 파생된 1그룹 동사"
+      },
+      "聞こえる": {
+        reading: "きこえる (키코에루)",
+        meaning: "들리다",
+        hanzi: "핵심: 聞(들을 문)과 통하는 감각 → 소리가 귀에 들리다\n좌우·구조: 見る(보다)↔見える(보이다)와 마찬가지로 聞く↔聞こえる로 짝지어 외우세요"
+      },
+      "待ち合わせ": {
+        reading: "まちあわせ (마치아와세)",
+        meaning: "만남의 약속, 접선",
+        hanzi: "핵심: 待ち(기다림) + 合わせ(맞춤) → 만나기로 약속하고 기다림\n좌우·구조: 待つ(기다리다) + 合わせる(맞추다)"
+      },
+      "続く": {
+        reading: "つづく (츠즈쿠)",
+        meaning: "계속되다, 이어지다",
+        hanzi: "핵심: 續(이을 속)의 약자 続 + く → 끊기지 않고 이어지다\n좌우·구조: 続く(자동사·계속되다)와 続ける(타동사·계속하다)를 구분하세요"
+      },
+      "道": {
+        reading: "みち (미치)",
+        meaning: "길, 도로, 도리",
+        hanzi: "핵심: 道(길 도) → 길, 도로\n좌우·구조: 왼쪽 辶(길 갈 착) + 오른쪽 首(머리 수)"
+      },
+      "悪い": {
+        reading: "わるい (와루이)",
+        meaning: "나쁘다, 좋지 않다",
+        hanzi: "핵심: 惡(악할 악)의 약자 悪 + い → 상태나 품질·기분 등이 나쁘다\n좌우·구조: 良い(좋다)의 반대말"
+      },
+      "留守": {
+        reading: "るす (루스)",
+        meaning: "부재, 집을 비움",
+        hanzi: "핵심: 留(머무를 류) + 守(지킬 수) → 집에 사람이 없거나 자리를 비움\n좌우·구조: 守는 위 宀(집 면) + 아래 寸(마디 촌)"
+      },
+      "歌": {
+        reading: "うた (우타)",
+        meaning: "노래",
+        hanzi: "핵심: 歌(노래 가) → 노래\n좌우·구조: 왼쪽 哥 + 오른쪽 欠"
+      },
+      "借りる": {
+        reading: "かりる (카리루)",
+        meaning: "빌리다",
+        hanzi: "핵심: 借(빌릴 차) + りる → 물건이나 돈·도움 등을 빌리다\n좌우·구조: 借의 우측 昔(옛 석)과 함께 쓰이는 2그룹 동사"
+      },
+      "お金": {
+        reading: "おかね (오카네)",
+        meaning: "돈",
+        hanzi: "핵심: お(미화 접두어) + 金(돈 금) → 돈\n좌우·구조: 일상 회화에서 'お金' 형태로 아주 자주 쓰입니다"
+      },
+      "必ず": {
+        reading: "かならず (카나라즈)",
+        meaning: "반드시, 꼭",
+        hanzi: "핵심: 必(반드시 필)과 같은 뜻의 부사 → 틀림없이 꼭\n좌우·구조: 必ず〜ない(반드시 ~인 것은 아니다)처럼 부정과 결합할 때도 주의하세요"
+      },
+      "返す": {
+        reading: "かえす (카에스)",
+        meaning: "돌려주다, 갚다",
+        hanzi: "핵심: 返(돌아올 반) + す → 빌린 물건이나 돈을 돌려주다\n좌우·구조: 返은 왼쪽 辶 + 오른쪽 反"
+      },
+      "学校": {
+        reading: "がっこう (갓코-)",
+        meaning: "학교",
+        hanzi: "핵심: 學校(학교)의 약자 学校 → 학교\n좌우·구조: 學(배움) + 校(학교 교)"
+      },
+      "猫": {
+        reading: "ねこ (네코)",
+        meaning: "고양이",
+        hanzi: "핵심: 猫(고양이 묘) → 고양이\n좌우·구조: 왼쪽 犭(개·짐승 견 변) + 오른쪽 苗(싹 묘)"
+      },
+      "田舎": {
+        reading: "いなか (이나카)",
+        meaning: "시골, 고향",
+        hanzi: "핵심: 田(밭 전) + 舍(집 사) → 시골, 고향\n좌우·구조: 舍는 위 亼 + 아래 舌"
+      },
+      "空気": {
+        reading: "くうき (쿠-키)",
+        meaning: "공기, 분위기",
+        hanzi: "핵심: 空(빌·하늘 공) + 氣(기운 기) → 공기, 장내 분위기\n좌우·구조: 空은 위 穴 + 아래 工"
+      },
+      "魚": {
+        reading: "さかな (사카나)",
+        meaning: "생선, 물고기",
+        hanzi: "핵심: 魚(물고기 어) → 물고기, 생선\n좌우·구조: 물고기의 머리·몸통·꼬리를 본뜬 상형문자"
+      },
+      "玄関": {
+        reading: "げんかん (겐칸)",
+        meaning: "현관",
+        hanzi: "핵심: 玄(검을·오묘할 현) + 關(빗장·문 관)의 약자 関 → 현관\n좌우·구조: 関은 바깥 門(문) 안에 天"
+      },
+      "扱う": {
+        reading: "あつかう (아츠카우)",
+        meaning: "다루다, 취급하다, 대우하다",
+        hanzi: "핵심: 扱(다룰 삽)과 통하는 동사 → 사람이나 물건·문제를 다루다\n좌우·구조: 1그룹 동사로 扱っている(다루고 있는) 형태로 쓰임"
+      },
+      "声": {
+        reading: "こえ (코에)",
+        meaning: "목소리, 소리",
+        hanzi: "핵심: 聲(소리 성)의 일본 약자 → 목소리, 소리\n좌우·구조: 위 士 + 아래 殸 계열의 간략형"
+      },
+      "運動不足": {
+        reading: "うんどうぶそく (운도-부소쿠)",
+        meaning: "운동 부족",
+        hanzi: "핵심: 運動(운동) + 不足(부족) → 몸을 움직이는 활동이 모자람\n좌우·구조: 運(옮길 운) + 動(움직일 동) + 不 + 足"
+      },
+      "毎日": {
+        reading: "まいにち (마이니치)",
+        meaning: "매일",
+        hanzi: "핵심: 每(매양 매) + 日(날 일) → 날마다, 매일\n좌우·구조: 每는 위 𠂊 + 아래 母 계열"
+      },
+      "毎朝": {
+        reading: "まいあさ (마이아사)",
+        meaning: "매일 아침",
+        hanzi: "핵심: 每(매양 매) + 朝(아침 조) → 날마다 아침\n좌우·구조: 每(매번) + 朝(아침)"
+      },
+      "軽い": {
+        reading: "かるい (카루이)",
+        meaning: "가볍다",
+        hanzi: "핵심: 輕(가벼울 경)의 약자 軽 + い → 무게나 정도가 가볍다\n좌우·구조: 重い(무겁다)의 반대말"
+      },
+      "運動": {
+        reading: "うんどう (운도-)",
+        meaning: "운동",
+        hanzi: "핵심: 運(움직일·옮길 운) + 動(움직일 동) → 체육 활동이나 움직임\n좌우·구조: 運은 왼쪽 辶 + 오른쪽 軍"
+      },
+      "小説": {
+        reading: "しょうせつ (쇼-세츠)",
+        meaning: "소설",
+        hanzi: "핵심: 小(작을 소) + 說(말씀·이야기 설)의 약자 説 → 허구와 상상으로 쓴 이야기 문학\n좌우·구조: 小(작다) + 説(이야기)"
+      },
+      "兄弟": {
+        reading: "きょうだい (쿄-다이)",
+        meaning: "형제, 남매",
+        hanzi: "핵심: 兄(형 형) + 弟(아우 제) → 형제, 자매·남매\n좌우·구조: 兄은 위 口(입 구) + 아래 儿"
+      },
+      "日曜日": {
+        reading: "にちようび (니치요-비)",
+        meaning: "일요일",
+        hanzi: "핵심: 日(해·일요일 일) + 曜(빛날·요일 요) + 日(날 일) → 일요일\n좌우·구조: 曜는 왼쪽 日 + 오른쪽 隹"
+      },
+      "どうりで": {
+        reading: "どうりで (도오리데)",
+        meaning: "어쩐지, 그럴 만도 하다",
+        hanzi: "핵심: 道理(도리·이치) + で → 이치에 맞다, 어쩐지 그렇더라\n좌우·구조: 道理는 왼쪽 道 + 오른쪽 里"
+      },
+      "渋滞": {
+        reading: "じゅうたい (쥬-타이)",
+        meaning: "(교통·흐름 등의) 정체",
+        hanzi: "핵심: 澁(떫을·막힐 삽)의 약자 渋 + 滯(막힐 체)의 약자 滞 → 차나 일이 막혀 밀림\n좌우·구조: 둘 다 왼쪽에 氵(물 수 변)이 있어 흐름·막힘을 나타냄"
+      },
+      "お父さん": {
+        reading: "おとうさん (오토-산)",
+        meaning: "아버지, 아빠",
+        hanzi: "핵심: お(접두어) + 父 + さん(호칭) → 아버지\n좌우·구조: 남의 아버지나 다정한 호칭으로 자주 쓰임"
+      },
+      "社長": {
+        reading: "しゃちょう (샤쵸-)",
+        meaning: "사장",
+        hanzi: "핵심: 社(회사·사당 사) + 長(어른·장 장) → 회사의 대표·사장\n좌우·구조: 社는 왼쪽 礻(보일 시 변) + 오른쪽 土(흙 토)"
+      },
+      "服": {
+        reading: "ふく (후쿠)",
+        meaning: "옷, 의복",
+        hanzi: "핵심: 服(옷·복종할 복) → 옷, 의복\n좌우·구조: 왼쪽 月(고기·몸 육) + 오른쪽 卩·又 계열"
+      },
+      "体調": {
+        reading: "たいちょう (타이쵸-)",
+        meaning: "컨디션, 몸 상태",
+        hanzi: "핵심: 體(몸 체)의 약자 体 + 調(고를·상태 조) → 몸의 컨디션\n좌우·구조: 体(몸) + 調(조율·상태)"
+      },
+      "専業主婦": {
+        reading: "せんぎょうしゅふ (센교-슈후)",
+        meaning: "전업주부",
+        hanzi: "핵심: 專(오직 전)의 약자 専 + 業(업 업) + 主婦(주부) → 가사·육아에 전념하는 주부\n좌우·구조: 専 + 業 + 主(주인 주) + 婦(며느리·아내 부)"
+      },
+      "彼氏": {
+        reading: "かれし (카레시)",
+        meaning: "남자친구",
+        hanzi: "핵심: 彼(그) + 氏(성씨·남성 씨) → 남자친구\n좌우·구조: 氏는 성씨·사람을 높여 부를 때 쓰는 한자"
+      },
+      "愛情": {
+        reading: "あいじょう (아이죠-)",
+        meaning: "애정",
+        hanzi: "핵심: 愛(사랑 애) + 情(뜻·정 정) → 깊이 아끼고 사랑하는 마음\n좌우·구조: 情은 왼쪽 忄(마음 심 변) + 오른쪽 青"
+      },
+      "作業": {
+        reading: "さぎょう (사교-)",
+        meaning: "작업",
+        hanzi: "핵심: 作(지을 작) + 業(일·업 업) → 몸이나 기계를 써서 하는 일·작업\n좌우·구조: 作은 왼쪽 亻 + 오른쪽 乍 / 業은 위 艹·一 계열 + 아래 木"
+      },
+      "進める": {
+        reading: "すすめる (스스메루)",
+        meaning: "진행하다, 앞으로 나아가게 하다",
+        hanzi: "핵심: 進(나아갈 진) + める → 일이나 계획을 진척시키다\n좌우·구조: 進은 왼쪽 辶 + 오른쪽 隹"
+      },
+      "共通": {
+        reading: "きょうつう (쿄-츠-)",
+        meaning: "공통",
+        hanzi: "핵심: 共(함께 공) + 通(통할 통) → 여럿이 함께 지니거나 통함\n좌우·구조: 通은 왼쪽 辶 + 오른쪽 甬"
+      },
+      "趣味": {
+        reading: "しゅみ (슈미)",
+        meaning: "취미",
+        hanzi: "핵심: 趣(뜻·취향 취) + 味(맛 미) → 즐기는 취미\n좌우·구조: 趣는 왼쪽 走 + 오른쪽 取"
+      },
+      "知り合う": {
+        reading: "しりあう (시리아우)",
+        meaning: "서로 알게 되다, 사귀게 되다",
+        hanzi: "핵심: 知り(알음) + 合う(서로 맞다) → 서로 알고 지내게 되다\n좌우·구조: 知る(알다) + 合う(서로 맞다)"
+      },
+      "息子": {
+        reading: "むすこ (무스코)",
+        meaning: "아들",
+        hanzi: "핵심: 息子(아들) → 아들\n좌우·구조: 息(숨·자식 식) + 子(아들 자)"
+      },
+      "退職": {
+        reading: "たいしょく (타이쇼쿠)",
+        meaning: "퇴직",
+        hanzi: "핵심: 退(물러날 퇴) + 職(직업·직장 직) → 직장에서 물러남\n좌우·구조: 退은 왼쪽 辶 + 오른쪽 艮"
+      },
+      "幼児": {
+        reading: "ようじ (요-지)",
+        meaning: "유아, 어린아이",
+        hanzi: "핵심: 幼(어릴 유) + 兒(아이 아)의 약자 児 → 취학 전 어린아이\n좌우·구조: 幼는 왼쪽 幺 + 오른쪽 力"
+      },
+      "絶対に": {
+        reading: "ぜったいに (젯타이니)",
+        meaning: "절대로",
+        hanzi: "핵심: 絶對(절대)의 약자 絶対 + に → 결코, 절대로\n좌우·구조: 絶(끊을 절) + 対(짝·마주할 대)"
+      },
+      "触る": {
+        reading: "さわる (사와루)",
+        meaning: "만지다, 손대다",
+        hanzi: "핵심: 觸(닿을 촉)의 약자 触 + る → 손이나 몸을 대어 만지다\n좌우·구조: 왼쪽 角(뿔 각) + 오른쪽 蜀"
+      },
+      "発表": {
+        reading: "はっぴょう (핫표-)",
+        meaning: "발표",
+        hanzi: "핵심: 發表(발표)의 약자 発表 → 의견이나 결과·소식을 세상에 알림\n좌우·구조: 発(필 발) + 表(나타낼 표)"
+      },
+      "曲": {
+        reading: "きょく (쿄쿠)",
+        meaning: "곡, 노래",
+        hanzi: "핵심: 曲(굽을·노래 곡) → 음악 한 곡\n좌우·구조: 악기나 굽은 모양에서 나온 한자"
+      },
+      "植木鉢": {
+        reading: "うえきばち (우에키바치)",
+        meaning: "화분",
+        hanzi: "핵심: 植木(나무를 심음·묘목) + 鉢(바리·화분 발) → 화분\n좌우·구조: 植(왼쪽 木 + 오른쪽 直) + 木 + 鉢(왼쪽 金 + 오른쪽 本)"
+      },
+      "誰か": {
+        reading: "だれか (다레카)",
+        meaning: "누군가, 누구인가",
+        hanzi: "핵심: 誰(누구 수) + か → 어떤 사람, 누군가\n좌우·구조: 誰는 왼쪽 言(말씀 언) + 오른쪽 隹"
+      },
+      "歌う": {
+        reading: "うたう (우타우)",
+        meaning: "노래하다",
+        hanzi: "핵심: 歌(노래 가) + う → 노래를 부르다\n좌우·구조: 1그룹 동사로 歌わせられる(억지로 노래하게 되다) 같은 사역수동형으로도 활용"
+      },
+      "内容": {
+        reading: "ないよう (나이요-)",
+        meaning: "내용",
+        hanzi: "핵심: 內(안 내) + 容(담을·모습 용) → 글·말·물건 속에 담긴 내용\n좌우·구조: 容은 위 宀(집 면) + 아래 谷"
+      },
+      "質問": {
+        reading: "しつもん (시츠몬)",
+        meaning: "질문",
+        hanzi: "핵심: 質(바탕·물건 질) + 問(물을 문) → 궁금한 점을 물음\n좌우·구조: 質은 위 斤 두 개 + 아래 貝"
+      },
+      "平日": {
+        reading: "へいじつ (헤-지츠)",
+        meaning: "평일",
+        hanzi: "핵심: 平(평평할·보통 평) + 日(날 일) → 주말·공휴일이 아닌 보통 날\n좌우·구조: 平(평범·고름) + 日(날)"
+      },
+      "空く": {
+        reading: "すく (스쿠)",
+        meaning: "(자리·길·배 등이) 비다, 한산하다, 고프다",
+        hanzi: "핵심: 空(빌 공) + く → 빈자리가 생기거나 여유로워지다\n좌우·구조: お腹が空く(배가 고프다), 電車が空く(전철이 한산하다) 등에 쓰임"
+      },
+      "込む": {
+        reading: "こむ (코무)",
+        meaning: "(사람·차 등이) 붐비다, 혼잡하다",
+        hanzi: "핵심: 込(들어갈·몰릴 입) + む → 사람이 가득 차 붐비다\n좌우·구조: 込은 왼쪽 辶 + 오른쪽 入(들 입)으로 만든 일본 고유 한자"
+      },
+      "春": {
+        reading: "はる (하루)",
+        meaning: "봄",
+        hanzi: "핵심: 春(봄 춘) → 봄\n좌우·구조: 위 三·人 계열 + 아래 日(날 일)"
+      },
+      "庭": {
+        reading: "にわ (니와)",
+        meaning: "정원, 뜰",
+        hanzi: "핵심: 庭(뜰 정) → 마당, 정원\n좌우·구조: 广(집 엄) 안에 壬"
+      },
+      "全員": {
+        reading: "ぜんいん (젠인)",
+        meaning: "전원, 모두",
+        hanzi: "핵심: 全(온전할 전) + 員(인원·구성원 원) → 그 모임이나 집단의 모든 사람\n좌우·구조: 員은 위 口(입 구) + 아래 貝(조개 패)"
+      },
+      "賛成": {
+        reading: "さんせい (산세-)",
+        meaning: "찬성",
+        hanzi: "핵심: 贊(도울·찬성할 찬)의 약자 賛 + 成(이룰 성) → 의견이나 안건에 동의함\n좌우·구조: 賛은 위 夫 두 개 + 아래 貝"
+      },
+      "案": {
+        reading: "あん (안)",
+        meaning: "안, 생각, 계획안",
+        hanzi: "핵심: 案(책상·생각 안) → 제안, 계획안\n좌우·구조: 위 安(편안할 안) + 아래 木(나무 목)"
+      },
+      "山": {
+        reading: "やま (야마)",
+        meaning: "산",
+        hanzi: "핵심: 山(산 산) → 산\n좌우·구조: 솟아오른 산봉우리 세 개를 그린 상형문자"
+      },
+      "一番": {
+        reading: "いちばん (이치방)",
+        meaning: "제일, 가장, 1번",
+        hanzi: "핵심: 一(하나·제일 일) + 番(차례·번 번) → 가장, 제일\n좌우·구조: 최상급·제일을 만들 때 앞에 붙여 아주 자주 씁니다"
+      },
+      "孫": {
+        reading: "まご (마고)",
+        meaning: "손자, 손녀",
+        hanzi: "핵심: 孫(손자 손) → 손자·손녀\n좌우·구조: 왼쪽 子(아들 자) + 오른쪽 系(이을 계)"
+      },
+      "毎晩": {
+        reading: "まいばん (마이반)",
+        meaning: "매일 밤",
+        hanzi: "핵심: 每(매양 매) + 晩(저녁·밤 만) → 날마다 밤\n좌우·구조: 晩은 왼쪽 日 + 오른쪽 免 계열"
+      },
+      "楽しみ": {
+        reading: "たのしみ (타노시미)",
+        meaning: "즐거움, 낙, 기대",
+        hanzi: "핵심: 樂(즐길 락)의 표기 楽 + しみ → 즐거움, 기대되는 일\n좌우·구조: 楽しむ(즐기다)에서 나온 명사형"
+      },
+      "講義": {
+        reading: "こうぎ (코-기)",
+        meaning: "강의",
+        hanzi: "핵심: 講(익힐·강의할 강) + 義(뜻·의리 의) → 대학 등에서 전문 내용을 강의함\n좌우·구조: 講은 왼쪽 言(말씀 언) + 오른쪽 構"
+      },
+      "貸す": {
+        reading: "かす (카스)",
+        meaning: "빌려주다",
+        hanzi: "핵심: 貸(빌릴 대) + す → 물건이나 돈 등을 빌려주다\n좌우·구조: 왼쪽 代(대신할 대) + 오른쪽 貝(조개 패)"
+      },
+      "わざわざ": {
+        reading: "わざわざ (와자와자)",
+        meaning: "일부러, 굳이",
+        hanzi: "핵심: 態々의 표기 → 수고스럽게 일부러, 굳이\n좌우·구조: 고마움이나 수고로움을 함께 담아 말할 때 자주 쓰입니다"
+      },
+      "運転": {
+        reading: "うんてん (운텐)",
+        meaning: "운전",
+        hanzi: "핵심: 運(움직일·운행할 운) + 轉(구를 전)의 약자 転 → 차·기계 등을 조종해 움직임\n좌우·구조: 運(운행) + 転(구름)"
+      }
+    };
+
+    function parseGrammarList(rawText) {
+      const lines = rawText.replace(/\r\n/g, "\n").split("\n");
+      const grammars = [];
+      let curGrammar = null;
+      let curExample = null;
+
+      function flushExample() {
+        if (curGrammar && curExample) {
+          curGrammar.examples.push(curExample);
+          curExample = null;
+        }
+      }
+
+      function flushGrammar() {
+        flushExample();
+        if (curGrammar) {
+          grammars.push(curGrammar);
+          curGrammar = null;
+        }
+      }
+
+      for (const rawLine of lines) {
+        const line = rawLine.trim();
+        if (!line) continue;
+
+        const m = line.match(/^(\d{3})\s+(.+?)\s+(.+)$/);
+        if (m) {
+          flushGrammar();
+          curGrammar = {
+            id: m[1],
+            num: parseInt(m[1], 10),
+            pattern: m[2].trim(),
+            meaning: m[3].trim(),
+            connection: "",
+            examples: []
+          };
+          continue;
+        }
+
+        if (!curGrammar) continue;
+
+        if (line.startsWith("접속:")) {
+          flushExample();
+          curGrammar.connection = line.replace(/^접속:\s*/, "").trim();
+          continue;
+        }
+
+        if (line.startsWith("・")) {
+          flushExample();
+          curExample = {
+            jp: line.replace(/^・\s*/, "").trim(),
+            pron: "",
+            kr: ""
+          };
+          continue;
+        }
+
+        if (curExample) {
+          if (!curExample.pron && line.startsWith("(") && line.endsWith(")")) {
+            curExample.pron = line.slice(1, -1).trim();
+          } else if (!curExample.kr) {
+            curExample.kr = line;
+          } else {
+            curExample.kr += " " + line;
+          }
+        }
+      }
+
+      flushGrammar();
+
+      const cards = [];
+      for (const g of grammars) {
+        g.examples.forEach((ex, idx) => {
+          cards.push({
+            uid: `${g.id}-${idx + 1}`,
+            grammarId: g.id,
+            num: g.num,
+            exIndex: idx + 1,
+            exTotal: g.examples.length,
+            pattern: g.pattern,
+            meaning: g.meaning,
+            connection: g.connection,
+            jp: ex.jp,
+            pron: ex.pron,
+            kr: ex.kr
+          });
+        });
+      }
+      return cards;
+    }
+
+    const ALL_CARDS = parseGrammarList(RAW_GRAMMAR_TEXT);
+
+    function normalizePron(str) {
+      return (str || "")
+        .toLowerCase()
+        .replace(/[\s\u00A0·ㆍ・,，.。!?！？"'()（）「」『』〜～ー\-]/g, "")
+        .trim();
+    }
+
+    function buildInflectionGuide(card) {
+      const notes = [];
+      const conn = card.connection || "";
+      const jp = card.jp || "";
+
+      if (conn) {
+        notes.push(`• 접속 공식: ${conn}`);
+      }
+      if (/동사\s*사전형|기본형|원형/.test(conn + jp)) {
+        notes.push("• 동사 사전형/기본형: 사전에 실린 원형(る·う·く·す·つ·ぬ·ぶ·む·ぐ 끝) 그대로 붙입니다.\n  예시) 行く → 行く / 食べる → 食べる");
+      }
+      if (/て형/.test(conn + jp)) {
+        notes.push("• 동사 て형 변형: 1그룹(う·つ·る→って / む·ぶ·ぬ→んで / く→いて / ぐ→いで / す→して), 2그룹(어간+て), 3그룹(する→して, 来る→きて)\n  예시) 待つ → 待って / 飲む → 飲んで / 見る → 見て");
+      }
+      if (/ない형/.test(conn + jp)) {
+        notes.push("• 동사 ない형 변형: 1그룹(어미를 あ단+ない, う→わない), 2그룹(어간+ない), 3그룹(する→しない, 来る→こない)\n  예시) 帰る → 帰らない / 食べる → 食べない / 来る → こない");
+      }
+      if (/た형|과거형/.test(conn + jp)) {
+        notes.push("• 동사 た형 변형: て형의 'て→た', 'で→だ'로 바꾸어 과거·완료·가정(~たら) 형태로 만듭니다.\n  예시) 行く → 行った / 読む → 読んだ");
+      }
+      if (/마스형/.test(conn + jp)) {
+        notes.push("• 동사 ます형 어간: ます형에서 'ます'를 떼어낸 형태에 뒷말을 바로 연결합니다.\n  예시) 食べる → 食べ(ます 탈락) / 走る → 走り(ます 탈락)");
+      }
+      if (/의지형/.test(conn + jp)) {
+        notes.push("• 동사 의지형 변형: 1그룹(어미를 お단+う), 2그룹(어간+よう), 3그룹(する→しよう, 来る→こよう)\n  예시) 行く → 行こう / 食べる → 食べよう / する → しよう");
+      }
+      if (/사역/.test(conn + jp)) {
+        notes.push("• 동사 사역형 변형: 1그룹(어미를 あ단+せる), 2그룹(어간+させる), 3그룹(する→させる, 来る→こさせる)\n  예시) 待つ → 待たせる / 見る → 見させる / する → させる");
+      }
+      if (/수동|가능/.test(conn + jp)) {
+        notes.push("• 동사 수동/가능형 변형: 1그룹(어미를 あ단+れる / え단+る), 2그룹(어간+られる), 3그룹(する→される/できる, 来る→こられる)\n  예시) 呼ぶ → 呼ばれる / 読む → 読める / する → される");
+      }
+      if (/い형용사/.test(conn + jp)) {
+        notes.push("• い형용사 변형: 어미 'い'를 빼고 'く', 'くて', 'かった', 'ければ'로 바꾸거나 보통형 그대로 씁니다.\n  예시) 高い → 高く / 高くて / 高かった");
+      }
+      if (/な형용사/.test(conn + jp)) {
+        notes.push("• な형용사 변형: 문법 규칙에 따라 어간 그대로, 'な', 'である', 또는 'だ' 생략형으로 접속합니다.\n  예시) 静かだ → 静かな / 静か / 静かである");
+      }
+      if (/명사/.test(conn + jp)) {
+        notes.push("• 명사 접속: 문법 조건에 따라 명사 뒤에 'の', 'な', 'である', 또는 명사 원형 그대로 이어 붙입니다.\n  예시) 雨 → 雨の / 病気 → 病気の");
+      }
+
+      return notes.join("\n\n");
+    }
+
+    function renderConnectionRules(card) {
+      const container = document.getElementById("expConnection");
+      const rawConn = (card.connection || "접속 규칙 정보 없음").trim();
+      const parts = rawConn.split(/\s*\/\s*(?=\[|①|②|③|※)/).filter(Boolean);
+
+      const rows = (parts.length ? parts : [rawConn]).map((part) => {
+        let chipClass = "pos-chip";
+        let chipLabel = "접속";
+        if (/동사/.test(part)) {
+          chipLabel = "동사";
+        } else if (/い형용사/.test(part)) {
+          chipClass = "pos-chip adj-i";
+          chipLabel = "い형용사";
+        } else if (/な형용사/.test(part)) {
+          chipClass = "pos-chip adj-na";
+          chipLabel = "な형용사";
+        } else if (/명사/.test(part)) {
+          chipClass = "pos-chip noun";
+          chipLabel = "명사";
+        } else if (/보통형/.test(part)) {
+          chipLabel = "보통형";
+        }
+
+        return `
+          <div class="conn-rule-row">
+            <div class="conn-rule-head">
+              <span class="${chipClass}">${chipLabel}</span>
+            </div>
+            <div class="conn-rule-body jp">${part}</div>
+          </div>
+        `;
+      }).join("");
+
+      container.innerHTML = `<div class="conn-rule-list">${rows}</div>`;
+    }
+
+    function extractSentenceVocab(jpText) {
+      const sortedKeys = Object.keys(VOCAB_BANK).sort((a, b) => b.length - a.length);
+      const matched = [];
+      let remaining = jpText || "";
+
+      for (const word of sortedKeys) {
+        if (remaining.includes(word)) {
+          const entry = VOCAB_BANK[word];
+          if (typeof entry === "string") {
+            matched.push({ word, reading: "", meaning: entry, hanzi: "" });
+          } else {
+            matched.push({
+              word,
+              reading: entry.reading || "",
+              meaning: entry.meaning || "",
+              hanzi: entry.hanzi || ""
+            });
+          }
+          remaining = remaining.split(word).join(" ");
+        }
+      }
+      return matched;
+    }
+
+    function parseHanziBreakdown(item) {
+      const raw = (item.hanzi || "").trim();
+      const lines = raw.split("\n").map((l) => l.trim()).filter(Boolean);
+      let coreLine = "";
+      let sideLine = "";
+
+      for (const line of lines) {
+        if (/^핵심\s*:/.test(line)) {
+          coreLine = line.replace(/^핵심\s*:\s*/, "").trim();
+        } else if (/^(좌우|구조|부수)\s*·?.*:/.test(line)) {
+          sideLine = line.replace(/^(좌우|구조|부수)[^:]*:\s*/, "").trim();
+        } else if (!coreLine) {
+          coreLine = line;
+        } else {
+          sideLine = sideLine ? `${sideLine}\n${line}` : line;
+        }
+      }
+
+      if (!coreLine) {
+        coreLine = `${item.word} (${item.meaning || "단어"})`;
+      }
+      if (!sideLine) {
+        sideLine = "글자 구성 요소와 발음을 함께 소리 내며 연결해 보세요.";
+      }
+      return { coreLine, sideLine };
+    }
+
+    function buildMnemonicVisual(item, coreLine, sideLine) {
+      const textBlob = `${item.word} ${item.meaning} ${coreLine} ${sideLine}`;
+      const glyph = (item.word || "字").slice(0, 2);
+
+      let originTag = "한자연상 · 원형기원 연상";
+      let story = `원형 기원 연상:\n'${glyph}'의 본래 모양과 부수 기원을 떠올리며 '${item.meaning}' 뜻과 연결하세요.`;
+
+      if (/비|雨|降る/.test(textBlob)) {
+        originTag = "한자연상 · 雨(비 우) 원형 연상";
+        story = "원형 기원 연상(雨):\n윗획(一)은 하늘, 안쪽 점들은 하늘에서 떨어지는 빗방울 원형입니다.\n• 연상고리: 하늘(一) 아래 빗방울(점)이 뚝뚝 떨어지는 모습 → 비·내리다";
+      } else if (/바람|風|吹く/.test(textBlob)) {
+        originTag = "한자연상 · 風(바람 풍) 원형 연상";
+        story = "원형 기원 연상(風):\n바깥 几는 바람이 감싸 도는 틀, 안쪽 기운은 불어가는 바람의 결을 뜻합니다.\n• 연상고리: 사방을 감싸며 스치는 바람결 → 바람·불다";
+      } else if (/시간|朝|夜|昨日|明日|今日|間|時|日|月/.test(textBlob)) {
+        originTag = "한자연상 · 日·月·間 원형 연상";
+        story = "원형 기원 연상(日·月·間):\n日은 둥근 태양, 月은 초승달·반달, 間은 문틈 사이로 비치는 햇살·시간입니다.\n• 연상고리: 해·달·문틈이 만드는 시간의 흐름 → 때·사이·동안";
+      } else if (/먹다|밥|차|술|요리|식|飲|食|茶|酒/.test(textBlob)) {
+        originTag = "한자연상 · 食(밥 식) 원형 연상";
+        story = "원형 기원 연상(食):\n윗부분 亼은 음식 덮개(뚜껑), 아래는 음식을 담은 그릇 모양에서 비롯되었습니다.\n• 연상고리: 뚜껑을 연 밥그릇 → 먹다·음식·식사";
+      } else if (/말|소리|듣다|이야기|전화|言|聞|話|音|声/.test(textBlob)) {
+        originTag = "한자연상 · 言·耳·音 원형 연상";
+        story = "원형 기원 연상(言·音):\n입(口)에서 나가는 말과 소리의 파동·울림을 형상화한 글자들입니다.\n• 연상고리: 입과 귀로 오가는 말과 소리 → 말·듣다·목소리";
+      } else if (/이동|가다|오다|걷다|달리다|전철|차|行|来|歩|走|車|駅/.test(textBlob)) {
+        originTag = "한자연상 · 行·車·足 원형 연상";
+        story = "원형 기원 연상(行·車):\n行은 네거리 길 모양, 車는 차축과 두 바퀴가 달린 수레의 위쪽 모습에서 왔습니다.\n• 연상고리: 길과 바퀴가 굴러가는 이동 → 가다·오다·차·역";
+      } else if (/마음|기분|사랑|불안|기쁘|화내|心|思|愛|喜|怒|気/.test(textBlob)) {
+        originTag = "한자연상 · 心(마음 심) 원형 연상";
+        story = "원형 기원 연상(心):\n가슴 속 심장의 윤곽과 뛰는 맥박(점 세 개)을 그린 상형문자입니다.\n• 연상고리: 두근거리는 심장과 감정 → 마음·기분·느낌";
+      }
+
+      return { originTag, story: `${story}\n• 핵심 연결: ${coreLine}` };
+    }
+
+    const STORAGE_KEY = "jlpt_n3_solo_pron_study_v1";
+
+    function loadState() {
+      const fallback = {
+        theme: "light",
+        scope: "all",
+        search: "",
+        currentUid: ALL_CARDS[0] ? ALL_CARDS[0].uid : "",
+        records: {},
+        wrongHistory: {},
+        autoAdvance: true,
+        autoAdvanceDelay: 1200,
+        sweepCompleted: false
+      };
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return fallback;
+        const parsed = JSON.parse(raw);
+        const records = parsed.records && typeof parsed.records === "object" ? parsed.records : {};
+        const wrongHistory = parsed.wrongHistory && typeof parsed.wrongHistory === "object" ? { ...parsed.wrongHistory } : {};
+        for (const [uid, rec] of Object.entries(records)) {
+          if (rec && rec.status === "wrong") {
+            wrongHistory[uid] = {
+              count: (wrongHistory[uid]?.count || 0) || 1,
+              lastWrongAt: wrongHistory[uid]?.lastWrongAt || rec.updatedAt || Date.now(),
+              cleared: false
+            };
+          }
+        }
+        return {
+          theme: parsed.theme === "dark" ? "dark" : "light",
+          scope: parsed.scope || "all",
+          search: typeof parsed.search === "string" ? parsed.search : "",
+          currentUid: parsed.currentUid || fallback.currentUid,
+          records,
+          wrongHistory,
+          autoAdvance: typeof parsed.autoAdvance === "boolean" ? parsed.autoAdvance : true,
+          autoAdvanceDelay: [800, 1200, 1800, 2500].includes(Number(parsed.autoAdvanceDelay)) ? Number(parsed.autoAdvanceDelay) : 1200,
+          sweepCompleted: Boolean(parsed.sweepCompleted)
+        };
+      } catch (e) {
+        return fallback;
+      }
+    }
+
+    let autoAdvanceTimer = null;
+    let autoAdvanceInterval = null;
+
+    function clearAutoAdvanceTimer() {
+      if (autoAdvanceTimer) {
+        clearTimeout(autoAdvanceTimer);
+        autoAdvanceTimer = null;
+      }
+      if (autoAdvanceInterval) {
+        clearInterval(autoAdvanceInterval);
+        autoAdvanceInterval = null;
+      }
+      const cd = document.getElementById("autoNavCountdown");
+      if (cd) cd.textContent = "";
+    }
+
+    function recordWrongHistory(uid) {
+      const prev = state.wrongHistory[uid] || { count: 0, lastWrongAt: 0, cleared: false };
+      state.wrongHistory[uid] = {
+        count: (prev.count || 0) + 1,
+        lastWrongAt: Date.now(),
+        cleared: false
+      };
+    }
+
+    function getHistoryWrongCards() {
+      return ALL_CARDS.filter((c) => {
+        const h = state.wrongHistory[c.uid];
+        const r = state.records[c.uid];
+        return Boolean((h && (h.count > 0 || !h.cleared)) || (r && r.status === "wrong"));
+      });
+    }
+
+    let state = loadState();
+
+    function saveState() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      } catch (e) {
+        toast("저장 공간에 기록할 수 없습니다.");
+      }
+    }
+
+    function toast(msg) {
+      const el = document.getElementById("toast");
+      el.textContent = msg;
+      el.classList.add("show");
+      clearTimeout(toast._t);
+      toast._t = setTimeout(() => el.classList.remove("show"), 2000);
+    }
+
+    function applyTheme() {
+      document.documentElement.setAttribute("data-theme", state.theme);
+      document.getElementById("themeBtn").textContent = state.theme === "dark" ? "라이트 모드" : "다크 모드";
+    }
+
+    function getScopedCards() {
+      const q = (state.search || "").trim().toLowerCase();
+      return ALL_CARDS.filter((c) => {
+        const rec = state.records[c.uid];
+        const hist = state.wrongHistory[c.uid];
+        if (state.scope === "001-050" && (c.num < 1 || c.num > 50)) return false;
+        if (state.scope === "051-103" && (c.num < 51 || c.num > 103)) return false;
+        if (state.scope === "104-137" && (c.num < 104 || c.num > 137)) return false;
+        if (state.scope === "wrong" && (!rec || rec.status !== "wrong")) return false;
+        if (state.scope === "history_wrong" && !((hist && (hist.count > 0 || !hist.cleared)) || (rec && rec.status === "wrong"))) return false;
+        if (state.scope === "unsolved" && rec && rec.status) return false;
+
+        if (!q) return true;
+        const blob = [c.grammarId, c.pattern, c.meaning, c.connection, c.jp, c.pron, c.kr].join(" ").toLowerCase();
+        return blob.includes(q);
+      });
+    }
+
+    function getCurrentCard() {
+      const list = getScopedCards();
+      if (!list.length) return null;
+      return list.find((c) => c.uid === state.currentUid) || list[0];
+    }
+
+    function updateHeaderStats() {
+      const totalAll = ALL_CARDS.length;
+      let done = 0;
+      let ok = 0;
+      let bad = 0;
+
+      for (const c of ALL_CARDS) {
+        const r = state.records[c.uid];
+        if (r && r.status) {
+          done += 1;
+          if (r.status === "correct") ok += 1;
+          else if (r.status === "wrong") bad += 1;
+        }
+      }
+
+      const scoped = getScopedCards();
+      const histWrongCount = getHistoryWrongCards().length;
+      document.getElementById("statDone").textContent = `${done} / ${totalAll}`;
+      document.getElementById("statOk").textContent = `${ok}`;
+      document.getElementById("statBad").textContent = `${bad}`;
+      document.getElementById("statScope").textContent = `${scoped.length}개`;
+      document.getElementById("progressFill").style.width = `${totalAll ? Math.round((done / totalAll) * 100) : 0}%`;
+      const histBtn = document.getElementById("historyReviewBtn");
+      if (histBtn) histBtn.textContent = `오답 이력 총복습 (${histWrongCount})`;
+    }
+
+    function checkFullSweepCompletion() {
+      const totalAll = ALL_CARDS.length;
+      if (!totalAll) return;
+      let done = 0;
+      for (const c of ALL_CARDS) {
+        if (state.records[c.uid]?.status) done += 1;
+      }
+      const banner = document.getElementById("fullSweepCompletionBox");
+      if (!banner) return;
+
+      if (done === totalAll && state.scope !== "history_wrong") {
+        const histCards = getHistoryWrongCards();
+        document.getElementById("sweepTitle").textContent = "전범위(001~137 전체 예문) 1회독 완료!";
+        if (histCards.length > 0) {
+          document.getElementById("sweepDesc").textContent =
+            `총 ${totalAll}문항을 모두 학습했습니다. 누적 오답 이력 ${histCards.length}개 문항을 모아 총복습을 시작할 수 있습니다.`;
+          document.getElementById("startHistoryReviewBtn").classList.remove("hidden");
+        } else {
+          document.getElementById("sweepDesc").textContent =
+            `총 ${totalAll}문항을 모두 완료했으며 누적 오답 이력이 없습니다! 언제든 원하는 범위나 오답 이력 모드로 복습해 보세요.`;
+          document.getElementById("startHistoryReviewBtn").classList.add("hidden");
+        }
+        if (!state.sweepCompleted) {
+          state.sweepCompleted = true;
+          saveState();
+          banner.classList.remove("hidden");
+        }
+      } else if (done < totalAll) {
+        state.sweepCompleted = false;
+        banner.classList.add("hidden");
+      }
+    }
+
+    function rebuildQuestionSelect(list, cur) {
+      const sel = document.getElementById("questionSelect");
+      if (!list.length) {
+        sel.innerHTML = `<option value="">표시할 문항 없음</option>`;
+        return;
+      }
+      sel.innerHTML = list.map((c) => {
+        const st = state.records[c.uid]?.status;
+        const mark = st === "correct" ? " [정답]" : st === "wrong" ? " [오답]" : "";
+        return `<option value="${c.uid}">[${c.grammarId}-${c.exIndex}] ${c.pattern} · ${c.kr.slice(0, 22)}${mark}</option>`;
+      }).join("");
+      sel.value = cur.uid;
+    }
+
+    function renderCard() {
+      clearAutoAdvanceTimer();
+      document.getElementById("scopeSelect").value = state.scope;
+      const autoToggle = document.getElementById("autoAdvanceToggle");
+      const autoDelay = document.getElementById("autoAdvanceDelay");
+      if (autoToggle) autoToggle.checked = Boolean(state.autoAdvance);
+      if (autoDelay) autoDelay.value = String(state.autoAdvanceDelay || 1200);
+      updateHeaderStats();
+      const list = getScopedCards();
+      const cur = getCurrentCard();
+      rebuildQuestionSelect(list, cur);
+
+      document.getElementById("resultBox").classList.add("hidden");
+
+      const promptJp = document.getElementById("promptJp");
+      const promptKr = document.getElementById("promptKr");
+      const promptHint = document.getElementById("promptHint");
+      const inputEl = document.getElementById("pronInput");
+      const statusBadge = document.getElementById("statusBadge");
+
+      if (!cur) {
+        document.getElementById("grammarBadge").textContent = "문항 없음";
+        document.getElementById("posIndexText").textContent = "0 / 0";
+        statusBadge.textContent = "필터 비어 있음";
+        statusBadge.className = "status-pill";
+        promptJp.textContent = "선택한 조건에 맞는 문항이 없습니다.";
+        promptKr.textContent = "범위나 검색어를 조정해 보세요.";
+        promptHint.textContent = "";
+        inputEl.value = "";
+        inputEl.disabled = true;
+        return;
+      }
+
+      inputEl.disabled = false;
+      state.currentUid = cur.uid;
+      saveState();
+
+      const pos = list.findIndex((c) => c.uid === cur.uid);
+      document.getElementById("grammarBadge").textContent = `${cur.grammarId} · ${cur.pattern}`;
+      document.getElementById("posIndexText").textContent = `${pos + 1} / ${list.length} (예문 ${cur.exIndex}/${cur.exTotal})`;
+
+      const rec = state.records[cur.uid];
+      if (!rec || !rec.status) {
+        statusBadge.textContent = "미학습";
+        statusBadge.className = "status-pill";
+      } else if (rec.status === "correct") {
+        statusBadge.textContent = "정답 완료";
+        statusBadge.className = "status-pill ok";
+      } else {
+        statusBadge.textContent = "오답 복습";
+        statusBadge.className = "status-pill bad";
+      }
+
+      promptJp.textContent = cur.jp;
+      promptKr.textContent = `(${cur.kr})`;
+      promptHint.textContent = `핵심 문법 의미: ${cur.meaning}`;
+      inputEl.value = rec?.userInput || "";
+    }
+
+    function setCardStatus(uid, status, userInput, options = {}) {
+      state.records[uid] = {
+        status,
+        userInput: typeof userInput === "string" ? userInput : (state.records[uid]?.userInput || ""),
+        updatedAt: Date.now()
+      };
+      if (status === "wrong") {
+        recordWrongHistory(uid);
+      } else if (status === "correct" && state.wrongHistory[uid]) {
+        state.wrongHistory[uid] = {
+          ...state.wrongHistory[uid],
+          cleared: true
+        };
+      }
+      saveState();
+      updateHeaderStats();
+      checkFullSweepCompletion();
+      const cur = getCurrentCard();
+      if (cur) rebuildQuestionSelect(getScopedCards(), cur);
+
+      const badge = document.getElementById("statusBadge");
+      if (status === "correct") {
+        badge.textContent = "정답 완료";
+        badge.className = "status-pill ok";
+        if (options.triggerAutoAdvance && state.autoAdvance) {
+          scheduleAutoAdvance(uid);
+        }
+      } else if (status === "wrong") {
+        clearAutoAdvanceTimer();
+        badge.textContent = "오답 복습";
+        badge.className = "status-pill bad";
+      }
+    }
+
+    function scheduleAutoAdvance(expectedUid) {
+      clearAutoAdvanceTimer();
+      const delayMs = Number(state.autoAdvanceDelay) || 1200;
+      const cd = document.getElementById("autoNavCountdown");
+      const start = Date.now();
+      if (cd) {
+        cd.textContent = `정답! ${(delayMs / 1000).toFixed(1)}초 후 다음 문항으로 이동...`;
+      }
+      autoAdvanceInterval = setInterval(() => {
+        const rem = Math.max(0, (delayMs - (Date.now() - start)) / 1000);
+        if (cd) cd.textContent = `정답! ${rem.toFixed(1)}초 후 다음 문항으로 이동...`;
+      }, 100);
+
+      autoAdvanceTimer = setTimeout(() => {
+        clearAutoAdvanceTimer();
+        const cur = getCurrentCard();
+        if (!cur || cur.uid !== expectedUid) return;
+        const list = getScopedCards();
+        if (list.length <= 1) {
+          checkFullSweepCompletion();
+          return;
+        }
+        const idx = list.findIndex((c) => c.uid === cur.uid);
+        if (idx === list.length - 1) {
+          checkFullSweepCompletion();
+          toast("현재 범위의 마지막 문항까지 완료했습니다!");
+          return;
+        }
+        moveCard(1);
+      }, delayMs);
+    }
+
+    function showExplanation(card, userInput, mode) {
+      const box = document.getElementById("resultBox");
+      box.classList.remove("hidden");
+
+      const banner = document.getElementById("verdictBanner");
+      const titleEl = document.getElementById("verdictTitle");
+      const refLine = document.getElementById("refPronLine");
+      const userLine = document.getElementById("userPronLine");
+
+      const normUser = normalizePron(userInput);
+      const normRef = normalizePron(card.pron);
+
+      refLine.textContent = `기준 발음: ${card.pron || "(발음 표기 없음)"}`;
+      userLine.textContent = `내 입력: ${userInput.trim() ? userInput.trim() : "(미입력)"}`;
+
+      clearAutoAdvanceTimer();
+      if (mode === "reveal") {
+        banner.className = "verdict-banner revealed";
+        titleEl.textContent = "정답 및 상세 해설을 확인하세요";
+      } else if (normRef && normUser && normUser === normRef) {
+        banner.className = "verdict-banner match";
+        titleEl.textContent = "발음이 일치합니다! (정답 처리됨)";
+        setCardStatus(card.uid, "correct", userInput, { triggerAutoAdvance: true });
+      } else {
+        banner.className = "verdict-banner mismatch";
+        titleEl.textContent = "발음 차이가 있습니다 — 아래 해설과 자가 채점을 확인하세요";
+        setCardStatus(card.uid, "wrong", userInput);
+      }
+
+      document.getElementById("expGrammarMeaning").textContent =
+        `문형: ${card.pattern}\n핵심 뜻: ${card.meaning}`;
+      document.getElementById("expExtraNotes").textContent =
+        GRAMMAR_NOTES[card.grammarId] || "문맥과 접속 조건에 맞춰 자연스럽게 해석하는 N3 핵심 문법입니다.";
+      document.getElementById("expMemoryTip").textContent =
+        MEMORY_TIPS[card.grammarId] || `암기 팁: 예문 "${card.jp}"을 소리 내어 읽으며 ${card.pattern}의 쓰임을 익혀 보세요.`;
+
+      renderConnectionRules(card);
+      document.getElementById("expInflection").textContent =
+        buildInflectionGuide(card);
+
+      const vocab = extractSentenceVocab(card.jp);
+      const vocabContainer = document.getElementById("expVocabList");
+      if (!vocab.length) {
+        vocabContainer.innerHTML = `<div class="vocab-item"><div class="v-kr">예문 단어와 문법 구성을 문장 전체와 함께 소리 내어 익혀 보세요.</div></div>`;
+      } else {
+        vocabContainer.innerHTML = vocab.map((v) => {
+          const { coreLine, sideLine } = parseHanziBreakdown(v);
+          const visual = buildMnemonicVisual(v, coreLine, sideLine);
+          return `
+            <article class="vocab-item">
+              <div class="vocab-top">
+                <span class="v-jp jp">${v.word}</span>
+                ${v.reading ? `<span class="v-rd">${v.reading}</span>` : ""}
+              </div>
+              <div class="v-kr">뜻: ${v.meaning}</div>
+              <div class="vocab-struct-panel">
+                <div class="vocab-struct-row">
+                  <span class="vocab-struct-tag">핵심</span>
+                  <span class="vocab-struct-text">${coreLine}</span>
+                </div>
+                <div class="vocab-struct-row">
+                  <span class="vocab-struct-tag side">좌우·구조</span>
+                  <span class="vocab-struct-text">${sideLine}</span>
+                </div>
+              </div>
+              <div class="vocab-mnemonic-box">
+                <div class="vocab-mnemonic-caption">
+                  <span class="vocab-mnemonic-label">${visual.originTag}</span>
+                  <div class="vocab-mnemonic-story">${visual.story}</div>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join("");
+      }
+    }
+
+    function gradeCurrent(mode) {
+      const card = getCurrentCard();
+      if (!card) return;
+      const userInput = document.getElementById("pronInput").value;
+      state.records[card.uid] = {
+        ...(state.records[card.uid] || {}),
+        userInput,
+        updatedAt: Date.now()
+      };
+      saveState();
+      showExplanation(card, userInput, mode);
+    }
+
+    function moveCard(delta) {
+      const list = getScopedCards();
+      if (!list.length) return;
+      const cur = getCurrentCard();
+      const idx = cur ? list.findIndex((c) => c.uid === cur.uid) : 0;
+      const next = list[(idx + delta + list.length) % list.length];
+      state.currentUid = next.uid;
+      renderCard();
+    }
+
+    function speakSentence() {
+      const card = getCurrentCard();
+      if (!card || !card.jp) return;
+      if (!("speechSynthesis" in window)) {
+        toast("이 브라우저는 음성 합성을 지원하지 않습니다.");
+        return;
+      }
+      window.speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(card.jp);
+      u.lang = "ja-JP";
+      u.rate = 0.95;
+      window.speechSynthesis.speak(u);
+    }
+
+    document.getElementById("themeBtn").addEventListener("click", () => {
+      state.theme = state.theme === "dark" ? "light" : "dark";
+      applyTheme();
+      saveState();
+    });
+
+    document.getElementById("exportBtn").addEventListener("click", () => {
+      const dataStr = JSON.stringify({
+        app: "jlpt-n3-solo-pron-study",
+        exportedAt: new Date().toISOString(),
+        records: state.records,
+        wrongHistory: state.wrongHistory
+      }, null, 2);
+      const blob = new Blob([dataStr], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "jlpt-n3-study-records.json";
+      a.click();
+      URL.revokeObjectURL(url);
+      toast("학습 기록 JSON을 내보냈습니다.");
+    });
+
+    document.getElementById("importFile").addEventListener("change", (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => {
+        try {
+          const parsed = JSON.parse(String(reader.result || "{}"));
+          if (parsed && parsed.records && typeof parsed.records === "object") {
+            state.records = parsed.records;
+            if (parsed.wrongHistory && typeof parsed.wrongHistory === "object") {
+              state.wrongHistory = parsed.wrongHistory;
+            }
+            saveState();
+            renderCard();
+            toast("학습 기록을 가져왔습니다.");
+          } else {
+            toast("올바른 기록 JSON 형식이 아닙니다.");
+          }
+        } catch (err) {
+          toast("JSON 파일을 읽는 중 오류가 발생했습니다.");
+        }
+        e.target.value = "";
+      };
+      reader.readAsText(file, "utf-8");
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", () => {
+      clearAutoAdvanceTimer();
+      state.records = {};
+      state.wrongHistory = {};
+      state.sweepCompleted = false;
+      saveState();
+      renderCard();
+      toast("모든 학습 기록과 오답 이력을 초기화했습니다.");
+    });
+
+    document.getElementById("autoAdvanceToggle").addEventListener("change", (e) => {
+      state.autoAdvance = e.target.checked;
+      if (!state.autoAdvance) clearAutoAdvanceTimer();
+      saveState();
+      toast(state.autoAdvance ? "정답 시 다음 문항 자동 이동이 켜졌습니다." : "자동 이동을 껐습니다.");
+    });
+
+    document.getElementById("autoAdvanceDelay").addEventListener("change", (e) => {
+      state.autoAdvanceDelay = Number(e.target.value) || 1200;
+      saveState();
+    });
+
+    function activateHistoryWrongReview() {
+      clearAutoAdvanceTimer();
+      const histCards = getHistoryWrongCards();
+      if (!histCards.length) {
+        toast("누적된 오답 이력이 없습니다.");
+        return;
+      }
+      state.scope = "history_wrong";
+      state.currentUid = histCards[0].uid;
+      document.getElementById("fullSweepCompletionBox").classList.add("hidden");
+      saveState();
+      renderCard();
+      toast(`오답 이력 총복습 모드(${histCards.length}문항)를 시작합니다.`);
+    }
+
+    document.getElementById("historyReviewBtn").addEventListener("click", activateHistoryWrongReview);
+    document.getElementById("startHistoryReviewBtn").addEventListener("click", activateHistoryWrongReview);
+    document.getElementById("dismissSweepBtn").addEventListener("click", () => {
+      document.getElementById("fullSweepCompletionBox").classList.add("hidden");
+    });
+
+    document.getElementById("scopeSelect").addEventListener("change", (e) => {
+      state.scope = e.target.value;
+      renderCard();
+    });
+
+    document.getElementById("questionSelect").addEventListener("change", (e) => {
+      if (!e.target.value) return;
+      state.currentUid = e.target.value;
+      renderCard();
+    });
+
+    document.getElementById("searchInput").addEventListener("input", (e) => {
+      state.search = e.target.value;
+      renderCard();
+    });
+
+    document.getElementById("randomBtn").addEventListener("click", () => {
+      const list = getScopedCards();
+      if (!list.length) {
+        toast("랜덤 선택할 문항이 없습니다.");
+        return;
+      }
+      const picked = list[Math.floor(Math.random() * list.length)];
+      state.currentUid = picked.uid;
+      renderCard();
+    });
+
+    document.querySelectorAll(".quick-mark-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const input = document.getElementById("pronInput");
+        const ch = btn.dataset.char || "";
+        const s = input.selectionStart ?? input.value.length;
+        const ePos = input.selectionEnd ?? input.value.length;
+        input.value = input.value.slice(0, s) + ch + input.value.slice(ePos);
+        input.focus();
+        input.setSelectionRange(s + ch.length, s + ch.length);
+      });
+    });
+
+    document.getElementById("gradeBtn").addEventListener("click", () => gradeCurrent("grade"));
+    document.getElementById("revealBtn").addEventListener("click", () => gradeCurrent("reveal"));
+    document.getElementById("clearBtn").addEventListener("click", () => {
+      const input = document.getElementById("pronInput");
+      input.value = "";
+      input.focus();
+    });
+
+    document.getElementById("markCorrectBtn").addEventListener("click", () => {
+      const card = getCurrentCard();
+      if (!card) return;
+      setCardStatus(card.uid, "correct", document.getElementById("pronInput").value, { triggerAutoAdvance: true });
+      toast("정답으로 처리했습니다.");
+    });
+
+    document.getElementById("markWrongBtn").addEventListener("click", () => {
+      const card = getCurrentCard();
+      if (!card) return;
+      setCardStatus(card.uid, "wrong", document.getElementById("pronInput").value);
+      toast("오답 복습 목록에 추가했습니다.");
+    });
+
+    document.getElementById("prevBtn").addEventListener("click", () => moveCard(-1));
+    document.getElementById("nextBtn").addEventListener("click", () => moveCard(1));
+    document.getElementById("speakBtn").addEventListener("click", speakSentence);
+    document.getElementById("promptJp").addEventListener("dblclick", speakSentence);
+    document.getElementById("toggleMnemonicBtn").addEventListener("click", (e) => {
+      const listEl = document.getElementById("expVocabList");
+      const hidden = listEl.classList.toggle("hidden-mnemonics");
+      e.currentTarget.textContent = hidden ? "한자연상 연상기억 보기" : "한자연상 연상기억 숨기기";
+    });
+
+    document.getElementById("pronInput").addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        gradeCurrent("grade");
+      }
+    });
+
+    document.addEventListener("keydown", (e) => {
+      const tag = document.activeElement ? document.activeElement.tagName : "";
+      if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+
+      if (e.code === "Space") {
+        e.preventDefault();
+        const box = document.getElementById("resultBox");
+        if (box.classList.contains("hidden")) {
+          gradeCurrent("reveal");
+        } else {
+          box.classList.add("hidden");
+        }
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        moveCard(-1);
+      } else if (e.key === "ArrowRight") {
+        e.preventDefault();
+        moveCard(1);
+      }
+    });
+
+
+    function renderAllQuestionsList() {
+      const grid = document.getElementById("allQuestionsGrid");
+      const list = getScopedCards();
+      const targetList = list.length ? list : ALL_CARDS;
+      grid.innerHTML = targetList.map((c) => {
+        const st = state.records[c.uid]?.status;
+        const stText = st === "correct" ? "정답" : st === "wrong" ? "오답" : "미학습";
+        return `
+          <button type="button" class="q-mini-card" data-jump-uid="${c.uid}">
+            <div class="q-mini-top">
+              <span>[${c.grammarId}-${c.exIndex}] ${c.pattern}</span>
+              <span>${stText}</span>
+            </div>
+            <div class="q-mini-jp jp">${c.jp}</div>
+            <div class="q-mini-pron">(${c.pron})</div>
+            <div class="q-mini-kr">${c.kr}</div>
+          </button>
+        `;
+      }).join("");
+
+      grid.querySelectorAll(".q-mini-card").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const uid = btn.dataset.jumpUid;
+          if (!uid) return;
+          const inScoped = getScopedCards().some((x) => x.uid === uid);
+          if (!inScoped) {
+            state.scope = "all";
+            state.search = "";
+            document.getElementById("searchInput").value = "";
+          }
+          state.currentUid = uid;
+          renderCard();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    }
+
+    document.getElementById("toggleAllListBtn").addEventListener("click", () => {
+      const panel = document.getElementById("allQuestionsPanel");
+      const willShow = panel.classList.contains("hidden");
+      if (willShow) renderAllQuestionsList();
+      panel.classList.toggle("hidden", !willShow);
+    });
+
+    document.getElementById("closeAllListBtn").addEventListener("click", () => {
+      document.getElementById("allQuestionsPanel").classList.add("hidden");
+    });
+
+    applyTheme();
+    renderCard();
+    checkFullSweepCompletion();
+  </script>
+</body>
+</html>
