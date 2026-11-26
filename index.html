@@ -5875,6 +5875,13 @@
       }
       state.scope = "history_wrong";
       state.currentUid = histCards[0].uid;
+
+      histCards.forEach((card) => {
+    if (state.records && state.records[card.uid]) {
+      state.records[card.uid].userInput = "";
+    }
+  });
+      
       document.getElementById("fullSweepCompletionBox").classList.add("hidden");
       saveState();
       renderCard();
