@@ -499,13 +499,6 @@
       font-size: 1.06rem;
       line-height: 1.6;
       resize: vertical;
-      input.meaning-input {
-      margin-top: 9px;
-      min-height: 46px;
-      font-size: 1rem;
-      line-height: 1.55;
-      background: var(--surface-2);
-      color: var(--text);
     }
 
     .action-bar {
@@ -1201,19 +1194,6 @@
         spellcheck="false"
       ></textarea>
 
-      <input
-        type="text"
-        id="meaningInput"
-        placeholder="입력2(뜻): 뜻(의미)을 입력하세요 (여러 뜻 중 1개만 맞아도 정답, 예: 헤어지다)"
-        autocomplete="off"
-        autocorrect="off"
-        autocapitalize="off"
-        spellcheck="false"
-        style="margin-top: 9px; font-size: 1rem;"
-      />
-
-
-      
       <div class="action-bar">
         <button type="button" class="btn-primary" id="gradeBtn">발음 채점 및 해설 보기</button>
         <button type="button" class="btn-secondary" id="revealBtn">정답 · 해설 바로 보기</button>
@@ -5120,39 +5100,6 @@
         .replace(/[\s\u00A0·ㆍ・,，.。!?！？"'()（）「」『』〜～ー\-]/g, "")
         .trim();
     }
-    function splitMeaningCandidates(text) {
-      return String(text || "")
-        .split(/[,，/／·ㆍ、\n]+/)
-        .map((s) => s.trim())
-        .filter(Boolean);
-    }
-
-    function isMeaningMatch(userMeaning, card) {
-      const normUser = normalizeMeaning(userMeaning);
-      if (!normUser) return { matched: false, candidates: [] };
-
-      const rawCandidates = [
-        ...splitMeaningCandidates(card.kr),
-        ...splitMeaningCandidates(card.meaning)
-      ];
-
-      const stripParticle = (s) =>
-        normalizeMeaning(s).replace(/(하다|되다|이다|은|는|이|가|을|를|에|에서|으로|로|의|와|과|도|만)$/g, "");
-
-      const userStripped = stripParticle(normUser);
-
-      const matched = rawCandidates.some((cand) => {
-        const normCand = normalizeMeaning(cand);
-        if (!normCand) return false;
-        if (normCand === normUser || normCand.includes(normUser) || normUser.includes(normCand)) {
-          return true;
-        }
-        const candStripped = stripParticle(normCand);
-        return Boolean(userStripped && candStripped && (candStripped === userStripped || candStripped.includes(userStripped)));
-      });
-
-      return { matched, candidates: rawCandidates };
-    }
 
     function buildInflectionGuide(card) {
       const notes = [];
@@ -5574,18 +5521,12 @@
       promptKr.textContent = `(${cur.kr})`;
       promptHint.textContent = `핵심 문법 의미: ${cur.meaning}`;
       inputEl.value = rec?.userInput || "";
-      const meaningEl = document.getElementById("meaningInput");
-      if (meaningEl) {
-        meaningEl.value = rec?.meaningInput || "";
-      }
-    
+    }
 
     function setCardStatus(uid, status, userInput, options = {}) {
-      const currentMeaningEl = document.getElementById("meaningInput");
       state.records[uid] = {
         status,
         userInput: typeof userInput === "string" ? userInput : (state.records[uid]?.userInput || ""),
-        meaningInput: currentMeaningEl ? currentMeaningEl.value : (state.records[uid]?.meaningInput || ""),
         updatedAt: Date.now()
       };
       if (status === "wrong") {
@@ -5657,49 +5598,16 @@
       const refLine = document.getElementById("refPronLine");
       const userLine = document.getElementById("userPronLine");
 
-      const userMeaning = document.getElementById("meaningInput")?.value || "";
       const normUser = normalizePron(userInput);
       const normRef = normalizePron(card.pron);
-      const pronOk = Boolean(normRef && normUser && normUser === normRef);
 
-      const meaningCheck = isMeaningMatch(userMeaning, card);
-      const meaningOk = meaningCheck.matched;
-
-      const refMeaningText = card.kr || card.meaning || "(뜻 정보 없음)";
-      refLine.innerHTML =
-        `기준 발음: ${escapeHtml(card.pron || "(발음 표기 없음)")}<br>` +
-        `기준 뜻(예문 해석): ${escapeHtml(refMeaningText)}`;
-
-      const pronDisplay = pronOk || !userInput.trim()
-        ? escapeHtml(userInput.trim() ? userInput.trim() : "(미입력)")
-        : `${buildHighlightedUserPron(userInput, card.pron)}<span class="wrong-char-legend">(발음 오답 의심)</span>`;
-
-      const meaningDisplay = !userMeaning.trim()
-        ? "(미입력)"
-        : meaningOk
-          ? `${escapeHtml(userMeaning.trim())} <span style="color:var(--success);font-weight:800;">(뜻 일치)</span>`
-          : `<span class="wrong-char-hl">${escapeHtml(userMeaning.trim())}</span><span class="wrong-char-legend">(뜻 불일치)</span>`;
-
-      userLine.innerHTML =
-        `내 입력 — 발음: ${pronDisplay} / 뜻: ${meaningDisplay}`;
-
-      clearAutoAdvanceTimer();
-      if (mode === "reveal") {
-        banner.className = "verdict-banner revealed";
-        titleEl.textContent = "정답 및 상세 해설을 확인하세요";
-      } else if (pronOk && meaningOk) {
-        banner.className = "verdict-banner match";
-        titleEl.textContent = "발음과 뜻 모두 일치합니다! (정답 처리됨)";
-        setCardStatus(card.uid, "correct", userInput, { triggerAutoAdvance: true });
+      refLine.textContent = `기준 발음: ${card.pron || "(발음 표기 없음)"}`;
+      const isMismatch = !(mode === "reveal" || (normRef && normUser && normUser === normRef));
+      if (isMismatch && userInput.trim()) {
+        const highlighted = buildHighlightedUserPron(userInput, card.pron);
+        userLine.innerHTML = `내 입력: ${highlighted}<span class="wrong-char-legend">(오답 의심 부분 표시)</span>`;
       } else {
-        const reason = !pronOk && !meaningOk
-          ? "발음과 뜻 모두 확인이 필요합니다"
-          : !pronOk
-            ? "발음 차이가 있습니다"
-            : "뜻이 예문 해석과 다릅니다";
-        banner.className = "verdict-banner mismatch";
-        titleEl.textContent = `${reason} — 아래 해설과 자가 채점을 확인하세요`;
-        setCardStatus(card.uid, "wrong", userInput);
+        userLine.textContent = `내 입력: ${userInput.trim() ? userInput.trim() : "(미입력)"}`;
       }
 
       clearAutoAdvanceTimer();
@@ -5854,11 +5762,9 @@
       const card = getCurrentCard();
       if (!card) return;
       const userInput = document.getElementById("pronInput").value;
-      const currentMeaningEl = document.getElementById("meaningInput");
       state.records[card.uid] = {
         ...(state.records[card.uid] || {}),
         userInput,
-        meaningInput: currentMeaningEl ? currentMeaningEl.value : (state.records[card.uid]?.meaningInput || ""),
         updatedAt: Date.now()
       };
       saveState();
@@ -6145,3 +6051,4 @@
   </script>
 </body>
 </html>
+
